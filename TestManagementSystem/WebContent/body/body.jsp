@@ -5,7 +5,7 @@
 </style>
       <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-  <a href="studentLoginForm.jsp"> <img src="image/student.PNG" width="280" height="300" border=0>		
-<a href="supervisorLoginForm.jsp"> <img src="image/supervisor.png" width="280" height="300" border=0>
+  <a href="studentLoginForm.jsp"> <img src="image/student.PNG" width="280" height="300" border=0>	</a>	
+<a href="supervisorLoginForm.jsp"> <img src="image/supervisor.png" width="280" height="300" border=0></a>
   </div>
   <!-- /.content-wrapper -->
