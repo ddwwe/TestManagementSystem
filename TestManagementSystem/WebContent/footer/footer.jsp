@@ -5,8 +5,9 @@
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      Anything you want
+     한누리, 김원교, 김대원
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+    <strong>Copyright 2016</strong> All rights reserved.<br>
+    <strong>Kongju University</a>.</strong>
   </footer>
