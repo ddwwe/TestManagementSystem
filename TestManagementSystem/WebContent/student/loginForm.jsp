@@ -2,10 +2,13 @@
     pageEncoding="UTF-8"%>
 <style>
 	.content-wrapper { text-align: center; }
+	.aa { height: 150px; }
 </style>
-  <div class="content-wrapper">
-<img src="image/student.PNG" width="280" height="300" border=0><br>
-<form action="studentMainForm.jsp" method="get">
+<div class="content-wrapper">
+<div class="aa">
+    </div>
+	<img src="image/student.PNG" width="280" height="300" border=0>
+	<form action="studentMainForm.jsp" method="get">
       <div class="form-group has-feedback">
         <input type="text"  placeholder="ID">
       </div>
