@@ -18,19 +18,8 @@
       <ul class="sidebar-menu">
         <li class="header">학생 메뉴</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>메인 화면</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
-          </ul>
-        </li>
+        <li class="active"><a href="MypageServlet"><i class="fa fa-link"></i> <span>내 정보 수정</span></a></li>
+        <li><a href="ReceiptServlet"><i class="fa fa-link"></i> <span>시험 접수하기</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
