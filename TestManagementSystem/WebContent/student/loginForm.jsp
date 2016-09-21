@@ -1,17 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <style>
-	.btn {  }
+	.content-wrapper { text-align: center; }
 </style>
-<div class="content-wrapper">
-<form action="LoginServlet">
-아이디<input type="text" name="userid" id="userid">
-비밀번호<input type="text" name="passwd" id="passwd"><br>
-<input type="submit" value="로그인">
-      <input type="reset" value="취소">
-</form>
-
+  <div class="content-wrapper">
+<img src="image/student.PNG" width="280" height="300" border=0><br>
+<form action="studentMainForm.jsp" method="get">
+      <div class="form-group has-feedback">
+        <input type="text"  placeholder="ID">
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text"  placeholder="Password">
+      </div>
+      <div class="row">
+        <div class="col-xs-5">
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-2">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">로그인</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
 </div>
-<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>                                                                                                                                                                                                                                                                                     
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="dist/js/app.min.js"></script>
