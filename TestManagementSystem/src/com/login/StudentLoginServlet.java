@@ -20,7 +20,7 @@ import com.service.MemberService;
 public class StudentLoginServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		request.setCharacterEncoding("UTF-8");
 		String id = request.getParameter("id");
 		String passwd = request.getParameter("passwd");
@@ -56,7 +56,6 @@ public class StudentLoginServlet extends HttpServlet {
 		RequestDispatcher dis =
 				request.getRequestDispatcher(target);
 		dis.forward(request, response);
-		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
