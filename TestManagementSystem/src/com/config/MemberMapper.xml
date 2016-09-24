@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+
+	<select id="StudentLogin" parameterType="hashmap" resultType="StudentDTO">
+		select
+		id,birth, nation, sex, name, passwd, pw_question, pw_answer, person, email,
+		post1, post2, addr1, addr2, rpost1, rpost2, raddr1, raddr2
+		from examinee
+		where id = #{id} and passwd = #{passwd}
+	</select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -5,15 +5,15 @@
 	.vertic { height: 150px; }
 </style>
 <div class="content-wrapper">
-<div class="vertic">
-    </div>
+	<div class="vertic">
+	</div>
 	<img src="image/student.PNG" width="280" height="300" border=0>
-	<form action="studentMainForm.jsp" method="get">
+	<form action="StudentLoginServlet" method="get">
       <div class="form-group has-feedback">
-        <input type="text" id="id" placeholder="ID">
+        <input type="text" name="id" id="id" placeholder="ID">
       </div>
       <div class="form-group has-feedback">
-        <input type="text" id="passwd" placeholder="Password">
+        <input type="text" name="passwd" id="passwd" placeholder="Password">
       </div>
       <div class="row">
         <div class="col-xs-5">

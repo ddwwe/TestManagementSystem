@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dto.MemberDTO;
+import com.dto.StudentDTO;
 import com.exception.CommonException;
 import com.service.MemberService;
 
@@ -22,33 +22,33 @@ public class StudentLoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		request.setCharacterEncoding("UTF-8");
-		String userid = request.getParameter("userid");
+		String id = request.getParameter("id");
 		String passwd = request.getParameter("passwd");
 		
 		HashMap<String, String> map= new HashMap<>();
-		map.put("userid", userid);
+		map.put("id", id);
 		map.put("passwd", passwd);
 		
 		MemberService service = new MemberService();
 		  String title="";
 		    String target="";
 		try {
-			MemberDTO dto = service.login(map);
+			StudentDTO dto = service.login(map);
 			if(dto==null){
 				title= "아이디 또는 비밀번호 불일치";
-				String link="LoginFormServlet";
+				String link="StudentLoginFormServlet";
 				target="error.jsp";
 				request.setAttribute("title", title);
 				request.setAttribute("link", link);
 			}else{
 				HttpSession session=request.getSession();
 				session.setAttribute("login", dto);
-				target="home.jsp";
+				target="studentMainForm.jsp";
 			}
 			
 		} catch (CommonException e) {
 			title= e.getMessage();
-			String link="LognFormServlet";
+			String link="StudentLoginFormServlet";
 			target="error.jsp";
 			request.setAttribute("title", title);
 			request.setAttribute("link", link);
@@ -60,7 +60,7 @@ public class StudentLoginServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		doGet(request, response);
 	}
 
 }
