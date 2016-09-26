@@ -15,9 +15,9 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-  <jsp:include page="header/header.jsp" flush="true"></jsp:include>
-  <jsp:include page="sidebar/sidebar.jsp" flush="true"></jsp:include>
-  <jsp:include page="body/body.jsp" flush="true"></jsp:include>
+  <jsp:include page="supervisor/supervisorHeader.jsp" flush="true"></jsp:include>
+  <jsp:include page="supervisor/supervisorSidebar.jsp" flush="true"></jsp:include>
+  <jsp:include page="supervisor/supervisorBody.jsp" flush="true"></jsp:include>
   <jsp:include page="footer/footer.jsp" flush="true"></jsp:include>
 
 </div>
