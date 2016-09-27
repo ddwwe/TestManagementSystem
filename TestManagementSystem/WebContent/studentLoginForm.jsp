@@ -25,13 +25,13 @@
   <div class="login-box-body">
     <p class="login-box-msg">Examinee</p>
 
-    <form action="StudentLoginServlet" method="post">
+    <form action="StudentLoginServlet" method="get">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="id">
+        <input type="text" class="form-control" name="id" id="id" placeholder="id">
         <span class="glyphicon glyphicon-ok form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="passwd">
+        <input type="password" class="form-control" name="passwd" id="passwd" placeholder="passwd">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
