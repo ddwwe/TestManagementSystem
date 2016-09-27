@@ -13,6 +13,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
  
   <typeAliases>
    <typeAlias type="com.dto.StudentDTO" alias="StudentDTO"/>
+   <typeAlias type="com.dto.SupervisorDTO" alias="SupervisorDTO"/>
   </typeAliases>
   
 

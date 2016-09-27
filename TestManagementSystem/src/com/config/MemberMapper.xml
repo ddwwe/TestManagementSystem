@@ -6,12 +6,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<select id="StudentLogin" parameterType="hashmap" resultType="StudentDTO">
 		select
-		id,birth, nation, sex, name, passwd, pw_question, pw_answer, person, email,
-		post1, post2, addr1, addr2, rpost1, rpost2, raddr1, raddr2
+		id,birth, nation, sex, name, passwd, pw_question, pw_answer,
+		person, email,
+		post1, post2, addr1, addr2, rpost1, rpost2, raddr1,
+		raddr2
 		from examinee
 		where id = #{id} and passwd = #{passwd}
 	</select>
-
+	<select 	id="SupervisorLogin" resultType="SupervisorDTO" parameterType="hashmap">
+	 select supervisorno, supervisorname, supervisorpass, placeno
+	  from	supervisor 
+	  where supervisorno=#{supervisorno} and supervisorpass=#{supervisorpass} </select>
 </mapper>
 
 

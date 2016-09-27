@@ -86,7 +86,7 @@
 			<div class="content-wrapper">
 				<a href="studentLoginForm.jsp"> <img src="image/student.PNG"
 					width="280" height="300" border=0></a> <a
-					href="supervisorMenu.jsp"> <img src="image/supervisor.png"
+					href="SuperLogin.jsp"> <img src="image/supervisor.png"
 					width="280" height="300" border=0></a>
 			</div>
 		</div>
