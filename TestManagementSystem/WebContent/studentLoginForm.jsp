@@ -27,11 +27,11 @@
 
     <form action="StudentLoginServlet" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="id">
+        <input type="text" class="form-control" placeholder="id" name="id">
         <span class="glyphicon glyphicon-ok form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="passwd">
+        <input type="password" class="form-control" placeholder="passwd" name="passwd">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">

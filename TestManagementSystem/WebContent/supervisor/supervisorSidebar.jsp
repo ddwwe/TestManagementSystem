@@ -23,15 +23,6 @@
               <i class="fa fa-angle-left pull-right"></i>
             </span>
               <li class="treeview">
-          <a href="#">
-            <i class="fa fa-edit"></i> <span>Forms</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="forms/general.jsp"><i class="fa fa-circle-o"></i> General Elements</a></li>
-          </ul>
         </li>
          <li>
           <a href="supervisor/calendar.jsp">
@@ -40,16 +31,16 @@
             </span>
           </a>
         </li>
-        <li class="treeview">
+       <li class="treeview">
           <a href="#">
             <i class="fa fa-pie-chart"></i>
-            <span>역대수험생인원</span>
+            <span>시험인원</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="supervisor/chartjs.jsp"><i class="fa fa-circle-o"></i> 역대수험생인원</a></li>
+            <li><a href="supervisor/chartjs.jsp"><i class="fa fa-circle-o"></i> 인원통계</a></li>
           </ul>
         </li>
         </li>

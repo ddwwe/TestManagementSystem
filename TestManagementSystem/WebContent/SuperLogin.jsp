@@ -32,12 +32,12 @@
 			<form action="SupervisorLoginServlet" method="get">
 				<div class="form-group has-feedback">
 					<input type="text" class="form-control" placeholder="Your Number"
-						id="supervisorno"></input> <span
+						name="supervisorno"></input> <span
 						class="glyphicon glyphicon-ok form-control-feedback"></span>
 				</div>
 				<div class="form-group has-feedback">
 					<input type="password" class="form-control" placeholder="Password"
-						id="supervisorpass"></input> <span
+						name="supervisorpass"></input> <span
 						class="glyphicon glyphicon-lock form-control-feedback"></span>
 
 					<button type="submit" class="btn btn-primary btn-block btn-flat">Sign

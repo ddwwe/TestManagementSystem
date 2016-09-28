@@ -44,7 +44,7 @@ public class SupervisorLoginServlet extends HttpServlet {
 			} else {
 				HttpSession session = request.getSession();
 				session.setAttribute("login", dto);
-				target = "studentMainForm.jsp";
+				target = "supervisorMenu.jsp";
 			}
 
 		} catch (CommonException e) {

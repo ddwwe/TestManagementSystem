@@ -9,10 +9,10 @@
   <div class="content-wrapper">
 <body class="content-wrapper">
 
-	<div class="w3-content w3-section" style="max-width: 300px">
-		<img class="mySlides" src="image/statistics.png" style="width: 100%"> <img
-			class="mySlides" src="image/korea.png" style="width: 100%"> <img
-			class="mySlides" src="image/japan.png" style="width: 100%">
+	<div >
+	 <img class="mySlides" src="image/himnet.jpg" style="width: 100%" height="800px"> 
+		<img class="mySlides" src="image/qnet.PNG" style="width: 100%" height="300px">
+		 <img class="mySlides" src="image/sanup.png" style="width: 100%"> 
 	</div>
 
 	<script>
@@ -30,7 +30,7 @@
 				myIndex = 1
 			}
 			x[myIndex - 1].style.display = "block";
-			setTimeout(carousel, 1000); // Change image every 2 seconds
+			setTimeout(carousel, 2000); // Change image every 2 seconds
 		}
 	</script>
 
