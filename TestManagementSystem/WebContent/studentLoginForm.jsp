@@ -25,34 +25,31 @@
   <div class="login-box-body">
     <p class="login-box-msg">Examinee</p>
 
-    <form action="StudentLoginServlet" method="post">
+    <form action="StudentLoginServlet" method="get">
       <div class="form-group has-feedback">
+<<<<<<< HEAD
         <input type="text" class="form-control" placeholder="id" name="id">
+=======
+        <input type="text" class="form-control" name="id" id="id" placeholder="id">
+>>>>>>> branch 'master' of https://github.com/ddwwe/TestManagementSystem
         <span class="glyphicon glyphicon-ok form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
+<<<<<<< HEAD
         <input type="password" class="form-control" placeholder="passwd" name="passwd">
+=======
+        <input type="password" class="form-control" name="passwd" id="passwd" placeholder="passwd">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+>>>>>>> branch 'master' of https://github.com/ddwwe/TestManagementSystem
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
         <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-              <input type="checkbox"> Remember Me
-            </label>
-          </div>
         </div>
         <!-- /.col -->
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-        </div>
         <!-- /.col -->
       </div>
     </form>
-
-
-    <a href="#">I forgot my password</a><br>
-    <a href="#" class="text-center">Register a new membership</a>
 
   </div>
   <!-- /.login-box-body -->

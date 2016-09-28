@@ -1,22 +1,14 @@
-Drop table Test_taker  purge;
-create table Test_taker
-( SlateNo number(20) primary key,
-  MName varchar2(10) not null,
-  SubjectNo number(5) REFERENCES TestInfo(SubjectNo),
-  Obstacle varchar2(200),
-  PlaceNo number(5) REFERENCES Place(PlaceNo));
-
--- ÏàòÌóòÏÉù person : Ïû•Ïï† Ïó¨Î∂Ä, rpost1~raddr2 : Ïã§Ï†ú Í±∞Ï£ºÏßÄ  
+-- ºˆ«Ëª˝ person : ¿Âæ÷ ø©∫Œ, rpost1~raddr2 : Ω«¡¶ ∞≈¡÷¡ˆ  
 create table examinee 
 ( id varchar2(20) constraint examinee_id_pk primary key,
   birth date not null,
-  nation varchar2(6) constraint examinee_nation_ck check(nation in('ÎÇ¥Íµ≠Ïù∏', 'Ïô∏Íµ≠Ïù∏')),
-  sex varchar2(4) constraint examinee_sex_ck check(sex in('ÎÇ®Ïûê', 'Ïó¨Ïûê')),
+  nation varchar2(6) constraint examinee_nation_ck check(nation in('≥ª±π¿Œ', 'ø‹±π¿Œ')),
+  sex varchar2(4) constraint examinee_sex_ck check(sex in('≥≤¿⁄', 'ø©¿⁄')),
   name varchar2(20) not null,
   passwd varchar2(20) not null,
   pw_question varchar2(100) not null,
   pw_answer varchar2(100) not null,
-  person varchar2(6) constraint taker_person_ck check(person in('Ïòà', 'ÏïÑÎãàÏöî')),
+  person varchar2(6) constraint taker_person_ck check(person in('øπ', 'æ∆¥œø‰')),
   email varchar2(30) not null,
   post1 varchar2(3) not null,
   post2 varchar2(3) not null,
@@ -26,7 +18,7 @@ create table examinee
   rpost2 varchar2(3) not null,
   raddr1 varchar2(100) not null,
   raddr2 varchar2(100) not null );
-  
+
   Drop table Place  purge;
   create table Place
 ( Megalopolis varchar2(200) not null,
@@ -55,12 +47,121 @@ create table examinee
   Subject varchar2(30) not null,
   TestDate date not null);
   
-  
   create SEQUENCE seq_SlateNo;
   create SEQUENCE seq_PlaceNo;
   create SEQUENCE seq_SupervisorNo;
   create SEQUENCE seq_BoardNo;
   create SEQUENCE seq_SubjectNo;
-  /***********************************************************************/
   
-  insert into
+  select *
+  from tab;
+  
+  insert into EXAMINEE
+  VALUES ('asdf', '1992-01-01', '≥ª±π¿Œ', '≥≤¿⁄', '≈¥√∂æ•', '1234', '∫Òπ¯¡˙πÆ, ¥‰¿∫ a',
+           'a', 'øπ', 'asdf@naver.com', '335', '448', 'º≠øÔ ∆Ø∫∞Ω√ øµµÓ∆˜±∏ ø©¿«µµµø', '22π¯¡ˆ', '335', '448', 'º≠øÔ ∆Ø∫∞Ω√ øµµÓ∆˜±∏ ø©¿«µµµø', '22π¯¡ˆ');
+  commit;
+  select
+		id,birth, nation, sex, name, passwd, pw_question, pw_answer, person, email,
+		post1, post2, addr1, addr2, rpost1, rpost2, raddr1, raddr2
+		from examinee
+		where id = 'asdf' and passwd='1234';
+    
+/*ªı ≈◊¿Ã∫Ì ªı ≈◊¿Ã∫Ì ªı ≈◊¿Ã∫Ì ªı ≈◊¿Ã∫Ì ªı ≈◊¿Ã∫Ì ªı ≈◊¿Ã∫Ì ªı ≈◊¿Ã∫Ì ªı ≈◊¿Ã∫Ì ªı ≈◊¿Ã∫Ì ªı ≈◊¿Ã∫Ì ªı ≈◊¿Ã∫Ì ªı ≈◊¿Ã∫Ì ªı ≈◊¿Ã∫Ì*/
+
+drop table EXAMINEE purge;
+
+create table EXAMINEE
+( eId VARCHAR2(20) CONSTRAINT EXAMINEE_eId_pk PRIMARY KEY,
+  ePw VARCHAR2(20) NOT NULL,
+  eName VARCHAR2(20) NOT NULL,
+  eEmail VARCHAR2(40) NOT NULL,
+  ePhone VARCHAR2(15) NOT NULL,
+  ePost VARCHAR2(6) NOT NULL,
+  eAddr1 VARCHAR2(100) NOT NULL,
+  eAddr2 VARCHAR2(100) NOT NULL,
+  ePath VARCHAR2(40) NOT NULL);
+  
+  
+  
+drop table SUPERVISOR purge;
+
+create table SUPERVISOR
+( sId VARCHAR2(20) CONSTRAINT SUPERVISOR_sId_pk PRIMARY KEY,
+  sPw VARCHAR2(20) NOT NULL,
+  sName VARCHAR2(20) NOT NULL,
+  sEmail VARCHAR2(40) NOT NULL,
+  sPhone VARCHAR2(15) NOT NULL,
+  sPost VARCHAR2(6) NOT NULL,
+  sAddr1 VARCHAR2(100) NOT NULL,
+  sAddr2 VARCHAR2(100) NOT NULL,
+  sPath VARCHAR2(40) NOT NULL);
+  
+  
+  
+drop table LICENSE purge;
+
+create table LICENSE
+( eId VARCHAR2(20),
+  qCode NUMBER,*******
+  lDate DATE NOT NULL);
+  
+  
+  
+drop table QUALIFICATION purge;
+
+create table QUALIFICATION
+( qCode NUMBER,*******
+  qName VARCHAR2(40) NOT NULL,
+  qFiled VARCHAR2(20) NOT NULL);
+  
+  
+  
+drop table SUBJECT purge;
+
+create table SUBJECT
+( qCode NUMBER,*******
+  sCategory VARCHAR2(4) CONSTRAINT SUBJECT_sCategory_ck CHECK(sCategory in('« ±‚', 'Ω«±‚')),
+  subject1 VARCHAR2(40),
+  subject2 VARCHAR2(40),
+  subject3 VARCHAR2(40),
+  subject4 VARCHAR2(40),
+  subject5 VARCHAR2(40),
+  subject6 VARCHAR2(40));
+  
+  
+  
+drop table TEST_PLACE purge;
+
+create table TEST_PLACE
+( tpNo NUMBER(5) CONSTRAINT TEST_PLACE_tpNo_pk PRIMARY KEY,
+  tpTitle VARCHAR2(100) NOT NULL,
+  pNo NUMBER(5) CONSTRAINT TEST_PLACE_pNo_fk REFERENCES PLACE(pNo) NOT NULL,
+  tpRoom VARCHAR2(100) NOT NULL,
+  tpDate DATE NOT NULL,
+  Admission_Time VARCHAR2(20) NOT NULL,
+  SUPERVISOR1 VARCHAR2(40) CONSTRAINT TEST_PLACE_SUPERVISOR1_fk REFERENCES SUPERVISOR(sId),
+  SUPERVISOR2 VARCHAR2(40) CONSTRAINT TEST_PLACE_SUPERVISOR2_fk REFERENCES SUPERVISOR(sId));
+  
+  
+  
+drop table PLACE purge;
+
+create table PLACE
+( pNo NUMBER(5) CONSTRAINT TEST_PLACE_pNo_pk PRIMARY KEY,
+  pRegion VARCHAR2(100) NOT NULL,
+  pCity VARCHAR2(100) NOT NULL,
+  pPlace VARCHAR2(100) NOT NULL);
+  
+  
+  
+drop table TEST_IDENTIFICATION_SLIP purge;
+
+create table TEST_IDENTIFICATION_SLIP
+( eNumber NUMBER(8) CONSTRAINT TEST_IDENTIFICATION_SLIP_eNumber_pk PRIMARY KEY,
+  Title VARCHAR2(50) NOT NULL,
+  qCode NUMBER CONSTRAINT TEST_IDENTIFICATION_SLIP_qCode_fk REFERENCES QUALIFICATION(qCode) NOT NULL,
+  Type VARCHAR2(1) CONSTRAINT TEST_IDENTIFICATION_SLIP_Type_ck CHECK(Type in('« ±‚', 'Ω«±‚')),
+  Category VARCHAR2(4) CONSTRAINT TEST_IDENTIFICATION_SLIP_Category_ck CHECK(sCategory in('« ±‚', 'Ω«±‚')),
+  tpNo NUMBER(5) CONSTRAINT TEST_IDENTIFICATION_SLIP_tpNo_fk REFERENCES TEST_PLACE(tpNo) NOT NULL,
+  Seat VARCHAR2(20) NOT NULL,
+  Attendance VARCHAR2(3) CONSTRAINT TEST_IDENTIFICATION_SLIP_Attendance_ck CHECK(Type in('YES', 'NO')));
