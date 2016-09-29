@@ -27,20 +27,12 @@
 
     <form action="StudentLoginServlet" method="get">
       <div class="form-group has-feedback">
-<<<<<<< HEAD
-        <input type="text" class="form-control" placeholder="id" name="id">
-=======
         <input type="text" class="form-control" name="id" id="id" placeholder="id">
->>>>>>> branch 'master' of https://github.com/ddwwe/TestManagementSystem
         <span class="glyphicon glyphicon-ok form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-<<<<<<< HEAD
-        <input type="password" class="form-control" placeholder="passwd" name="passwd">
-=======
         <input type="password" class="form-control" name="passwd" id="passwd" placeholder="passwd">
           <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
->>>>>>> branch 'master' of https://github.com/ddwwe/TestManagementSystem
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">

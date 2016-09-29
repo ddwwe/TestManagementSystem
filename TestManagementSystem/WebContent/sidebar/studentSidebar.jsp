@@ -20,6 +20,7 @@
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="MypageServlet"><i class="fa fa-link"></i> <span>내 정보 수정</span></a></li>
         <li><a href="ReceiptServlet"><i class="fa fa-link"></i> <span>시험 접수하기</span></a></li>
+        <li><a href="index.jsp"><span>홈으로 가기</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

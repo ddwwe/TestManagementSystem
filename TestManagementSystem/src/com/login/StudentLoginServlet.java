@@ -42,7 +42,7 @@ public class StudentLoginServlet extends HttpServlet {
 				request.setAttribute("link", link);
 			}else{
 				HttpSession session=request.getSession();
-				session.setAttribute("login", dto);
+				session.setAttribute("stuLogin", dto);
 				target="studentMainForm.jsp";
 			}
 			
