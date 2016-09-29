@@ -33,15 +33,21 @@
       <span class="logo-lg"><b>TestManagement</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
+ <nav class="navbar navbar-static-top" role="navigation">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
       </a>
-
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+             <li class="dropdown user user-menu">
+            <a href="../SupervisorLogOutServlet">
+              <img src="../dist/img/logout.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">로그아웃</span>
+            </a>
+      </div>
     </nav>
   </header>
   <aside class="main-sidebar">

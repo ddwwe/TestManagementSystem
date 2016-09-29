@@ -64,14 +64,21 @@
 			</a>
 
 			<!-- Header Navbar: style can be found in header.less -->
-			<nav class="navbar navbar-static-top">
+			<nav class="navbar navbar-static-top" role="navigation">
 				<!-- Sidebar toggle button-->
 				<a href="#" class="sidebar-toggle" data-toggle="offcanvas"
 					role="button"> <span class="sr-only">Toggle navigation</span>
-					 <span class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
 				</a>
-
+				<!-- Navbar Right Menu -->
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav">
+						<!-- Messages: style can be found in dropdown.less-->
+						<li class="dropdown user user-menu"><a
+							href="../SupervisorLogOutServlet"> <img
+								src="../dist/img/logout.jpg" class="user-image" alt="User Image">
+								<span class="hidden-xs" style="font-size: 11pt">로그아웃</span>
+						</a>
+				</div>
 			</nav>
 		</header>
 		<aside class="main-sidebar">
@@ -89,17 +96,17 @@
 				<ul class="sidebar-menu">
 					<!-- Optionally, you can add icons to the links -->
 					<li class="active"><a href="#"><i class="fa fa-link"></i>
-							<span style="font-size: 12pt">내 정보보기</span></a></li>
+							<span style="font-size: 11pt">내 정보보기</span></a></li>
 					<li class="treeview"><span class="pull-right-container">
 							<i class="fa fa-angle-left pull-right"></i>
 					</span>
 					<li class="treeview"></li>
 					<li><a href="calendar.jsp"> <i class="fa fa-calendar"></i>
-							<span style="font-size: 12pt">시험일정</span> <span
+							<span style="font-size: 11pt">시험일정</span> <span
 							class="pull-right-container"> </span>
 					</a></li>
 					<li class="treeview"><a href="#"> <i
-							class="fa fa-pie-chart"></i> <span style="font-size: 12pt">시험인원</span>
+							class="fa fa-pie-chart"></i> <span style="font-size: 11pt">시험인원</span>
 							<span class="pull-right-container"> <i
 								class="fa fa-angle-left pull-right"></i>
 						</span>
@@ -113,6 +120,7 @@
 				<!-- /.sidebar-menu -->
 			</section>
 			<!-- /.sidebar -->
+
 		</aside>
 		<!-- sidebar: style can be found in sidebar.less -->
 		<section class="sidebar">
@@ -138,60 +146,54 @@
 					<body>
 						<div>
 							<table>
-								<caption>시험 인원 현황</caption>
+								<caption></caption>
 								<thead>
 									<tr>
-										<td></td>
-										<th>2014</th>
-										<th>2014</th>
-										<th>2014</th>
-										<th>2015</th>
-										<th>2015</th>
-										<th>2015</th>
-										<th>2016</th>
+										<td>필기시험</td>
+										<th>2015 1회차</th>
+										<th>2015 2회차</th>
+										<th>2015 3회차</th>
+										<th>2016 1회차</th>
+										<th>2016 2회차</th>
+										<th>2016 3회차</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<th>기사/산업기사</th>
-										<td>84190</td>
-										<td>82410</td>
-										<td>82340</td>
-										<td>84120</td>
-										<td>82330</td>
-										<td>81250</td>
-										<td>82150</td>
-									</tr>
+										<td>44190</td>
+										<td>42410</td>
+										<td>42340</td>
+										<td>42330</td>
+										<td>41250</td>
+										<td>44250</td>
 									<tr>
 										<th>기능장</th>
-										<td>14213</td>
-										<td>11440</td>
-										<td>12330</td>
-										<td>14245</td>
-										<td>12535</td>
-										<td>12449</td>
-										<td>11230</td>
+										<td>4213</td>
+										<td>1440</td>
+										<td>2150</td>
+										<td>2650</td>
+										<td>2150</td>
+										<td>1230</td>
 									</tr>
 									<tr>
 										<th>기술사</th>
-										<td>10142</td>
-										<td>11380</td>
-										<td>15210</td>
-										<td>12315</td>
-										<td>12125</td>
-										<td>13179</td>
-										<td>14220</td>
+										<td>2142</td>
+										<td>1380</td>
+										<td>5210</td>
+										<td>2315</td>
+										<td>2150</td>
+										<td>3179</td>
 									</tr>
 
 									<tr>
 										<th>기능사</th>
-										<td>12310</td>
-										<td>11480</td>
-										<td>12190</td>
-										<td>23125</td>
-										<td>4215</td>
-										<td>23119</td>
-										<td>52130</td>
+										<td>2310</td>
+										<td>1480</td>
+										<td>2190</td>
+										<td>3125</td>
+										<td>2150</td>
+										<td>2150</td>
 									</tr>
 
 								</tbody>
@@ -199,4 +201,12 @@
 					</body>
 
 					<!-- -------------------------------------------------------------------------------- -->
-</body>
+				</div>
+
+			</ul>
+		</section>
+		<footer class="main-footer">
+			<div class="pull-right hidden-xs"></div>
+			<strong>Copyright &copy;2016 <a>KongjuUniversity</a>.
+			</strong> All rights reserved.
+		</footer>

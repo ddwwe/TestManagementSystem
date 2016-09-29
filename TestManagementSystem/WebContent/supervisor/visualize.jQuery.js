@@ -408,7 +408,7 @@ $.fn.visualize = function(options, container){
 		
 		//append title
 		if(o.appendTitle){
-			$('<div class="visualize-title">'+ title +'</div>').appendTo(infoContain);
+			$('<div class="visualize-title">'+ '</div>').appendTo(infoContain);
 		}
 		
 		

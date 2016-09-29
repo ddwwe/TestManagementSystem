@@ -1,3 +1,4 @@
+<%@page import="com.dto.SupervisorDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <head>
@@ -40,7 +41,7 @@
 		<li><a href="#second" title="Next Section"><img
 				src="image/dot.png" alt="Link" /></a></li>
 		<li><a href="#third" title="Next Section"><img
-				src="image/dot.png" alt="Link" /></a></li>
+				src="image/login.png" alt="Link" /></a></li>
 	</ul>
 
 	<div id="intro">
@@ -55,7 +56,6 @@
 				<p>&nbsp;</p>
 				<p>&nbsp;</p>
 				<p>&nbsp;</p>
-				<h1>합격을 기원합니다</h1>
 			</div>
 		</div>
 		<!--.story-->
@@ -78,7 +78,14 @@
 			</div>
 		</div>
 		<!--.story-->
+		<%
+	SupervisorDTO dto=(SupervisorDTO)session.getAttribute("login");
+%>
+<% if(dto!=null){ %>
+<%
+System.out.println(dto.getSupervisorname());
 
+}%>
 	</div>
 	<!--#second-->
 	<div id="third">
