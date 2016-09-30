@@ -41,12 +41,6 @@
 			pieMargin : 10,
 			title : '2009 Total Sales by Individual'
 		});
-		$('table').visualize({
-			type : 'line'
-		});
-		$('table').visualize({
-			type : 'area'
-		});
 		$('table').visualize();
 	});
 </script>
@@ -87,7 +81,6 @@
 			<section class="sidebar">
 
 				<!-- Sidebar user panel (optional) -->
-				<div class="user-panel"></div>
 
 				<!-- search form (Optional) -->
 				<!-- /.search form -->
@@ -95,7 +88,7 @@
 				<!-- Sidebar Menu -->
 				<ul class="sidebar-menu">
 					<!-- Optionally, you can add icons to the links -->
-					<li class="active"><a href="#"><i class="fa fa-link"></i>
+					<li class="active"><a href="supervisorProfile.jsp"><i class="fa fa-link"></i>
 							<span style="font-size: 11pt">내 정보보기</span></a></li>
 					<li class="treeview"><span class="pull-right-container">
 							<i class="fa fa-angle-left pull-right"></i>
@@ -116,6 +109,12 @@
 									인원보기</a></li>
 						</ul></li>
 					</li>
+					      <li>
+          <a href="picture.jsp"><i class="fa fa-comment"></i> <span style="font-size: 11pt">정오게시판</span>
+            <span class="pull-right-container">
+            </span>
+          </a>
+        </li>
 				</ul>
 				<!-- /.sidebar-menu -->
 			</section>
@@ -125,7 +124,6 @@
 		<!-- sidebar: style can be found in sidebar.less -->
 		<section class="sidebar">
 			<!-- Sidebar user panel -->
-			<div class="user-panel"></div>
 			<!-- sidebar menu: : style can be found in sidebar.less -->
 			<ul class="sidebar-menu">
 				<!-- /.sidebar -->
@@ -166,7 +164,7 @@
 										<td>42340</td>
 										<td>42330</td>
 										<td>41250</td>
-										<td>44250</td>
+										<td>0</td>
 									<tr>
 										<th>기능장</th>
 										<td>4213</td>
@@ -174,7 +172,7 @@
 										<td>2150</td>
 										<td>2650</td>
 										<td>2150</td>
-										<td>1230</td>
+										<td>0</td>
 									</tr>
 									<tr>
 										<th>기술사</th>
@@ -183,7 +181,7 @@
 										<td>5210</td>
 										<td>2315</td>
 										<td>2150</td>
-										<td>3179</td>
+										<td>0</td>
 									</tr>
 
 									<tr>
@@ -193,7 +191,7 @@
 										<td>2190</td>
 										<td>3125</td>
 										<td>2150</td>
-										<td>2150</td>
+										<td>0</td>
 									</tr>
 
 								</tbody>

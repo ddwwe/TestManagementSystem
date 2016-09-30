@@ -83,7 +83,7 @@
 %>
 <% if(dto!=null){ %>
 <%
-System.out.println(dto.getSupervisorname());
+System.out.println(dto.getSname());
 
 }%>
 	</div>

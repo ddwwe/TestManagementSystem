@@ -21,6 +21,7 @@
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
 </head>
+
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
@@ -56,8 +57,6 @@
     <section class="sidebar">
 
       <!-- Sidebar user panel (optional) -->
-      <div class="user-panel">
-      </div>
 
       <!-- search form (Optional) -->
       <!-- /.search form -->
@@ -65,7 +64,7 @@
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>내 정보보기</span></a></li>
+        <li class="active"><a href="supervisorProfile.jsp"><i class="fa fa-link"></i> <span>내 정보보기</span></a></li>
         <li class="treeview">
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -88,6 +87,13 @@
             <li><a href="chartjs.jsp"><i class="fa fa-circle-o"></i> 인원통계</a></li>
           </ul>
         </li>
+              <li>
+          <a href="picture.jsp">
+            <i class="fa fa-comment"></i> <span>정오게시판</span>
+            <span class="pull-right-container">
+            </span>
+          </a>
+        </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -96,8 +102,6 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
-      <div class="user-panel">
-      </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
     <!-- /.sidebar -->
@@ -122,13 +126,6 @@
               <!-- THE CALENDAR -->
               <div id="calendar"></div>
             </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /. box -->
-        </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
     </section>
     <!-- /.content -->
   </div>
@@ -148,21 +145,6 @@
       <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
       <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
     </ul>
-    <!-- Tab panes -->
-        <!-- /.control-sidebar-menu -->
-
-        <!-- /.control-sidebar-menu -->
-
-      </div>
-      <!-- /.tab-pane -->
-      <!-- Stats tab content -->
-
-
-          <!-- /.form-group -->
-        </form>
-      </div>
-      <!-- /.tab-pane -->
-    </div>
   </aside>
   <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
@@ -187,7 +169,7 @@
 <script src="../dist/js/demo.js"></script>
 <!-- fullCalendar 2.2.5 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-<script src="../plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="../plugins/fullcalendar/fullcalendar.js"></script>
 <!-- Page specific script -->
 <script>
   $(function () {
@@ -230,12 +212,6 @@
         left: 'prev,next today',
         center: 'title',
         right: 'month,agendaWeek,agendaDay'
-      },
-      buttonText: {
-        today: 'today',
-        month: 'month',
-        week: 'week',
-        day: 'day'
       },
       //Random default events
       events: [

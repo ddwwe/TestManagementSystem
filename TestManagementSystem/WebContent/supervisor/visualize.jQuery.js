@@ -229,7 +229,6 @@ $.fn.visualize = function(options, container){
 			line: function(area){
 			
 				if(area){ canvasContain.addClass('visualize-area'); }
-				else{ canvasContain.addClass('visualize-line'); }
 			
 				//write X labels
 				var xInterval = canvas.width() / (xLabels.length -1);
@@ -237,19 +236,6 @@ $.fn.visualize = function(options, container){
 					.width(canvas.width())
 					.height(canvas.height())
 					.insertBefore(canvas);
-				$.each(xLabels, function(i){ 
-					var thisLi = $('<li><span>'+this+'</span></li>')
-						.prepend('<span class="line" />')
-						.css('left', xInterval * i)
-						.appendTo(xlabelsUL);						
-					var label = thisLi.find('span:not(.line)');
-					var leftOffset = label.width()/-2;
-					if(i == 0){ leftOffset = 0; }
-					else if(i== xLabels.length-1){ leftOffset = -label.width(); }
-					label
-						.css('margin-left', leftOffset)
-						.addClass('label');
-				});
 
 				//write Y labels
 				var yScale = canvas.height() / totalYRange;
@@ -259,47 +245,9 @@ $.fn.visualize = function(options, container){
 					.height(canvas.height())
 					.insertBefore(canvas);
 					
-				$.each(yLabels, function(i){  
-					var thisLi = $('<li><span>'+this+'</span></li>')
-						.prepend('<span class="line"  />')
-						.css('bottom',liBottom*i)
-						.prependTo(ylabelsUL);
-					var label = thisLi.find('span:not(.line)');
-					var topOffset = label.height()/-2;
-					if(i == 0){ topOffset = -label.height(); }
-					else if(i== yLabels.length-1){ topOffset = 0; }
-					label
-						.css('margin-top', topOffset)
-						.addClass('label');
-				});
 
 				//start from the bottom left
-				ctx.translate(0,zeroLoc);
 				//iterate and draw
-				$.each(dataGroups,function(h){
-					ctx.beginPath();
-					ctx.lineWidth = o.lineWeight;
-					ctx.lineJoin = 'round';
-					var points = this.points;
-					var integer = 0;
-					ctx.moveTo(0,-(points[0]*yScale));
-					$.each(points, function(){
-						ctx.lineTo(integer,-(this*yScale));
-						integer+=xInterval;
-					});
-					ctx.strokeStyle = this.color;
-					ctx.stroke();
-					if(area){
-						ctx.lineTo(integer,0);
-						ctx.lineTo(0,0);
-						ctx.closePath();
-						ctx.fillStyle = this.color;
-						ctx.globalAlpha = .3;
-						ctx.fill();
-						ctx.globalAlpha = 1.0;
-					}
-					else {ctx.closePath();}
-				});
 			},
 			
 			area: function(){

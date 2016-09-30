@@ -8,8 +8,6 @@
     <section class="sidebar">
 
       <!-- Sidebar user panel (optional) -->
-      <div class="user-panel">
-      </div>
 
       <!-- search form (Optional) -->
       <!-- /.search form -->
@@ -17,7 +15,7 @@
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>내 정보보기</span></a></li>
+        <li class="active"><a href="supervisor/supervisorProfile.jsp"><i class="fa fa-link"></i> <span>내 정보보기</span></a></li>
         <li class="treeview">
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -43,6 +41,13 @@
             <li><a href="supervisor/chartjs.jsp"><i class="fa fa-circle-o"></i> 인원통계</a></li>
           </ul>
         </li>
+        </li>
+          <li>
+          <a href="supervisor/picture.jsp">
+            <i class="fa fa-comment"></i> <span>정오게시판</span>
+            <span class="pull-right-container">
+            </span>
+          </a>
         </li>
       </ul>
       <!-- /.sidebar-menu -->

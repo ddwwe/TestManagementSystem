@@ -23,12 +23,12 @@ public class SupervisorLoginServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		request.setCharacterEncoding("UTF-8");
-		String supervisorno = request.getParameter("supervisorno");
-		String supervisorpass = request.getParameter("supervisorpass");
-		System.out.println(supervisorno);
+		String sid = request.getParameter("sid");
+		String spw = request.getParameter("spw");
+		System.out.println(sid);
 		HashMap<String, String> map = new HashMap<>();
-		map.put("supervisorno", supervisorno);
-		map.put("supervisorpass", supervisorpass);
+		map.put("sid", sid);
+		map.put("spw", spw);
 
 		MemberService service = new MemberService();
 		String title = "";

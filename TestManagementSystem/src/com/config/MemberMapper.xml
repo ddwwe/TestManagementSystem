@@ -13,10 +13,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		from examinee
 		where id = #{id} and passwd = #{passwd}
 	</select>
-	<select 	id="SupervisorLogin" resultType="SupervisorDTO" parameterType="hashmap">
-	 select supervisorno, supervisorname, supervisorpass, placeno
+	<select	id="SupervisorLogin" resultType="SupervisorDTO" parameterType="hashmap">
+	 select sid, spw, sname, sgroup, sphone, spost, saddr1, saddr2, to_char(sbirth,'yyyy/mm/dd') sbirth, spath, scareers
 	  from	supervisor 
-	  where supervisorno=#{supervisorno} and supervisorpass=#{supervisorpass} </select>
+	  where sid=#{sid} and spw=#{spw} </select>
 </mapper>
 
 
