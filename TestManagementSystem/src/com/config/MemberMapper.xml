@@ -5,14 +5,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="member">
 
 	<select id="StudentLogin" parameterType="hashmap" resultType="StudentDTO">
-		select
-		id,birth, nation, sex, name, passwd, pw_question, pw_answer,
-		person, email,
-		post1, post2, addr1, addr2, rpost1, rpost2, raddr1,
-		raddr2
+		select eId, ePw, eName, eBirth, eEmail, ePhone, ePost, eAddr1, eAddr2, ePath
 		from examinee
-		where id = #{id} and passwd = #{passwd}
+		where eId = #{eId} and ePw = #{ePw}
 	</select>
+	
 	<select	id="SupervisorLogin" resultType="SupervisorDTO" parameterType="hashmap">
 	 select sid, spw, sname, sgroup, sphone, spost, saddr1, saddr2, to_char(sbirth,'yyyy/mm/dd') sbirth, spath, scareers
 	  from	supervisor 

@@ -91,7 +91,7 @@ System.out.println(dto.getSname());
 	<div id="third">
 		<div class="story">
 			<div class="content-wrapper">
-				<a href="studentLoginForm.jsp"> <img src="image/student.PNG"
+				<a href="StudentLoginFormServlet"> <img src="image/student.PNG"
 					width="280" height="300" border=0></a> <a
 					href="SuperLogin.jsp"> <img src="image/supervisor.png"
 					width="280" height="300" border=0></a>
