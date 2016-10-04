@@ -8,12 +8,8 @@
     <section class="content-header ">
       <h1>
                    회원가입	
-        <small>일반회원가입</small>
+        <small>수험생 회원가입</small>
       </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol>
     </section>
 
     <!-- Main content -->
@@ -48,55 +44,19 @@
 					            	생년월일
 					            	<span class="text-red">*</span>
 					            </label>
-					            <div class="col-sm-2">
-							    	<select class="form-control">
-							        	<option>년</option>
-							      	 	<option>스크립트릿(Scriptlet)</option>
-							       	 	<option>이용해서</option>
-							       		<option>집어넣자</option>
-							    	</select>
-					            </div>
+					            <div class="col-xs-2">
+          							<input class="form-control" name="birthYear" id="birthYear" type="text" placeholder="년">
+        						</div>
 					            
-					            <div class="col-sm-2">							    	
-							    	<select class="form-control">
-							        	<option>월</option>
-							      	 	<option>스크립트릿(Scriptlet)</option>
-							       	 	<option>이용해서</option>
-							       		<option>집어넣자</option>
-							    	</select>
-					             </div>
-					             
-					            <div class="col-sm-2">							    	
-							    	<select class="form-control">
-							        	<option>일</option>
-							      	 	<option>스크립트릿(Scriptlet)</option>
-							       	 	<option>이용해서</option>
-							       		<option>집어넣자</option>
-							    	</select>
-					             </div>
-					        </div>      						
-      						
-					        <div class="form-group">
-					            <label class="col-sm-3 control-label" for="inputNumber">
-					            	내국인/외국인
-					            	<span class="text-red">*</span>
-					            </label>
-					            <div class="col-sm-6">
- 									<label class="radio-inline"><input type="radio" name="optradio">내국인</label>
- 								 	<label class="radio-inline"><input type="radio" name="optradio">외국인</label>
-					             </div>
-					        </div>
-					        
-					        <div class="form-group">
-					            <label class="col-sm-3 control-label" for="inputNumberCheck">
-									성별
-									<span class="text-red">*</span>
-								</label>
-					          	<div class="col-sm-6">
- 									<label class="radio-inline"><input type="radio" name="optradio">남자</label>
- 									<label class="radio-inline"><input type="radio" name="optradio">여자</label>
-					          	</div> 
-					        </div>
+					            <div class="col-xs-2">
+          							<input class="form-control" name="birthMonth" id="birthMonth" type="text" placeholder="월">
+        						</div>
+        						
+					            <div class="col-xs-2">
+          							<input class="form-control" name="birthDay" id="birthDay" type="text" placeholder="일">
+        						</div>
+					        </div>   
+
       						
 					        <div class="form-group">
 					          	<label class="col-sm-3 control-label" for="inputPassword">
@@ -121,33 +81,7 @@
           							-->
 					            </div>
 					        </div>
-					        
-					        <div class="form-group">
-					            <label class="col-sm-3 control-label" for="11">
-					            	비밀번호 질문
-					            	<span class="text-red">*</span>
-					            </label>
-					            <div class="col-sm-6" >
-							    	<select class="form-control" id="11">
-							        	<option>- 선택하세요 -</option>
-							      	 	<option>스크립트릿(Scriptlet)</option>
-							       	 	<option>이용해서</option>
-							       		<option>집어넣자</option>
-							    	</select>
-							    </div>
-					        </div>	
-					        
-					        <div class="form-group">
-					            <label class="col-sm-3 control-label" for="inputName">
-					            	비밀번호 답변
-					            	<span class="text-red">*</span>
-					            </label>
-					          		<div class="col-sm-6">
-					            		<input class="form-control" id="inputName" type="text" placeholder="비밀번호 답변">
-					            		<p class="help-block">(비밀번호 분실시 사용됩니다. 질문의 답변을 잘 기억해 두세요)</p>
-					          		</div>
-					        </div>				        				        
-					        					                					
+					        	                					
 					        <div class="form-group">
 					            <label class="col-sm-3 control-label" for="inputName">
 					            	이름
@@ -166,7 +100,7 @@
 					        	<div class="col-sm-6">
 					          		<input class="form-control" id="email" type="email" placeholder="이메일">
 					        	</div>
-					        </div> 
+					        </div>
 					        
 					        <div class="form-group">
 					            <label class="col-sm-3 control-label" for="inputNumber">
@@ -180,21 +114,7 @@
 					            		</span>
 					            	</div>
 					            </div>
-					        </div>	
-					        
-					        <div class="form-group">
-					            <label class="col-sm-3 control-label" for="inputNumber">
-					             	이동전화
-					            </label>
-					            <div class="col-sm-6">
-					            	<div class="input-group">
-					            		<input type="tel" class="form-control" id="inputNumber" placeholder="- 없이 입력해 주세요" />
-					            		<span class="input-group-btn">
-					            		<button class="btn btn-success">인증번호 전송<i class="fa fa-mail-forward spaceLeft"></i></button>
-					            		</span>
-					            	</div>
-					            </div>
-					        </div>					        				        
+					        </div>	        				        
         			        
 					        <div class="form-group text-center">
 					        	<label class="col-sm-3 control-label" for="">

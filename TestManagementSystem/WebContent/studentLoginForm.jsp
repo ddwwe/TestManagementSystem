@@ -35,13 +35,8 @@
           <button type="submit" class="btn btn-primary btn-block btn-flat">로그인</button>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
-      <div class="row">
-        <div class="col-xs-8">
-        </div>
-        <!-- /.col -->
-        <!-- /.col -->
-      </div>
     </form>
+    <a href="StudentRegisterFormServlet"><button type="submit" class="btn btn-block btn-info btn-lg">수험생 회원가입</button></a>
 
   </div>
   <!-- /.login-box-body -->
