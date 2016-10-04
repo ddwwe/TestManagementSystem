@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-@WebServlet("/StudentMyPageServlet")
+@WebServlet("/StudentMyPageFormServlet")
 public class StudentMyPageFormServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dis=request.getRequestDispatcher("studentMyPageForm.jsp");
+		
+		RequestDispatcher dis = request.getRequestDispatcher("studentMyPageForm.jsp");
 		dis.forward(request, response);
 	}
 
