@@ -172,7 +172,7 @@
         			        
 					        <div class="form-group text-center">
 					        	<label class="col-sm-3 control-label" for="">
-					        		주민등록 거주지
+					        		주소
 					        		<span class="text-red">*</span>
 					        	</label>
 					        						        	

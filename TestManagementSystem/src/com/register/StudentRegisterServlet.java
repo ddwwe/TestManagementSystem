@@ -46,7 +46,7 @@ public class StudentRegisterServlet extends HttpServlet {
 			request.setAttribute("result", "success");
 		} catch (CommonException e) {
 			title= e.getMessage();
-			String link="MemberFormServlet";
+			String link="StudentRegisterFormServlet";
 			target="error.jsp";
 			request.setAttribute("title", title);
 			request.setAttribute("link", link);

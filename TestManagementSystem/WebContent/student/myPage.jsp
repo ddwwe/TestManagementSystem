@@ -6,8 +6,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header ">
       <h1>
-                   회원가입	
-        <small>수험생 회원가입</small>
+                   내 정보	
+        <small>정보 수정</small>
       </h1>
     </section>
 
@@ -19,7 +19,7 @@
     			<div class="box">
     				<div class="box-header with-border">
     					<i class="fa fa-pencil"></i>
-    					<h4 class="box-title">(<span class="text-red">*</span>) 필수입력 사항입니다.</h4>
+    					<h4 class="box-title">수정 가능한 항목 (비밀번호, 이메일, 전화번호, 주소)</h4>
     				</div>
     				
     				<div class="box-body">
@@ -30,7 +30,7 @@
           							<span class="text-red">*</span>
           						</label>
         						<div class="col-xs-6">
-          							<input class="form-control" name="eId" id="eId" type="text" placeholder="아이디">
+          							<input class="form-control" name="eId" id="eId" type="text" placeholder="아이디" disabled="disabled">
           							<span id="idCheck"></span>
           							<!-- ajax로 동적처리
           							<p class="text-info">사용가능한 아이디입니다.</p>
@@ -98,12 +98,7 @@
 					          		<span class="text-red">*</span>
 					          	</label>
 					        	<div class="col-sm-6">
-					        		<div class="input-group">
-					          			<input class="form-control" name="eEmail" id="eEmail" type="email" placeholder="이메일">
-					            		<span class="input-group-btn">
-					            		<button class="btn btn-success">인증번호 전송<i class="fa fa-mail-forward spaceLeft"></i></button>
-					            		</span>
-					            		</div>
+					          		<input class="form-control" name="eEmail" id="eEmail" type="email" placeholder="이메일">
 					        	</div>
 					        </div>
 					        
