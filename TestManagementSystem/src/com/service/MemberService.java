@@ -73,5 +73,21 @@ public class MemberService {
 		}
 		
 	}
+
+	// 수험생 마이페이지
+	public StudentDTO mypage(String eId) throws CommonException {
+
+		StudentDTO dto = null;
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			dto = session.selectOne("mypage", eId);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("mypage 실패");
+		} finally {
+			session.close();
+		}
+		return dto;
+	}
 	
 }

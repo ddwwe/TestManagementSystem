@@ -21,6 +21,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	  from	supervisor 
 	  where sid=#{sid} and spw=#{spw}
 	</select>
+	
+	<select id="mypage" parameterType="string" resultType="StudentDTO">
+		select eId, ePw, eName, eBirth, eEmail, ePhone, ePost, eAddr1, eAddr2, ePath
+		from examinee
+		where eId = #{eId}
+	</select>
+	
 </mapper>
 
 
