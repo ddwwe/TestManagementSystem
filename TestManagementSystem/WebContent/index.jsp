@@ -1,6 +1,9 @@
 <%@page import="com.dto.SupervisorDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>	
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="style.css" rel="stylesheet" type="text/css" />
@@ -67,6 +70,7 @@
 			<p>&nbsp;</p>
 			<a href="#four" title="Next Section"><img
 				src="image/login.png"  width="150" height="50" alt="Link" /></a>
+			
 			</div>
 		</div>
 		<!--.story-->
@@ -132,9 +136,18 @@ System.out.println(dto.getSname());
 	<div id="four">
 		<div class="story">
 			<div class="content-wrapper">
+			
+			<c:if test="${sessionScope.stuLogin==null}">
 				<a href="StudentLoginFormServlet"> <img src="image/student.PNG"
-					width="280" height="300" border=0></a> <a
-					href="SuperLogin.jsp"> <img src="image/supervisor.png"
+					width="280" height="300" border=0></a> 
+			</c:if>
+			 
+			<c:if test="${sessionScope.stuLogin!=null}">
+				<a href="studentMainForm.jsp"> <img src="image/student.PNG"
+					width="280" height="300" border=0></a> 
+			</c:if>
+			
+				<a href="SuperLogin.jsp"> <img src="image/supervisor.png"
 					width="280" height="300" border=0></a>
 			</div>
 		</div>
