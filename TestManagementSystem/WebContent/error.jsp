@@ -1,14 +1,35 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>    
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>에러</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
+
 </head>
-<body>
-<h2>${title}</h2>
-<hr>
-<a href="${link}">바로가기</a>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+  <jsp:include page="header/header.jsp" flush="true"></jsp:include>
+  <jsp:include page="error/errorSidebar.jsp" flush="true"></jsp:include>
+  <jsp:include page="error/error.jsp" flush="true"></jsp:include>
+  <jsp:include page="footer/footer.jsp" flush="true"></jsp:include>
+
+</div>
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>                                                                                                                                                                                                                                                                                     
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="dist/js/app.min.js"></script>
+<!-- 二쇱냼 寃��깋 -->
+<script type="text/javascript" src="plugins/search/search.min.js"></script>
+
+<script type="text/javascript">
+	$("#postcodify_search_button").postcodifyPopUp();
+</script>
+
 </body>
 </html>
