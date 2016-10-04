@@ -42,4 +42,19 @@ public class MemberService {
 		}
 		return dto;
 	}// end addMember
+	
+	//감독관 회원정보 수정
+	public void updateMember(SupervisorDTO dto) throws CommonException {
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			int n = session.update("updateMember", dto);
+			session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("회원등록 실패");
+		} finally {
+			session.close();
+		}
+	}
+	
 }

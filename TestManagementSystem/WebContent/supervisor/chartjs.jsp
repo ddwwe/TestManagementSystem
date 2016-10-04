@@ -39,13 +39,14 @@
 		$('table').visualize({
 			type : 'pie',
 			pieMargin : 10,
-			title : '2009 Total Sales by Individual'
 		});
 		$('table').visualize();
 	});
 </script>
 
-
+<%
+int may = 10;
+%>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 	<div class="wrapper">
@@ -164,7 +165,7 @@
 										<td>42340</td>
 										<td>42330</td>
 										<td>41250</td>
-										<td>0</td>
+										<td>4123</td>
 									<tr>
 										<th>기능장</th>
 										<td>4213</td>
@@ -172,7 +173,7 @@
 										<td>2150</td>
 										<td>2650</td>
 										<td>2150</td>
-										<td>0</td>
+										<td>1</td>
 									</tr>
 									<tr>
 										<th>기술사</th>
@@ -181,7 +182,7 @@
 										<td>5210</td>
 										<td>2315</td>
 										<td>2150</td>
-										<td>0</td>
+										<td>1</td>
 									</tr>
 
 									<tr>
@@ -191,7 +192,7 @@
 										<td>2190</td>
 										<td>3125</td>
 										<td>2150</td>
-										<td>0</td>
+										<td>1</td>
 									</tr>
 
 								</tbody>

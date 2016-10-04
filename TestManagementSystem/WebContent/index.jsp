@@ -19,16 +19,17 @@
 </style>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('#nav').localScroll(800);
+		$('#nav').localScroll(1000);
 
 		//.parallax(xPosition, speedFactor, outerHeight) options:
 		//xPosition - Horizontal position of the element
 		//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
 		//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
 		$('#intro').parallax("50%", 0.1);
-		$('#second').parallax("50%", 0.1);
-		$('.bg').parallax("50%", 0.4);
+		$('#second').parallax("80%", 0.1);
+		$('.bg').parallax("40%", 0.4);
 		$('#third').parallax("50%", 0.3);
+		$('#four').parallax("50%", 0.1);
 
 	})
 </script>
@@ -41,21 +42,31 @@
 		<li><a href="#second" title="Next Section"><img
 				src="image/dot.png" alt="Link" /></a></li>
 		<li><a href="#third" title="Next Section"><img
-				src="image/login.png" alt="Link" /></a></li>
+				src="image/dot.png" alt="Link" /></a></li>
+		<li><a href="#four" title="Next Section"><img
+				src="image/dot.png" alt="Link" /></a></li>		
+				
 	</ul>
 
 	<div id="intro">
 		<div class="story">
 			<div class="float-left">
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
+			</div>
+			<div>
+			</div>
+			<div>
+			</div>
+			<div class="float-right">
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<a href="#four" title="Next Section"><img
+				src="image/login.png"  width="150" height="50" alt="Link" /></a>
 			</div>
 		</div>
 		<!--.story-->
@@ -66,15 +77,14 @@
 		<div class="story">
 			<div class="bg"></div>
 			<div class="float-right">
-				<h1>"답은 언제나 하나뿐!"</h1>
-				<p>젋었을 때 열심히 배우지 않으면 늙어서 후회한다. - 중국 유학자 주희 -</p>
-				<p>사람은 미치광이라는 말을 들을 정도가 아니면 아무것도 이룰 수 없다 - 박태준 포스코명예회장 -</p>
-				<p>쉬운 길, 편안한 길로 가는 사람은 성공의 묘미를 못 느낀다. 어려움 없이 성취되는 것은 하나도 없다 - 노만
-					V.필 -</p>
-				<p>평범한 인간이 이따금 비상한 결의로 성공하는 경우가 있는데, 그것은 그가 훌륭한 인물이어서가 아니라 불안에서
-					벗어나려고 끊임없이 노력한 결과이다. - 몽테로랑 -</p>
-				<p>공부 밖에 할줄 모르는 "바보" 한테 잘 보여라. 사회 나온 다음에는 아마 그 "바보" 밑에서 일하게 될지
-					모른다.</p>
+				<h2>"HIMNET(힘넷)이란?"</h2>
+				<p>한국산업인력공단 + 큐넷이 합쳐진 사이트입니다.</p>
+				<p></p>
+				<p>시험감독관들은 인적사항파악, 인원통계, 문제가 발생시 이것을 수기로 작성하여</p>
+				<p>중앙통제부에 직접 가서 보고하였습니다. </p>
+				<p>또, 중앙통제부에선 이것들을 수집하여 다시 위에한테 보고를 했는데</p>
+				<p>이제 힘넷에서는 이런 번거러움 필요 없이 바로 안드로이드와 연동하여
+				 실시간 통계를 내고, 상황을 빠르게 조치할 수 있도록 하는 사이트입니다.</p>
 			</div>
 		</div>
 		<!--.story-->
@@ -86,9 +96,40 @@
 System.out.println(dto.getSname());
 
 }%>
+<div id="third">
+		<div class="story">
+			<div >
+	 <img class="mySlides" src="image/himnet.jpg" style="width: 100%" height="300"> 
+		<img class="mySlides" src="image/qnet.PNG" style="width: 100%" height="300px">
+		 <img class="mySlides" src="image/sanup.png" style="width: 100%"> 
+	</div>
+
+	<script>
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			myIndex++;
+			if (myIndex > x.length) {
+				myIndex = 1
+			}
+			x[myIndex - 1].style.display = "block";
+			setTimeout(carousel, 2000); // Change image every 2 seconds
+		}
+	</script>
+
+		</div>
+		<!--.story-->
+	</div>
+
 	</div>
 	<!--#second-->
-	<div id="third">
+	<div id="four">
 		<div class="story">
 			<div class="content-wrapper">
 				<a href="studentLoginForm.jsp"> <img src="image/student.PNG"

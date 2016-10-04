@@ -127,6 +127,7 @@
         <div class="col-md-3">
 
           <!-- Profile Image -->
+          <form action="<%=request.getContextPath() %>/test/test.do" method="post" enctype="multipart/form-data">
           <div class="box box-primary">
             <div class="box-body box-profile">
               <img class="profile-user-img img-responsive img-circle" src="../image/<%= dto.getSid()%>.jpg" alt="User profile picture">
@@ -143,14 +144,13 @@
                   <b>생년월일</b>
                   <a class="pull-center"><%= dto.getSbirth()%></a>
                 </li>
-                <a href="#" class="btn btn-primary btn-block"><b>사진수정하기</b></a>
               </ul>
 
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
-
+</form>
           <!-- About Me Box -->
           <div class="box box-primary">
             <div class="box-header with-border">
@@ -179,6 +179,7 @@
           <!-- /.box -->
         </div>
         <!-- /.col -->
+        <form action="SupervisorUpdate" method="post">
         <div class="col-md-9">
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
@@ -201,11 +202,7 @@
                     <div class="col-sm-10">
                       <input type="text" class="form-control" id="inputEmail" value="<%= dto.getSphone()%>" readonly="readonly">
                     </div>
-                    
                   </div>
-                  
-                  
-                  
                   <div class="form-group">
                     <label for="inputName" class="col-sm-2 control-label">소속</label>
 					

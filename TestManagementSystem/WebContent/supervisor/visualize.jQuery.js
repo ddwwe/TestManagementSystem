@@ -1,43 +1,46 @@
 /**
  * --------------------------------------------------------------------
- * jQuery-Plugin "visualize"
- * by Scott Jehl, scott@filamentgroup.com
- * http://www.filamentgroup.com
- * Copyright (c) 2009 Filament Group 
- * Dual licensed under the MIT (filamentgroup.com/examples/mit-license.txt) and GPL (filamentgroup.com/examples/gpl-license.txt) licenses.
- * 	
+ * jQuery-Plugin "visualize" by Scott Jehl, scott@filamentgroup.com
+ * http://www.filamentgroup.com Copyright (c) 2009 Filament Group Dual licensed
+ * under the MIT (filamentgroup.com/examples/mit-license.txt) and GPL
+ * (filamentgroup.com/examples/gpl-license.txt) licenses.
+ * 
  * --------------------------------------------------------------------
  */
 (function($) { 
 $.fn.visualize = function(options, container){
 	return $(this).each(function(){
-		//configuration
+		// configuration
 		var o = $.extend({
-			type: 'bar', //also available: area, pie, line
-			width: $(this).width(), //height of canvas - defaults to table height
-			height: $(this).height(), //height of canvas - defaults to table height
-			appendTitle: true, //table caption text is added to chart
-			title: null, //grabs from table caption if null
-			appendKey: true, //color key is added to chart
+			type: 'bar', // also available: area, pie, line
+			width: $(this).width(), // height of canvas - defaults to table
+									// height
+			height: $(this).height(), // height of canvas - defaults to table
+										// height
+			appendTitle: true, // table caption text is added to chart
+			title: null, // grabs from table caption if null
+			appendKey: true, // color key is added to chart
 			colors: ['#be1e2d','#666699','#92d5ea','#ee8310','#8d10ee','#5a3b16','#26a4ed','#f45a90','#e9e744'],
-			textColors: [], //corresponds with colors array. null/undefined items will fall back to CSS
-			parseDirection: 'x', //which direction to parse the table data
-			pieMargin: 20, //pie charts only - spacing around pie
+			textColors: [], // corresponds with colors array. null/undefined
+							// items will fall back to CSS
+			parseDirection: 'x', // which direction to parse the table data
+			pieMargin: 20, // pie charts only - spacing around pie
 			pieLabelPos: 'inside',
-			lineWeight: 4, //for line and area - stroke weight
+			lineWeight: 4, // for line and area - stroke weight
 			barGroupMargin: 10,
-			barMargin: 1, //space around bars in bar chart (added to both sides of bar)
-			yLabelInterval: 30 //distance between y labels
+			barMargin: 1, // space around bars in bar chart (added to both
+							// sides of bar)
+			yLabelInterval: 30 // distance between y labels
 		},options);
 		
-		//reset width, height to numbers
+		// reset width, height to numbers
 		o.width = parseFloat(o.width);
 		o.height = parseFloat(o.height);
 		
 		
 		var self = $(this);
 		
-		//function to scrape data from html table
+		// function to scrape data from html table
 		function scrapeTable(){
 			var colors = o.colors;
 			var textColors = o.textColors;
@@ -173,7 +176,7 @@ $.fn.visualize = function(options, container){
 		};
 		
 		
-		//function to create a chart
+		// function to create a chart
 		var createChart = {
 			pie: function(){	
 				
@@ -189,7 +192,7 @@ $.fn.visualize = function(options, container){
 				var labels = $('<ul class="visualize-labels"></ul>')
 					.insertAfter(canvas);
 
-				//draw the pie pieces
+				// draw the pie pieces
 				$.each(memberTotals, function(i){
 					var fraction = (this <= 0 || isNaN(this))? 0 : this / dataSum;
 					ctx.beginPath();
@@ -229,25 +232,31 @@ $.fn.visualize = function(options, container){
 			line: function(area){
 			
 				if(area){ canvasContain.addClass('visualize-area'); }
+				else{ canvasContain.addClass('visualize-line'); }
 			
-				//write X labels
-				var xInterval = canvas.width() / (xLabels.length -1);
+				// write X labels
 				var xlabelsUL = $('<ul class="visualize-labels-x"></ul>')
 					.width(canvas.width())
 					.height(canvas.height())
 					.insertBefore(canvas);
+				$.each(xLabels, function(i){ 
+					var thisLi = $('<li><span>'+this+'</span></li>')
+						.prepend('<span class="line" />')
+						.css('left', xInterval * i)
+						.appendTo(xlabelsUL);						
+					var label = thisLi.find('span:not(.line)');
+					var leftOffset = label.width()/-2;
+					if(i == 0){ leftOffset = 0; }
+					else if(i== xLabels.length-1){ leftOffset = -label.width(); }
+					label
+						.css('margin-left', leftOffset)
+						.addClass('label');
+				});
 
-				//write Y labels
-				var yScale = canvas.height() / totalYRange;
-				var liBottom = canvas.height() / (yLabels.length-1);
-				var ylabelsUL = $('<ul class="visualize-labels-y"></ul>')
-					.width(canvas.width())
-					.height(canvas.height())
-					.insertBefore(canvas);
-					
+				// write Y labels
 
-				//start from the bottom left
-				//iterate and draw
+				// iterate and draw
+			
 			},
 			
 			area: function(){
@@ -258,7 +267,7 @@ $.fn.visualize = function(options, container){
 				
 				canvasContain.addClass('visualize-bar');
 			
-				//write X labels
+				// write X labels
 				var xInterval = canvas.width() / (xLabels.length);
 				var xlabelsUL = $('<ul class="visualize-labels-x"></ul>')
 					.width(canvas.width())
@@ -274,7 +283,7 @@ $.fn.visualize = function(options, container){
 					label.addClass('label');
 				});
 
-				//write Y labels
+				// write Y labels
 				var yScale = canvas.height() / totalYRange;
 				var liBottom = canvas.height() / (yLabels.length-1);
 				var ylabelsUL = $('<ul class="visualize-labels-y"></ul>')
@@ -295,12 +304,13 @@ $.fn.visualize = function(options, container){
 							.addClass('label');
 				});
 
-				//start from the bottom left
+				// start from the bottom left
 				ctx.translate(0,zeroLoc);
-				//iterate and draw
+				// iterate and draw
 				for(var h=0; h<dataGroups.length; h++){
 					ctx.beginPath();
-					var linewidth = (xInterval-o.barGroupMargin*2) / dataGroups.length; //removed +1 
+					var linewidth = (xInterval-o.barGroupMargin*2) / dataGroups.length; // removed
+																						// +1
 					var strokeWidth = linewidth - (o.barMargin*2);
 					ctx.lineWidth = strokeWidth;
 					var points = dataGroups[h].points;
@@ -320,22 +330,22 @@ $.fn.visualize = function(options, container){
 			}
 		};
 	
-		//create new canvas, set w&h attrs (not inline styles)
+		// create new canvas, set w&h attrs (not inline styles)
 		var canvasNode = document.createElement("canvas"); 
 		canvasNode.setAttribute('height',o.height);
 		canvasNode.setAttribute('width',o.width);
 		var canvas = $(canvasNode);
 			
-		//get title for chart
+		// get title for chart
 		var title = o.title || self.find('caption').text();
 		
-		//create canvas wrapper div, set inline w&h, append
+		// create canvas wrapper div, set inline w&h, append
 		var canvasContain = (container || $('<div class="visualize" role="img" aria-label="Chart representing data from the table: '+ title +'" />'))
 			.height(o.height)
 			.width(o.width)
 			.append(canvas);
 
-		//scrape table (this should be cleaned up into an obj)
+		// scrape table (this should be cleaned up into an obj)
 		var tableData = scrapeTable();
 		var dataGroups = tableData.dataGroups();
 		var allData = tableData.allData();
@@ -348,19 +358,19 @@ $.fn.visualize = function(options, container){
 		var xLabels = tableData.xLabels();
 		var yLabels = tableData.yLabels();
 								
-		//title/key container
+		// title/key container
 		if(o.appendTitle || o.appendKey){
 			var infoContain = $('<div class="visualize-info"></div>')
 				.appendTo(canvasContain);
 		}
 		
-		//append title
+		// append title
 		if(o.appendTitle){
 			$('<div class="visualize-title">'+ '</div>').appendTo(infoContain);
 		}
 		
 		
-		//append key
+		// append key
 		if(o.appendKey){
 			var newKey = $('<ul class="visualize-key"></ul>');
 			var selector = (o.parseDirection == 'x') ? 'tr:gt(0) th' : 'tr:eq(0) th' ;
@@ -371,26 +381,27 @@ $.fn.visualize = function(options, container){
 			newKey.appendTo(infoContain);
 		};		
 		
-		//append new canvas to page
+		// append new canvas to page
 		
 		if(!container){canvasContain.insertAfter(this); }
 		if( typeof(G_vmlCanvasManager) != 'undefined' ){ G_vmlCanvasManager.initElement(canvas[0]); }	
 		
-		//set up the drawing board	
+		// set up the drawing board
 		var ctx = canvas[0].getContext('2d');
 		
-		//create chart
+		// create chart
 		createChart[o.type]();
 		
-		//clean up some doubled lines that sit on top of canvas borders (done via JS due to IE)
+		// clean up some doubled lines that sit on top of canvas borders (done
+		// via JS due to IE)
 		$('.visualize-line li:first-child span.line, .visualize-line li:last-child span.line, .visualize-area li:first-child span.line, .visualize-area li:last-child span.line, .visualize-bar li:first-child span.line,.visualize-bar .visualize-labels-y li:last-child span.line').css('border','none');
 		if(!container){
-		//add event for updating
+		// add event for updating
 		canvasContain.bind('visualizeRefresh', function(){
 			self.visualize(o, $(this).empty()); 
 		});
 		}
-	}).next(); //returns canvas(es)
+	}).next(); // returns canvas(es)
 };
 })(jQuery);
 
