@@ -77,7 +77,7 @@
     				</div>
     				
     				<div class="box-body">
-    					<form class="form-horizontal">		  
+    					<form class="form-horizontal" action="StudentRegisterServlet" method="get">		  
         					<div class="form-group">
           						<label class="col-xs-3 control-label" for="id">
           							아이디

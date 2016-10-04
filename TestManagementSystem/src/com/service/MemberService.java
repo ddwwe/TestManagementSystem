@@ -56,5 +56,22 @@ public class MemberService {
 			session.close();
 		}
 	}
+
+	// 수험생 회원가입
+	public void addMember(StudentDTO dto) throws CommonException {
+
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			int n = session.insert("addMember", dto);
+			session.commit();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("회원등록 실패");
+		} finally {
+			session.close();
+		}
+		
+	}
 	
 }
