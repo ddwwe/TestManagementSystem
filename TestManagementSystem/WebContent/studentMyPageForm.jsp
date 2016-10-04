@@ -17,7 +17,7 @@
 <div class="wrapper">
   <jsp:include page="header/studentHeader.jsp" flush="true"></jsp:include>
   <jsp:include page="sidebar/studentSidebar.jsp" flush="true"></jsp:include>
-  <jsp:include page="student/main.jsp" flush="true"></jsp:include>
+  <jsp:include page="student/myPage.jsp" flush="true"></jsp:include>
   <jsp:include page="footer/footer.jsp" flush="true"></jsp:include>
 
 </div>
