@@ -27,21 +27,16 @@
 
     <form action="StudentLoginServlet" method="get">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="id" id="id" placeholder="id">
+        <input type="text" class="form-control" name="eId" id="eId" placeholder="id">
         <span class="glyphicon glyphicon-ok form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" name="passwd" id="passwd" placeholder="passwd">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+        <input type="password" class="form-control" name="ePw" id="ePw" placeholder="passwd">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">로그인</button>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
-      <div class="row">
-        <div class="col-xs-8">
-        </div>
-        <!-- /.col -->
-        <!-- /.col -->
-      </div>
     </form>
+    <a href="StudentRegisterFormServlet"><button type="submit" class="btn btn-block btn-info btn-lg">수험생 회원가입</button></a>
 
   </div>
   <!-- /.login-box-body -->

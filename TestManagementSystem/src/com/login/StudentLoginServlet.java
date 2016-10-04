@@ -22,12 +22,12 @@ public class StudentLoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		request.setCharacterEncoding("UTF-8");
-		String id = request.getParameter("id");
-		String passwd = request.getParameter("passwd");
+		String id = request.getParameter("eId");
+		String passwd = request.getParameter("ePw");
 		
 		HashMap<String, String> map= new HashMap<>();
-		map.put("id", id);
-		map.put("passwd", passwd);
+		map.put("eId", id);
+		map.put("ePw", passwd);
 		
 		MemberService service = new MemberService();
 		  String title="";
