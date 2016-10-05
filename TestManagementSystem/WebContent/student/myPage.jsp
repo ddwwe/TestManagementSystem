@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
+<script type="text/javascript" src="jquery-3.1.0.min.js"></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script>
     //본 예제에서는 도로명 주소 표기 방식에 대한 법령에 따라, 내려오는 데이터를 조합하여 올바른 주소를 구성하는 방법을 설명합니다.
@@ -86,13 +87,13 @@
     				</div>
     				
     				<div class="box-body">
-    					<form class="form-horizontal" action="StudentRegisterServlet" method="get">		  
+    					<form class="form-horizontal" action="StudentUpdateServlet" method="get">		  
         					<div class="form-group">
           						<label class="col-xs-3 control-label" for="id">
           							아이디
           						</label>
         						<div class="col-xs-6">
-          							<input class="form-control" name="eId" id="eId" type="text" value="${stuMypage.eId}" disabled="disabled">
+          							<input class="form-control" name="eId" id="eId" type="text" value="${stuMypage.eId}" readonly="readonly">
           							<span id="idCheck"></span>
           							<!-- ajax로 동적처리
           							<p class="text-info">사용가능한 아이디입니다.</p>
@@ -106,17 +107,17 @@
 					            	생년월일
 					            </label>
 					            <div class="col-xs-2">
-          							<input class="form-control" name="birthYear" id="birthYear" type="text" value="<%=birthYear%>" disabled="disabled">
+          							<input class="form-control" name="birthYear" id="birthYear" type="text" value="<%=birthYear%>" readonly="readonly">
         						</div>
 					            
 					            <div class="col-xs-2">
-          							<input class="form-control" name="birthMonth" id="birthMonth" type="text" value="<%=birthMonth%>" disabled="disabled">
+          							<input class="form-control" name="birthMonth" id="birthMonth" type="text" value="<%=birthMonth%>" readonly="readonly">
         						</div>
         						
 					            <div class="col-xs-2">
-          							<input class="form-control" name="birthDay" id="birthDay" type="text" value="<%=birthDay%>" disabled="disabled">
+          							<input class="form-control" name="birthDay" id="birthDay" type="text" value="<%=birthDay%>" readonly="readonly">
         						</div>
-					        </div>   
+					        </div>
 
       						
 					        <div class="form-group">
@@ -125,7 +126,8 @@
 					          		</label>
 					        	<div class="col-sm-6">
 					          		<input class="form-control" name="ePw" id="ePw" type="password" placeholder="비밀번호">
-					        	<p class="help-block">비밀번호 조합예시: korea123@ 입력가능 특수문자: ! @ # $ % ^ & * (보안지침에 의거하여 비밀번호는 9~16자리이며, 반드시 영문자 숫자 특수문자를 모두 혼합하여 입력하시기 바랍니다. 대소문자 구분되므로 주의!)</p>
+					        		<span id="result"></span>
+					        	<p class="help-block">비밀번호 조합예시: korea123@<br> 보안지침에 의거하여 비밀번호는 무조건 9~16자리 입니다.<br>비밀번호는 영문자 숫자 특수문자를 혼합하여 입력하시는 것을 권장합니다.</p>
 					        	</div>
 					        </div>
 					        
@@ -134,7 +136,8 @@
 					        		비밀번호 확인
 					        	</label>
 					            <div class="col-sm-6">
-					            <input class="form-control" id="inputPasswordCheck" type="password" placeholder="비밀번호 확인">
+					            <input class="form-control" name="ePw2" id="ePw2" type="password" placeholder="비밀번호 확인">
+					            <span id="result2"></span>
 					            	<!-- ajax로 동적처리  
           							<p class="text-danger">비밀번호가 틀립니다.</p>
           							-->
@@ -146,7 +149,7 @@
 					            	이름
 					            </label>
 					          		<div class="col-sm-6">
-					            		<input class="form-control" name="eName" id="eName" type="text" value="${stuMypage.eName}">
+					            		<input class="form-control" name="eName" id="eName" type="text" value="${stuMypage.eName}" readonly="readonly">
 					          		</div>
 					        </div>
 					        
@@ -215,6 +218,86 @@
 					          	</div>
 						    </div>
         				</form>
+        				<div class="col-sm-12 text-right">
+        					<a href="StudentDeleteServlet"><input class="btn btn-xs btn-danger" value="회원탈퇴"></a>
+        				</div>
+        				
+        				<script type="text/javascript">
+
+						   $(document).ready(function(){
+							  
+							   $("#ePw2").on("keyup", function(event){
+								 $("#result2").removeClass();
+								   var p = $("#ePw").val();
+								   var p2 = $("#ePw2").val();
+								   if(p == p2){
+									   $("#result2").text("비밀번호가 일치합니다");
+								   }else{
+									   $("#result2").text("비밀번호가 불일치합니다");
+								   }
+							   });
+							   
+							   $("#ePw").on("keyup", function(event){
+									 $("#result").removeClass();
+									   var p = $("#ePw").val();
+									   if(p.length < 9 || p.length > 16){
+										   $("#sub").attr("disabled", true);
+										   $("#result").text("비밀번호는 9~16자로 입력 해주세요.");
+									   }else{
+										   $("#result").text("입력하신 비밀번호가 9~16자 입니다.");
+										   $("#sub").attr("disabled", false);
+									   }
+								});
+							   
+							   $("form").on("submit", function(event){
+								   
+								    var eId = $("#eId").val();
+								    if(eId == ''){
+								    	alert("아이디를 입력하세요");
+								    	return false;
+								    }else if($("#birthYear").val() == ''){
+								    	alert("생년월일(년)을 입력하세요");
+								    	return false;
+								    }else if($("#birthMonth").val() == ''){
+								    	alert("생년월일(월)을 입력하세요");
+								    	return false;
+								    }else if($("#birthDay").val() == ''){
+								    	alert("생년월일(일)을 입력하세요");
+								    	return false;
+								    }else if($("#ePw").val() == ''){
+								    	alert("비밀번호를 입력하세요");
+								    	return false;
+								    }else if($("#ePw2").val() == ''){
+								    	alert("비밀번호 확인을 입력하세요");
+								    	return false;
+								    }else if($("#eName").val() == ''){
+								    	alert("이름을 입력하세요");
+								    	return false;
+								    }else if($("#ePost").val() == ''){
+								    	alert("우편번호를 입력하세요");
+								    	return false;
+								    }else if($("#eAddr1").val() == ''){
+								    	alert("주소를 입력하세요");
+								    	return false;
+								    }else if($("#eAddr2").val() == ''){
+								    	alert("주소를 입력하세요");
+								    	return false;
+								    }else if($("#ePhone").val() == ''){
+								    	alert("전화번호를 입력하세요");
+								    	return false;
+								    }else if($("#eEmail").val() == ''){
+								    	alert("이메일을 입력하세요");
+								    	return false;
+								    }else{
+								    	//성공
+								    	alert("학생 회원정보를 수정합니다.");
+								    }
+								   
+							   });
+							   
+						   });
+					   </script>
+        				
         			</div>
         		</div>
     		</div>

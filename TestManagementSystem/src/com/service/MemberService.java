@@ -90,4 +90,34 @@ public class MemberService {
 		return dto;
 	}
 	
+	// 수험생 삭제
+	public void deleteStudent(String eId) throws CommonException {
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				int n = session.delete("deleteMember", eId);
+				session.commit();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("회원삭제 실패");
+			} finally {
+				session.close();
+			}
+	}
+
+	// 수험생 정보 갱신
+	public void updateMember(StudentDTO dto) throws CommonException {
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			int n = session.update("updateMember", dto);
+			session.commit();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("회원수정 실패");
+		} finally {
+			session.close();
+		}
+	}
+	
 }
