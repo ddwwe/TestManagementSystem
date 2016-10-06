@@ -155,12 +155,8 @@
 					          		<span class="text-red">*</span>
 					          	</label>
 					        	<div class="col-sm-6">
-					        		<div class="input-group">
 					          			<input class="form-control" name="eEmail" id="eEmail" type="email" placeholder="이메일">
-					            		<span class="input-group-btn">
-					            		<button class="btn btn-success">인증번호 전송<i class="fa fa-mail-forward spaceLeft"></i></button>
-					            		</span>
-					            		</div>
+					            		
 					        	</div>
 					        </div>
 					        
