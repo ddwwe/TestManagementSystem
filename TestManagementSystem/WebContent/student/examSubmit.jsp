@@ -63,7 +63,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header ">
       <h1>
-                   시험접수	
+                   원서접수	
         <small>수험생 시험원서접수</small>
       </h1>
     </section>
@@ -74,13 +74,9 @@
     	<div class="row">
     		<div class="col-xs-12">
     			<div class="box">
-    				<div class="box-header with-border">
-    					<i class="fa fa-pencil"></i>
-    					<h4 class="box-title">(<span class="text-red">*</span>) 필수입력 사항입니다.</h4>
-    				</div>
     				
     				<div class="box-body">
-    					<form class="form-horizontal" action="StudentRegisterServlet" method="get">		  
+    					<form class="form-horizontal" action="ExamSubmitServlet" method="post" enctype="multipart/form-data">		  
         					<div class="form-group">
           						<label class="col-xs-3 control-label" for="id">
           							아이디
@@ -217,6 +213,10 @@
 					        <div class="form-group">
 					        	<div class="col-sm-12 text-center">
 					            	<input class="btn btn-primary btn-info" id="sub" type="submit" value="회원가입">
+					          	</div>
+					          	
+					          	<div class="col-sm-12 text-center">
+					            	파일<input type="file" name="theFIle">
 					          	</div>
 						    </div>
         				</form>
