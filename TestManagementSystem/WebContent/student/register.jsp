@@ -1,3 +1,5 @@
+<%@page import="com.config.MySqlSessionFactory"%>
+<%@page import="org.apache.ibatis.session.SqlSession"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
@@ -86,7 +88,7 @@
           						</label>
         						<div class="col-xs-6">
           							<input class="form-control" name="eId" id="eId" type="text" placeholder="아이디">
-          							<span id="idCheck"></span>
+          							<span id="resultId"></span>
           							<!-- ajax로 동적처리
           							<p class="text-info">사용가능한 아이디입니다.</p>
           							<p class="text-danger">사용불가능한 아이디입니다.</p>
@@ -223,6 +225,27 @@
 
 						   $(document).ready(function(){
 							  
+							   $("#eId").on("keyup", function(event){
+								   
+								   //Ajax 연동 
+								 //ajax통신
+									jQuery.ajax({
+										type:"GET",
+										url:"idCheck.jsp",
+										dataType:"text",
+										data:{
+											   eId:$("#eId").val()
+											},
+										success:function(responseData,status,xhr){
+											console.log(responseData);
+											$("#resultId").text(responseData);
+										},
+										error:function(xhr,status,error){
+											console.log("error");
+										}
+									});
+							   });
+							   
 							   $("#ePw2").on("keyup", function(event){
 								 $("#result2").removeClass();
 								   var p = $("#ePw").val();

@@ -4,6 +4,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member">
 
+	<select id="idCheck" parameterType="string" resultType="string">
+      select eId
+      from examinee
+      where eId = #{eId}
+    </select>
+
 	<delete id="deleteMember" parameterType="string">
 		delete from examinee
       	where eId = #{eId}
