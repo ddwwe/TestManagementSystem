@@ -1,4 +1,5 @@
-<%@page import="com.dto.StudentDTO"%>
+<%@page import="com.config.MySqlSessionFactory"%>
+<%@page import="org.apache.ibatis.session.SqlSession"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
@@ -57,21 +58,13 @@
     }
 </script>
     
-<% // 생년월일 나누기
-	StudentDTO dto = (StudentDTO)request.getAttribute("stuMypage");
-	String birth = dto.geteBirth();
-	String birthYear = birth.substring(0, 4);
-	String birthMonth = birth.substring(5, 7);
-	String birthDay = birth.substring(8, 10);
-%>  
-  
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper ">
     <!-- Content Header (Page header) -->
     <section class="content-header ">
       <h1>
-                   내 정보	
-        <small>정보 수정</small>
+                   시험접수	
+        <small>수험생 시험원서접수</small>
       </h1>
     </section>
 
@@ -83,50 +76,53 @@
     			<div class="box">
     				<div class="box-header with-border">
     					<i class="fa fa-pencil"></i>
-    					<h4 class="box-title">수정 가능한 항목 (비밀번호, 이메일, 전화번호, 주소)</h4>
+    					<h4 class="box-title">(<span class="text-red">*</span>) 필수입력 사항입니다.</h4>
     				</div>
     				
     				<div class="box-body">
-    					<form class="form-horizontal" action="StudentUpdateServlet" method="get">		  
+    					<form class="form-horizontal" action="StudentRegisterServlet" method="get">		  
         					<div class="form-group">
           						<label class="col-xs-3 control-label" for="id">
           							아이디
+          							<span class="text-red">*</span>
           						</label>
         						<div class="col-xs-6">
-          							<input class="form-control" name="eId" id="eId" type="text" value="${stuMypage.eId}" readonly="readonly">
-          							<span id="idCheck"></span>
+          							<input class="form-control" name="eId" id="eId" type="text" placeholder="아이디">
+          							<span id="resultId"></span>
           							<!-- ajax로 동적처리
           							<p class="text-info">사용가능한 아이디입니다.</p>
           							<p class="text-danger">사용불가능한 아이디입니다.</p>
           							-->
         						</div>
       						</div>
-      						
+
 					        <div class="form-group">
 					            <label class="col-sm-3 control-label" for="inputNumber">
 					            	생년월일
+					            	<span class="text-red">*</span>
 					            </label>
 					            <div class="col-xs-2">
-          							<input class="form-control" name="birthYear" id="birthYear" type="text" value="<%=birthYear%>" readonly="readonly">
+          							<input class="form-control" name="birthYear" id="birthYear" type="text" placeholder="년">
         						</div>
 					            
 					            <div class="col-xs-2">
-          							<input class="form-control" name="birthMonth" id="birthMonth" type="text" value="<%=birthMonth%>" readonly="readonly">
+          							<input class="form-control" name="birthMonth" id="birthMonth" type="text" placeholder="월">
         						</div>
         						
 					            <div class="col-xs-2">
-          							<input class="form-control" name="birthDay" id="birthDay" type="text" value="<%=birthDay%>" readonly="readonly">
+          							<input class="form-control" name="birthDay" id="birthDay" type="text" placeholder="일">
         						</div>
-					        </div>
+					        </div>   
 
       						
 					        <div class="form-group">
 					          	<label class="col-sm-3 control-label" for="inputPassword">
 					          		비밀번호
+					          		<span class="text-red">*</span>
 					          		</label>
 					        	<div class="col-sm-6">
 					          		<input class="form-control" name="ePw" id="ePw" type="password" placeholder="비밀번호">
-					        		<span id="result"></span>
+					            <span id="result"></span>
 					        	<p class="help-block">비밀번호 조합예시: korea123@<br> 보안지침에 의거하여 비밀번호는 무조건 9~16자리 입니다.<br>비밀번호는 영문자 숫자 특수문자를 혼합하여 입력하시는 것을 권장합니다.</p>
 					        	</div>
 					        </div>
@@ -134,9 +130,10 @@
 					        <div class="form-group">
 					            <label class="col-sm-3 control-label" for="inputPasswordCheck">
 					        		비밀번호 확인
+					        		<span class="text-red">*</span>	
 					        	</label>
 					            <div class="col-sm-6">
-					            <input class="form-control" name="ePw2" id="ePw2" type="password" placeholder="비밀번호 확인">
+					            <input class="form-control" id="ePw2" type="password" placeholder="비밀번호 확인">
 					            <span id="result2"></span>
 					            	<!-- ajax로 동적처리  
           							<p class="text-danger">비밀번호가 틀립니다.</p>
@@ -147,33 +144,38 @@
 					        <div class="form-group">
 					            <label class="col-sm-3 control-label" for="inputName">
 					            	이름
+					            	<span class="text-red">*</span>
 					            </label>
 					          		<div class="col-sm-6">
-					            		<input class="form-control" name="eName" id="eName" type="text" value="${stuMypage.eName}" readonly="readonly">
+					            		<input class="form-control" name="eName" id="eName" type="text" placeholder="이름">
 					          		</div>
 					        </div>
 					        
 					        <div class="form-group">
 					          	<label class="col-sm-3 control-label" for="email">
 					          		이메일
+					          		<span class="text-red">*</span>
 					          	</label>
 					        	<div class="col-sm-6">
-					          		<input class="form-control" name="eEmail" id="eEmail" type="email" value="${stuMypage.eEmail}">
+					          			<input class="form-control" name="eEmail" id="eEmail" type="email" placeholder="이메일">
+					            		
 					        	</div>
 					        </div>
 					        
 					        <div class="form-group">
 					            <label class="col-sm-3 control-label" for="inputNumber">
 					             	전화번호
+					            	<span class="text-red">*</span>
 					            </label>
 					            <div class="col-sm-6">
-					            		<input type="tel" class="form-control" name="ePhone" id="ePhone"  value="${stuMypage.ePhone}"/>
+					            		<input type="tel" class="form-control" name="ePhone" id="ePhone" placeholder="- 없이 입력해 주세요" />
 					            </div>
 					        </div>	        				        
         			        
 					        <div class="form-group text-center">
 					        	<label class="col-sm-3 control-label" for="">
 					        		주소
+					        		<span class="text-red">*</span>
 					        	</label>
 					        						        	
 					        		<div class="col-sm-1">
@@ -182,7 +184,7 @@
 					        		
 					     	   		<div class="col-sm-3">
 			        					<div class="input-group">
-					        				<input type="text" id="ePost" name="ePost" class="form-control postcodify_postcode5"  value="${stuMypage.ePost}" />
+					        				<input type="text" id="ePost" name="ePost" class="form-control postcodify_postcode5" />
 					        				<span class="input-group-btn">
 					        				<input type="button" class="btn btn-primary" onclick="sample4_execDaumPostcode()" value="주소검색">
 					        				</span>
@@ -199,7 +201,7 @@
 					        	</div>
 					     
 					        	<div class="col-sm-5">
-									<input type="text" id="eAddr1" name="eAddr1" class="form-control postcodify_address" value="${stuMypage.eAddr1}" /> 
+									<input type="text" id="eAddr1" name="eAddr1" class="form-control postcodify_address" value="" /> 
 					        	</div>	
 					    
 					        	<div class="col-sm-offset-3 col-sm-1">
@@ -207,25 +209,43 @@
 					        	</div>
 
 					        	<div class="col-sm-5">
-									<input type="text" id="eAddr2" name="eAddr2" class="form-control postcodify_details" value="${stuMypage.eAddr2}" /><br />
+									<input type="text" id="eAddr2" name="eAddr2" class="form-control postcodify_details" value="" /><br />
 					 			</div>
 					        	
 					        </div>
           
 					        <div class="form-group">
 					        	<div class="col-sm-12 text-center">
-					            	<input class="btn btn-primary btn-info" type="submit" value="수정">
+					            	<input class="btn btn-primary btn-info" id="sub" type="submit" value="회원가입">
 					          	</div>
 						    </div>
         				</form>
-        				<div class="col-sm-12 text-right">
-        					<a href="StudentDeleteServlet"><input class="btn btn-xs btn-danger" value="회원탈퇴"></a>
-        				</div>
         				
         				<script type="text/javascript">
 
 						   $(document).ready(function(){
 							  
+							   $("#eId").on("keyup", function(event){
+								   
+								   //Ajax 연동 
+								 //ajax통신
+									jQuery.ajax({
+										type:"GET",
+										url:"idCheck.jsp",
+										dataType:"text",
+										data:{
+											   eId:$("#eId").val()
+											},
+										success:function(responseData,status,xhr){
+											console.log(responseData);
+											$("#resultId").text(responseData);
+										},
+										error:function(xhr,status,error){
+											console.log("error");
+										}
+									});
+							   });
+							   
 							   $("#ePw2").on("keyup", function(event){
 								 $("#result2").removeClass();
 								   var p = $("#ePw").val();
@@ -290,7 +310,7 @@
 								    	return false;
 								    }else{
 								    	//성공
-								    	alert("학생 회원정보를 수정합니다.");
+								    	alert("회원가입을 환영합니다");
 								    }
 								   
 							   });
