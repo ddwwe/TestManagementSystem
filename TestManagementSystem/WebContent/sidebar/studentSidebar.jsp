@@ -19,8 +19,7 @@
         <li class="header">학생 메뉴</li>
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="StudentMyPageServlet"><i class="fa fa-link"></i> <span>내 정보 수정</span></a></li>
-        <li><a href="ReceiptServlet"><i class="fa fa-link"></i> <span>시험 접수하기</span></a></li>
-        <li><a href="StudentLogOutServlet"><i class="fa fa-link"></i> <span>로그아웃</span></a></li>
+        <li><a href="ExamSubmitFormServlet"><i class="fa fa-link"></i> <span>시험 접수하기</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

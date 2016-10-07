@@ -22,60 +22,11 @@
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- Messages: style can be found in dropdown.less-->
-          <li class="dropdown messages-menu">
-            <!-- Menu toggle button -->
-            <ul class="dropdown-menu">
-              <li>
-                <!-- inner menu: contains the messages -->
-                <ul class="menu">
-                </ul>
-          </li>
-          <!-- /.messages-menu -->
-
-          <!-- Notifications Menu -->
-          <li class="dropdown notifications-menu">
-            <!-- Menu toggle button -->
-            <ul class="dropdown-menu">
-              <li>
-                <!-- Inner Menu: contains the notifications -->
-                <ul class="menu">
-                  <li><!-- start notification -->
-                  </li>
-                  <!-- end notification -->
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <!-- Tasks Menu -->
-          <li class="dropdown tasks-menu">
-            <!-- Menu Toggle Button -->
-            <ul class="dropdown-menu">
-              <li>
-                <!-- Inner menu: contains the tasks -->
-                <ul class="menu">
-                  <li><!-- Task item -->
-                  </li>
-                  <!-- end task item -->
-                </ul>
-              </li>
-              <li class="footer">
-              </li>
-            </ul>
-          </li>
-          <!-- User Account Menu -->
           <li class="dropdown user user-menu">
-            <!-- Menu Toggle Button -->
-            <ul class="dropdown-menu">
-              <!-- The user image in the menu -->
-              <!-- Menu Body -->
-              <!-- Menu Footer-->
-            </ul>
-          </li>
-          <!-- Control Sidebar Toggle Button -->
-          <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-          </li>
-        </ul>
+            <a href="StudentLogOutServlet">
+              <img src="dist/img/logout.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">로그아웃</span>
+            </a>
       </div>
     </nav>
   </header>
