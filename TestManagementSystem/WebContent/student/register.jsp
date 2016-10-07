@@ -80,7 +80,7 @@
     				</div>
     				
     				<div class="box-body">
-    					<form class="form-horizontal" action="StudentRegisterServlet" method="get">		  
+    					<form class="form-horizontal" action="StudentRegisterServlet" method="post">		  
         					<div class="form-group">
           						<label class="col-xs-3 control-label" for="id">
           							아이디
@@ -219,6 +219,8 @@
 					            	<input class="btn btn-primary btn-info" id="sub" type="submit" value="회원가입">
 					          	</div>
 						    </div>
+						    
+						    
         				</form>
         				
         				<script type="text/javascript">
@@ -310,7 +312,7 @@
 								    	return false;
 								    }else{
 								    	//성공
-								    	alert("회원가입을 환영합니다");
+								    	alert("회원가입을 신청합니다");
 								    }
 								   
 							   });
