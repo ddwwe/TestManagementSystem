@@ -97,25 +97,6 @@
       						</div>
 
 					        <div class="form-group">
-					            <label class="col-sm-3 control-label" for="inputNumber">
-					            	생년월일
-					            	<span class="text-red">*</span>
-					            </label>
-					            <div class="col-xs-2">
-          							<input class="form-control" name="birthYear" id="birthYear" type="text" placeholder="년">
-        						</div>
-					            
-					            <div class="col-xs-2">
-          							<input class="form-control" name="birthMonth" id="birthMonth" type="text" placeholder="월">
-        						</div>
-        						
-					            <div class="col-xs-2">
-          							<input class="form-control" name="birthDay" id="birthDay" type="text" placeholder="일">
-        						</div>
-					        </div>   
-
-      						
-					        <div class="form-group">
 					          	<label class="col-sm-3 control-label" for="inputPassword">
 					          		비밀번호
 					          		<span class="text-red">*</span>
@@ -140,6 +121,16 @@
           							-->
 					            </div>
 					        </div>
+					        
+					        <div class="form-group">
+					            <label class="col-sm-3 control-label" for="inputNumber">
+					            	생년월일
+					            	<span class="text-red">*</span>
+					            </label>
+					            <div class="col-xs-6">
+          							<input class="form-control" name="eBirth" id="eBirth" type="text" placeholder="ex)1994년 7월 3일이면 19940703 입력">
+        						</div>
+					        </div>   
 					        	                					
 					        <div class="form-group">
 					            <label class="col-sm-3 control-label" for="inputName">
@@ -309,6 +300,9 @@
 								    	return false;
 								    }else if($("#eEmail").val() == ''){
 								    	alert("이메일을 입력하세요");
+								    	return false;
+								    }else if($("#ePw").val() != $("#ePw2").val()){
+								    	alert("비밀번호가 불일치합니다");
 								    	return false;
 								    }else{
 								    	//성공
