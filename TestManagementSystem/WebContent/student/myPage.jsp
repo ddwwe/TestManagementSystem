@@ -56,14 +56,7 @@
         }).open();
     }
 </script>
-    
-<% // 생년월일 나누기
-	StudentDTO dto = (StudentDTO)request.getAttribute("stuMypage");
-	String birth = dto.geteBirth();
-	String birthYear = birth.substring(0, 4);
-	String birthMonth = birth.substring(5, 7);
-	String birthDay = birth.substring(8, 10);
-%>  
+   
   
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper ">
