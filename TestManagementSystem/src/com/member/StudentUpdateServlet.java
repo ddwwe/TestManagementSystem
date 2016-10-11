@@ -22,10 +22,7 @@ public class StudentUpdateServlet extends HttpServlet {
 				request.setCharacterEncoding("UTF-8");
 				
 				String eId = request.getParameter("eId");
-				String birthYear = request.getParameter("birthYear");
-				String birthMonth = request.getParameter("birthMonth");
-				String birthDay = request.getParameter("birthDay");
-				String eBirth = birthYear + "/" + birthMonth + "/" + birthDay;
+				String eBirth = request.getParameter("eBirth");
 				String ePw = request.getParameter("ePw");
 				String eName = request.getParameter("eName");
 				String eEmail = request.getParameter("eEmail");

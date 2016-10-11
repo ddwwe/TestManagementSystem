@@ -103,30 +103,13 @@
       						</div>
       						
 					        <div class="form-group">
-					            <label class="col-sm-3 control-label" for="inputNumber">
-					            	생년월일
-					            </label>
-					            <div class="col-xs-2">
-          							<input class="form-control" name="birthYear" id="birthYear" type="text" value="<%=birthYear%>" readonly="readonly">
-        						</div>
-					            
-					            <div class="col-xs-2">
-          							<input class="form-control" name="birthMonth" id="birthMonth" type="text" value="<%=birthMonth%>" readonly="readonly">
-        						</div>
-        						
-					            <div class="col-xs-2">
-          							<input class="form-control" name="birthDay" id="birthDay" type="text" value="<%=birthDay%>" readonly="readonly">
-        						</div>
-					        </div>
-
-      						
-					        <div class="form-group">
 					          	<label class="col-sm-3 control-label" for="inputPassword">
 					          		비밀번호
+					          		<span class="text-red">*</span>
 					          		</label>
 					        	<div class="col-sm-6">
 					          		<input class="form-control" name="ePw" id="ePw" type="password" placeholder="비밀번호">
-					        		<span id="result"></span>
+					            <span id="result"></span>
 					        	<p class="help-block">비밀번호 조합예시: korea123@<br> 보안지침에 의거하여 비밀번호는 무조건 9~16자리 입니다.<br>비밀번호는 영문자 숫자 특수문자를 혼합하여 입력하시는 것을 권장합니다.</p>
 					        	</div>
 					        </div>
@@ -134,14 +117,25 @@
 					        <div class="form-group">
 					            <label class="col-sm-3 control-label" for="inputPasswordCheck">
 					        		비밀번호 확인
+					        		<span class="text-red">*</span>	
 					        	</label>
 					            <div class="col-sm-6">
-					            <input class="form-control" name="ePw2" id="ePw2" type="password" placeholder="비밀번호 확인">
+					            <input class="form-control" id="ePw2" type="password" placeholder="비밀번호 확인">
 					            <span id="result2"></span>
 					            	<!-- ajax로 동적처리  
           							<p class="text-danger">비밀번호가 틀립니다.</p>
           							-->
 					            </div>
+					        </div>
+					        
+					        <div class="form-group">
+					            <label class="col-sm-3 control-label" for="inputNumber">
+					            	생년월일
+					            	<span class="text-red">*</span>
+					            </label>
+					            <div class="col-xs-6">
+          							<input class="form-control" name="eBirth" id="eBirth" type="text" placeholder="ex)1994년 7월 3일이면 19940703 입력">
+        						</div>
 					        </div>
 					        	                					
 					        <div class="form-group">
