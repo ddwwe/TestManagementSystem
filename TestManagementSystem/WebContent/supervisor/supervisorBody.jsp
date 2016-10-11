@@ -9,8 +9,8 @@ body {
 
 #slidebox {
 	position: relative;
-	width: 300px;
-	height: 200px;
+	width: 1050px;
+	height: 400px;
 	overflow: hidden;
 	white-space: nowrap;
 	border: 1px solid #000;
@@ -24,13 +24,13 @@ body {
 
 #slidebox ul li {
 	position: absolute;
-	width: 300px;
-	height: 300px;
+	width: 1200px;
+	height: 500px;
 }
 
 #slidebox ul li img {
-	width: 300px;
-	height: 200px;
+	width: 500px;
+	height: 500px;
 }
 </style>
 <body>
@@ -38,7 +38,7 @@ body {
 		<div id="slidebox">
 			<ul id="slider">
 				<li><img src="image/qnet.PNG" style="width: 100%"
-					height="300px" /></li>
+					height="1300px" /></li>
 				<li><img src="image/sanup.png" style="width: 100%" /></li>
 				<li><img src="image/exam2.jpg" style="width: 100%" /></li>
 			</ul>

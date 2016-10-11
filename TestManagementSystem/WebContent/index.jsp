@@ -1,144 +1,127 @@
 <%@page import="com.dto.SupervisorDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript"
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
-<script type="text/javascript"
-	src="scripts/jquery.localscroll-1.2.7-min.js"></script>
-<script type="text/javascript"
-	src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
-<style>
-.content-wrapper {
-	text-align: center;
-	line-height: 837px;
-}
-</style>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('#nav').localScroll(1000);
 
-		//.parallax(xPosition, speedFactor, outerHeight) options:
-		//xPosition - Horizontal position of the element
-		//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
-		//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-		$('#intro').parallax("50%", 0.1);
-		$('#second').parallax("80%", 0.1);
-		$('.bg').parallax("40%", 0.4);
-		$('#third').parallax("50%", 0.3);
-		$('#four').parallax("50%", 0.1);
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
 
-	})
-</script>
+<!-- Bootstrap Core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="vendor/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+<link
+	href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+	rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet" type="text/css">
+
+<!-- Theme CSS -->
+<link href="css/grayscale.min.css" rel="stylesheet">
+
+
 </head>
 
-<body>
-	<ul id="nav">
-		<li><a href="#intro" title="Next Section"><img
-				src="image/dot.png" alt="Link" /></a></li>
-		<li><a href="#second" title="Next Section"><img
-				src="image/dot.png" alt="Link" /></a></li>
-		<li><a href="#third" title="Next Section"><img
-				src="image/dot.png" alt="Link" /></a></li>
-		<li><a href="#four" title="Next Section"><img
-				src="image/dot.png" alt="Link" /></a></li>		
-				
-	</ul>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-	<div id="intro">
-		<div class="story">
-			<div class="float-left">
+	<!-- Navigation -->
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-main-collapse">
+					Menu <i class="fa fa-bars"></i>
+				</button>
 			</div>
-			<div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div
+				class="collapse navbar-collapse navbar-right navbar-main-collapse">
+				<ul class="nav navbar-nav">
+					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+					<li class="hidden"><a href="#page-top"></a></li>
+					<li><a class="page-scroll" href="#about">About</a></li>
+					<li><a class="page-scroll" href="StudentLoginFormServlet">학생용</a></li>
+					<li><a class="page-scroll" href="SuperLogin.jsp">관리자용</a></li>
+				</ul>
 			</div>
-			<div>
-			</div>
-			<div class="float-right">
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<a href="#four" title="Next Section"><img
-				src="image/login.png"  width="150" height="50" alt="Link" /></a>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+
+	<!-- Intro Header -->
+	<header class="intro">
+		<div class="intro-body">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<h1 class="brand-heading">HIMNET</h1>
+						<p class="intro-text">
+It is easier for supervisors
+						</p>
+						<a href="#about" class="btn btn-circle page-scroll"> <i
+							class="fa fa-angle-double-down animated"></i>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
-		<!--.story-->
-	</div>
-	<!--#intro-->
+	</header>
 
-	<div id="second">
-		<div class="story">
-			<div class="bg"></div>
-			<div class="float-right">
-				<h2>"HIMNET(힘넷)이란?"</h2>
-				<p>한국산업인력공단 + 큐넷이 합쳐진 사이트입니다.</p>
-				<p></p>
-				<p>시험감독관들은 인적사항파악, 인원통계, 문제가 발생시 이것을 수기로 작성하여</p>
-				<p>중앙통제부에 직접 가서 보고하였습니다. </p>
-				<p>또, 중앙통제부에선 이것들을 수집하여 다시 위에한테 보고를 했는데</p>
-				<p>이제 힘넷에서는 이런 번거러움 필요 없이 바로 안드로이드와 연동하여
-				 실시간 통계를 내고, 상황을 빠르게 조치할 수 있도록 하는 사이트입니다.</p>
+	<!-- About Section -->
+	<section id="about" class="container content-section text-center">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<h2>About HIMNET</h2>
+				<p>
+					힘넷이란? 한국산업인력공단 + 큐넷이 합친 사이트입니다.
+				</p>
+				<p>
+					</a>
+				</p>
+				<p>감독관은 수기 작성할 필요없이 휴대폰 하나로 
+				인원확인 및 신원확인까지 할 수 있습니다.</p>
+				<p>또한, 문제에 관해 특이사항 발생시 실시간으로 바로 해결할 수 있습니다.</p>
 			</div>
 		</div>
-		<!--.story-->
-		<%
-	SupervisorDTO dto=(SupervisorDTO)session.getAttribute("login");
-%>
-<% if(dto!=null){ %>
-<%
-System.out.println(dto.getSname());
+	</section>
 
-}%>
-<div id="third">
-		<div class="story">
-			<div >
-	 <img class="mySlides" src="image/himnet.jpg" style="width: 100%" height="300"> 
-		<img class="mySlides" src="image/qnet.PNG" style="width: 100%" height="300px">
-		 <img class="mySlides" src="image/sanup.png" style="width: 100%"> 
-	</div>
 
-	<script>
-		var myIndex = 0;
-		carousel();
+	<!-- Contact Section -->
 
-		function carousel() {
-			var i;
-			var x = document.getElementsByClassName("mySlides");
-			for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";
-			}
-			myIndex++;
-			if (myIndex > x.length) {
-				myIndex = 1
-			}
-			x[myIndex - 1].style.display = "block";
-			setTimeout(carousel, 2000); // Change image every 2 seconds
-		}
-	</script>
+	<!-- Map Section -->
 
+	<!-- Footer -->
+	<footer>
+		<div class="container text-center">
+			<p> Copyright &copy; KONGJU University 2016</p>
 		</div>
-		<!--.story-->
-	</div>
+	</footer>
 
-	</div>
-	<!--#second-->
-	<div id="four">
-		<div class="story">
-			<div class="content-wrapper">
-				<a href="StudentLoginFormServlet"> <img src="image/student.PNG"
-					width="280" height="300" border=0></a> <a
-					href="SuperLogin.jsp"> <img src="image/supervisor.png"
-					width="280" height="300" border=0></a>
-			</div>
-		</div>
-		<!--.story-->
-	</div>
+	<!-- jQuery -->
+	<script src="vendor/jquery/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+	<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+	<!-- Theme JavaScript -->
+	<script src="js/grayscale.min.js"></script>
 
 </body>
+
+</html>
