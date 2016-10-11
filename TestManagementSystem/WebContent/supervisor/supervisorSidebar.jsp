@@ -43,7 +43,7 @@
         </li>
         </li>
           <li>
-          <a href="supervisor/picture.jsp">
+          <a href=SupervisorBoardFormServlet>
             <i class="fa fa-comment"></i> <span>정오게시판</span>
             <span class="pull-right-container">
             </span>

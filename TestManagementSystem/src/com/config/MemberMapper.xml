@@ -4,6 +4,38 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member">
 
+	<select id="idCheck" parameterType="string" resultType="string">
+      select eId
+      from examinee
+      where eId = #{eId}
+    </select>
+
+	<delete id="deleteMember" parameterType="string">
+		delete from examinee
+      	where eId = #{eId}
+	</delete>
+	
+	<update id="updateMember" parameterType="StudentDTO">
+	  update examinee
+		set eId=#{eId},
+		ePw=#{ePw},
+		eName=#{eName},
+		eBirth=#{eBirth},
+		eEmail=#{eEmail},
+		ePhone=#{ePhone},
+		ePost=#{ePost},
+		eAddr1=#{eAddr1},
+		eAddr2=#{eAddr2},
+		ePath=#{ePath}
+	  where eId=#{eId}
+	</update>
+
+	<insert id="addMember" parameterType="StudentDTO">
+		insert into
+		examinee (eId, ePw, eName, eBirth, eEmail, ePhone, ePost, eAddr1, eAddr2, ePath)
+		values (#{eId}, #{ePw}, #{eName}, #{eBirth}, #{eEmail}, #{ePhone}, #{ePost}, #{eAddr1}, #{eAddr2}, #{ePath})
+	</insert>
+
 	<select id="StudentLogin" parameterType="hashmap" resultType="StudentDTO">
 		select eId, ePw, eName, eBirth, eEmail, ePhone, ePost, eAddr1, eAddr2, ePath
 		from examinee
@@ -13,7 +45,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select	id="SupervisorLogin" resultType="SupervisorDTO" parameterType="hashmap">
 	 select sid, spw, sname, sgroup, sphone, spost, saddr1, saddr2, to_char(sbirth,'yyyy/mm/dd') sbirth, spath, scareers
 	  from	supervisor 
-	  where sid=#{sid} and spw=#{spw} </select>
+	  where sid=#{sid} and spw=#{spw}
+	</select>
+	
+	<select id="mypage" parameterType="string" resultType="StudentDTO">
+		select eId, ePw, eName, eBirth, eEmail, ePhone, ePost, eAddr1, eAddr2, ePath
+		from examinee
+		where eId = #{eId}
+	</select>
+	
 </mapper>
 
 
