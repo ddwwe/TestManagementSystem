@@ -134,7 +134,7 @@
 					            	<span class="text-red">*</span>
 					            </label>
 					            <div class="col-xs-6">
-          							<input class="form-control" name="eBirth" id="eBirth" type="text" placeholder="ex)1994년 7월 3일이면 19940703 입력">
+          							<input class="form-control" name="eBirth" id="eBirth" type="text" value="${stuMypage.eBirth}" readonly="readonly">
         						</div>
 					        </div>
 					        	                					

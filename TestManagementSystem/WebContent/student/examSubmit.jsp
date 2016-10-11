@@ -78,17 +78,21 @@
     				<div class="box-body">
     					<form class="form-horizontal" action="ExamSubmitServlet" method="post" enctype="multipart/form-data">		  
         					<div class="form-group">
-          						<label class="col-xs-3 control-label" for="id">
-          							아이디
-          							<span class="text-red">*</span>
-          						</label>
-        						<div class="col-xs-6">
-          							<input class="form-control" name="eId" id="eId" type="text" placeholder="아이디">
-          							<span id="resultId"></span>
-          							<!-- ajax로 동적처리
-          							<p class="text-info">사용가능한 아이디입니다.</p>
-          							<p class="text-danger">사용불가능한 아이디입니다.</p>
-          							-->
+          						<label class="col-xs-3"></label>
+        						<div class="col-xs-4">
+          							<select id="Subject" name="Subject">
+          								<option>접수할 종목을 선택해주세요</option>
+          								<option>ㅇㅇ</option>
+          								<option>ㅇㅇ</option>
+          								<option>ㅇㅇ</option>
+          							</select>
+        						</div>
+        						<div class="col-xs-4 form-group">
+        							<label>종목선택</label>
+          							<select id="Subject" name="Subject">
+          								<option>ㅋㅋ</option>
+          								<option>ㅇㅇ</option>
+          							</select>
         						</div>
       						</div>
 

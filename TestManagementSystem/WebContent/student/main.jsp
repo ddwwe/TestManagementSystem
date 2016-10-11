@@ -4,5 +4,6 @@
 	
 </style>
 <div class="content-wrapper">
-<h1>공사중 입니다</h1>
+<img src="image/student.PNG"
+					width="420" height="450" border=0>
 </div>
