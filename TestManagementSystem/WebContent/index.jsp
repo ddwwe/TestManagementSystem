@@ -1,13 +1,10 @@
 <%@page import="com.dto.SupervisorDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<<<<<<< HEAD
 
-=======
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>	
->>>>>>> branch 'master' of https://github.com/ddwwe/TestManagementSystem
 <head>
 
 <meta charset="utf-8">
@@ -57,7 +54,6 @@
 					<li><a class="page-scroll" href="SuperLogin.jsp">관리자용</a></li>
 				</ul>
 			</div>
-<<<<<<< HEAD
 			<!-- /.navbar-collapse -->
 		</div>
 		<!-- /.container -->
@@ -77,25 +73,6 @@ It is easier for supervisors
 							class="fa fa-angle-double-down animated"></i>
 						</a>
 					</div>
-				</div>
-=======
-			<div>
-			</div>
-			<div class="float-right">
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<a href="#four" title="Next Section"><img
-				src="image/login.png"  width="150" height="50" alt="Link" /></a>
-			
->>>>>>> branch 'master' of https://github.com/ddwwe/TestManagementSystem
-			</div>
-		</div>
 	</header>
 
 	<!-- About Section -->
@@ -134,27 +111,6 @@ It is easier for supervisors
 =======
 	</div>
 	<!--#second-->
-	<div id="four">
-		<div class="story">
-			<div class="content-wrapper">
-			
-			<c:if test="${sessionScope.stuLogin==null}">
-				<a href="StudentLoginFormServlet"> <img src="image/student.PNG"
-					width="280" height="300" border=0></a> 
-			</c:if>
-			 
-			<c:if test="${sessionScope.stuLogin!=null}">
-				<a href="studentMainForm.jsp"> <img src="image/student.PNG"
-					width="280" height="300" border=0></a> 
-			</c:if>
-			
-				<a href="SuperLogin.jsp"> <img src="image/supervisor.png"
-					width="280" height="300" border=0></a>
-			</div>
-		</div>
-		<!--.story-->
-	</div>
->>>>>>> branch 'master' of https://github.com/ddwwe/TestManagementSystem
 
 	<!-- Bootstrap Core JavaScript -->
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
