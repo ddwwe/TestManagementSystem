@@ -82,16 +82,15 @@
         						<div class="col-xs-4">
           							<select id="Subject" name="Subject">
           								<option>접수할 종목을 선택해주세요</option>
-          								<option>ㅇㅇ</option>
-          								<option>ㅇㅇ</option>
-          								<option>ㅇㅇ</option>
+          								<option>정보처리기사</option>
+          								<option>전기기사</option>
+          								<option>토목기사</option>
           							</select>
         						</div>
         						<div class="col-xs-4 form-group">
-        							<label>종목선택</label>
           							<select id="Subject" name="Subject">
-          								<option>ㅋㅋ</option>
-          								<option>ㅇㅇ</option>
+          								<option>접수할 시험을 선택해주세요</option>
+          								<option>2016년 정기기사 3회</option>
           							</select>
         						</div>
       						</div>
