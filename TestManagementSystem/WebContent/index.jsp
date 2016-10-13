@@ -51,7 +51,7 @@
 					<li class="hidden"><a href="#page-top"></a></li>
 					<li><a class="page-scroll" href="#about">About</a></li>
 					<li><a class="page-scroll" href="StudentLoginFormServlet">학생용</a></li>
-					<li><a class="page-scroll" href="SuperLogin.jsp">관리자용</a></li>
+					<li><a class="page-scroll" href="SupervisorLoginFormServlet">관리자용</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->

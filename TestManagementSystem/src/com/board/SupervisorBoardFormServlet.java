@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 public class SupervisorBoardFormServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dis = request.getRequestDispatcher("supervisorBoard.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("supervisor/picture.jsp");
 		dis.forward(request, response);
 	}
 

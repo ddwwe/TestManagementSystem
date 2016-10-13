@@ -89,13 +89,13 @@ int may = 10;
 				<!-- Sidebar Menu -->
 				<ul class="sidebar-menu">
 					<!-- Optionally, you can add icons to the links -->
-					<li class="active"><a href="supervisorProfile.jsp"><i class="fa fa-link"></i>
+					<li class="active"><a href="supervisor/supervisorProfile.jsp"><i class="fa fa-link"></i>
 							<span style="font-size: 11pt">내 정보보기</span></a></li>
 					<li class="treeview"><span class="pull-right-container">
 							<i class="fa fa-angle-left pull-right"></i>
 					</span>
 					<li class="treeview"></li>
-					<li><a href="calendar.jsp"> <i class="fa fa-calendar"></i>
+					<li><a href="supervisor/calendar.jsp"> <i class="fa fa-calendar"></i>
 							<span style="font-size: 11pt">시험일정</span> <span
 							class="pull-right-container"> </span>
 					</a></li>
@@ -106,12 +106,12 @@ int may = 10;
 						</span>
 					</a>
 						<ul class="treeview-menu">
-							<li><a href="chartjs.jsp"><i class="fa fa-circle-o"></i>
-									인원보기</a></li>
+							<li><i class="fa fa-circle-o"></i>
+									인원통계</li>
 						</ul></li>
 					</li>
 					      <li>
-          <a href="picture.jsp"><i class="fa fa-comment"></i> <span style="font-size: 11pt">정오게시판</span>
+          <a href="SupervisorBoardFormServlet"><i class="fa fa-comment"></i> <span style="font-size: 11pt">정오게시판</span>
             <span class="pull-right-container">
             </span>
           </a>
