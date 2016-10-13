@@ -63,13 +63,13 @@
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><i class="fa fa-link"></i> <span>내 정보보기</span></a></li>
+        <li class="active"><a href="SupervisorProfileServlet"><i class="fa fa-link"></i> <span>내 정보보기</span></a></li>
         <li class="treeview">
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
               <li class="treeview">
-          <a href="supervisor/calendar.jsp">
+          <a href="calendar.jsp">
             <i class="fa fa-calendar"></i> <span>시험일정</span>
             <span class="pull-right-container">
             </span>
@@ -83,11 +83,11 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="supervisor/chartjs.jsp"><i class="fa fa-circle-o"></i> 인원통계</a></li>
+            <li><a href="chartjs.jsp"><i class="fa fa-circle-o"></i> 인원통계</a></li>
           </ul>
         </li>
              <li>
-          <a href="SupervisorBoardFormServlet">
+          <a href="picture.jsp">
             <i class="fa fa-comment"></i> <span>정오게시판</span>
             <span class="pull-right-container">
             </span>

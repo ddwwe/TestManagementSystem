@@ -89,7 +89,7 @@ int may = 10;
 				<!-- Sidebar Menu -->
 				<ul class="sidebar-menu">
 					<!-- Optionally, you can add icons to the links -->
-					<li class="active"><a href="supervisor/supervisorProfile.jsp"><i class="fa fa-link"></i>
+					<li class="active"><a href="SupervisorProfileServlet"><i class="fa fa-link"></i>
 							<span style="font-size: 11pt">내 정보보기</span></a></li>
 					<li class="treeview"><span class="pull-right-container">
 							<i class="fa fa-angle-left pull-right"></i>
