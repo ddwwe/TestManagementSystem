@@ -1,10 +1,12 @@
 package com.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.apache.ibatis.session.SqlSession;
 
 import com.config.MySqlSessionFactory;
+import com.dto.ManagerDTO;
 import com.dto.StudentDTO;
 import com.dto.SupervisorDTO;
 import com.exception.CommonException;
@@ -26,17 +28,15 @@ public class MemberService {
 		return dto;
 	}// end addMember
 	
-	// 감독관 로그인
-	public SupervisorDTO superlogin(HashMap<String, String> map) throws CommonException {
-		SupervisorDTO dto = null;
+	// 관리자 로그인
+	public ManagerDTO managerLogin(HashMap<String, String> map) throws CommonException {
+		ManagerDTO dto = null;
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
-			dto = session.selectOne("SupervisorLogin", map);
-			
-			
+			dto = session.selectOne("managerLogin", map);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("로그인 실패");
+			throw new CommonException("관리자 로그인 실패");
 		} finally {
 			session.close();
 		}

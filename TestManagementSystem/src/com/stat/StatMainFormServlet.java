@@ -1,4 +1,4 @@
-package com.board;
+package com.stat;
 
 import java.io.IOException;
 
@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/SupervisorBoardFormServlet")
-public class SupervisorBoardFormServlet extends HttpServlet {
+@WebServlet("/StatMainFormServlet")
+public class StatMainFormServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dis = request.getRequestDispatcher("supervisor/picture.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("statMainForm.jsp");
 		dis.forward(request, response);
 	}
 

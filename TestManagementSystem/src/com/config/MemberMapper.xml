@@ -42,10 +42,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		where eId = #{eId} and ePw = #{ePw}
 	</select>
 	
-	<select	id="SupervisorLogin" resultType="SupervisorDTO" parameterType="hashmap">
-	 select sid, spw, sname, sgroup, sphone, spost, saddr1, saddr2, to_char(sbirth,'yyyy/mm/dd') sbirth, spath, scareers
-	  from	supervisor 
-	  where sid=#{sid} and spw=#{spw}
+	<select	id="managerLogin" resultType="ManagerDTO" parameterType="hashmap">
+	 select mId, mPw
+	  from	EXAM_MANAGER 
+	  where mId=#{mId} and mPw=#{mPw}
 	</select>
 	
 	<select id="mypage" parameterType="string" resultType="StudentDTO">

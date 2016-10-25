@@ -27,17 +27,17 @@
 		</div>
 		<!-- /.login-logo -->
 		<div class="login-box-body">
-			<p class="login-box-msg">Supervisor</p>
+			<p class="login-box-msg">Manager</p>
 
-			<form action="SupervisorLoginServlet" method="get">
+			<form action="ManagerLoginServlet" method="get">
 				<div class="form-group has-feedback">
 					<input type="text" class="form-control" placeholder="Your Number"
-						name="sid"></input> <span
+						name="mId"></input> <span
 						class="glyphicon glyphicon-ok form-control-feedback"></span>
 				</div>
 				<div class="form-group has-feedback">
 					<input type="password" class="form-control" placeholder="Password"
-						name="spw"></input> <span
+						name="mPw"></input> <span
 						class="glyphicon glyphicon-lock form-control-feedback"></span>
 
 					<button type="submit" class="btn btn-primary btn-block btn-flat">Sign

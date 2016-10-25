@@ -13,7 +13,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
  
   <typeAliases>
    <typeAlias type="com.dto.StudentDTO" alias="StudentDTO"/>
-   <typeAlias type="com.dto.SupervisorDTO" alias="SupervisorDTO"/>
+   <typeAlias type="com.dto.ManagerDTO" alias="ManagerDTO"/>
+   <typeAlias type="com.dto.SlipDTO" alias="SlipDTO"/>
   </typeAliases>
   
 
@@ -32,6 +33,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	
 	<mappers>
 		<mapper resource="com/config/MemberMapper.xml" />
+		<mapper resource="com/config/SelectMapper.xml" />
 	</mappers>
 </configuration>
 

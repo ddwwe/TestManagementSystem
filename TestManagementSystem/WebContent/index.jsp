@@ -50,8 +50,19 @@
 					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
 					<li class="hidden"><a href="#page-top"></a></li>
 					<li><a class="page-scroll" href="#about">About</a></li>
-					<li><a class="page-scroll" href="StudentLoginFormServlet">학생용</a></li>
-					<li><a class="page-scroll" href="SupervisorLoginFormServlet">관리자용</a></li>
+					<c:if test="${sessionScope.stuLogin==null}">
+						<li><a class="page-scroll" href="StudentLoginFormServlet">수험생용</a></li>
+					</c:if>
+					<c:if test="${sessionScope.stuLogin!=null}">
+						<li><a class="page-scroll" href="studentMainForm.jsp">수험생용</a></li>
+					</c:if>
+					
+					<c:if test="${sessionScope.manaLogin==null}">
+						<li><a class="page-scroll" href="ManagerLoginFormServlet">관리자용</a></li>
+					</c:if>
+					<c:if test="${sessionScope.manaLogin!=null}">
+						<li><a class="page-scroll" href="managerMainForm.jsp">관리자용</a></li>
+					</c:if>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -67,12 +78,15 @@
 					<div class="col-md-8 col-md-offset-2">
 						<h1 class="brand-heading">HIMNET</h1>
 						<p class="intro-text">
-It is easier for supervisors
+							It is easier for supervisors
 						</p>
 						<a href="#about" class="btn btn-circle page-scroll"> <i
 							class="fa fa-angle-double-down animated"></i>
 						</a>
 					</div>
+				</div>
+			</div>
+		</div>
 	</header>
 
 	<!-- About Section -->
@@ -84,7 +98,6 @@ It is easier for supervisors
 					힘넷이란? 한국산업인력공단 + 큐넷이 합친 사이트입니다.
 				</p>
 				<p>
-					</a>
 				</p>
 				<p>감독관은 수기 작성할 필요없이 휴대폰 하나로 
 				인원확인 및 신원확인까지 할 수 있습니다.</p>
@@ -105,11 +118,8 @@ It is easier for supervisors
 		</div>
 	</footer>
 
-<<<<<<< HEAD
 	<!-- jQuery -->
 	<script src="vendor/jquery/jquery.js"></script>
-=======
-	</div>
 	<!--#second-->
 
 	<!-- Bootstrap Core JavaScript -->

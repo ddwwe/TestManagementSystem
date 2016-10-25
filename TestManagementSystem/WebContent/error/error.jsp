@@ -40,7 +40,6 @@
   </div>
   <!-- /.content-wrapper -->
   
-  <jsp:include page="../footer/footer.jsp" flush="true"></jsp:include>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

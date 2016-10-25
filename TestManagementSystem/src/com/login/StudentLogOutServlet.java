@@ -30,8 +30,8 @@ public class StudentLogOutServlet extends HttpServlet {
 			request.setAttribute("link", link);
 		}else{
 			target="index.jsp";
-	request.setAttribute("stuLogout", "정상적으로 로그아웃");
-		    session.invalidate();	
+			request.setAttribute("stuLogout", "정상적으로 로그아웃");
+			session.setAttribute("stuLogin", null);
 		}
 		
 		RequestDispatcher dis =

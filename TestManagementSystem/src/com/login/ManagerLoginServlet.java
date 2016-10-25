@@ -2,6 +2,7 @@ package com.login;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,46 +11,49 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.swing.plaf.synth.SynthSeparatorUI;
 
+import com.dto.ManagerDTO;
 import com.dto.SupervisorDTO;
 import com.exception.CommonException;
 import com.service.MemberService;
+import com.service.SelectService;
 
-@WebServlet("/SupervisorLoginServlet")
-public class SupervisorLoginServlet extends HttpServlet {
+@WebServlet("/ManagerLoginServlet")
+public class ManagerLoginServlet extends HttpServlet {
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		String sid = request.getParameter("sid");
-		String spw = request.getParameter("spw");
-		System.out.println(sid);
+		String mId = request.getParameter("mId");
+		String mPw = request.getParameter("mPw");
+		String yy = "16";
+		if(request.getParameter("yy") == null);
+		else
+			yy = request.getParameter("yy");
 		HashMap<String, String> map = new HashMap<>();
-		map.put("sid", sid);
-		map.put("spw", spw);
+		map.put("mId", mId);
+		map.put("mPw", mPw);
 
 		MemberService service = new MemberService();
 		String title = "";
 		String target = "";
 		try {
-			SupervisorDTO dto = service.superlogin(map);
+			ManagerDTO dto = service.managerLogin(map);
 			if (dto == null) {
 				title = "아이디 또는 비밀번호 불일치";
-				String link = "SupervisorLoginFormServlet";
+				String link = "ManagerLoginFormServlet";
 				target = "error.jsp";
 				request.setAttribute("title", title);
 				request.setAttribute("link", link);
 			} else {
 				HttpSession session = request.getSession();
-				session.setAttribute("login", dto);
-				target = "supervisorMenu.jsp";
+				session.setAttribute("manaLogin", dto);
+				request.setAttribute("yy", yy);
+				target = "managerMainForm.jsp";
 			}
 
 		} catch (CommonException e) {
 			title = e.getMessage();
-			String link = "SupervisorLoginFormServlet";
+			String link = "ManagerLoginFormServlet";
 			target = "error.jsp";
 			request.setAttribute("title", title);
 			request.setAttribute("link", link);
@@ -58,8 +62,7 @@ public class SupervisorLoginServlet extends HttpServlet {
 		dis.forward(request, response);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
 
