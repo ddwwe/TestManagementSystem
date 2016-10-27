@@ -71,7 +71,7 @@ public class SelectService {
 			session.close();
 		}
 		return submitNum;
-	}// end selectSubmitPeopleList
+	}// end selectSubmitPeople
 	
 	// 1종목-1본부 참석한 인원 수 불러오기
 		public int selectYesPeople(Map map) throws CommonException {
@@ -86,5 +86,65 @@ public class SelectService {
 				session.close();
 			}
 			return submitNum;
-		}// end selectSubmitPeopleList
+		}// end selectYesPeople
+
+	// 시험 번호로 시험 이름 불러오기
+		public String selectTsTitleBytsNo(String tsNo) throws CommonException {
+			String tsTitle = null;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				tsTitle = session.selectOne("selectTsTitleBytsNo", tsNo);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("시험 이름 불러오기 실패");
+			} finally {
+				session.close();
+			}
+			return tsTitle;
+		}// end selectTsTitleBytsNo
+
+		// s_bonboo대로 기관이름 가져오기
+		public List<String> selectGiGwan(String s_bonboo) throws CommonException {
+			List<String> GiGwanList = null;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				GiGwanList = session.selectList("selectGiGwan", s_bonboo);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("기관이름 불러오기 실패");
+			} finally {
+				session.close();
+			}
+			return GiGwanList;
+		}// end selectGiGwan
+		
+		// 1종목-1기관 접수한 인원 수 불러오기
+		public int selectGigwanSubmitPeople(Map map) throws CommonException {
+			int submitNum = 0;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				submitNum = session.selectOne("selectGigwanSubmitPeople", map);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("1종목-1본부 접수한 인원 수 불러오기 실패");
+			} finally {
+				session.close();
+			}
+			return submitNum;
+		}// end selectSubmitPeople
+		
+		// 1종목-1기관 참석한 인원 수 불러오기
+		public int selectGigwanYesPeople(Map map) throws CommonException {
+			int submitNum = 0;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				submitNum = session.selectOne("selectGigwanYesPeople", map);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("1종목-1본부 참석한 인원 수 불러오기 실패");
+			} finally {
+				session.close();
+			}
+			return submitNum;
+		}// end selectYesPeople
 }

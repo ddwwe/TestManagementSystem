@@ -25,10 +25,6 @@ public class ManagerLoginServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String mId = request.getParameter("mId");
 		String mPw = request.getParameter("mPw");
-		String yy = "16";
-		if(request.getParameter("yy") == null);
-		else
-			yy = request.getParameter("yy");
 		HashMap<String, String> map = new HashMap<>();
 		map.put("mId", mId);
 		map.put("mPw", mPw);
@@ -47,7 +43,6 @@ public class ManagerLoginServlet extends HttpServlet {
 			} else {
 				HttpSession session = request.getSession();
 				session.setAttribute("manaLogin", dto);
-				request.setAttribute("yy", yy);
 				target = "managerMainForm.jsp";
 			}
 

@@ -24,17 +24,17 @@
 	            	</span>
 				</a>
 				<ul class="treeview-menu menu-open">
-					<li><a href="StatMainFormServlet"><i class="fa fa-circle-o"></i> 서울지역본부</a></li>
-					<li><a href="StatMainFormServlet"><i class="fa fa-circle-o"></i> 부산지역본부</a></li>
-					<li><a href="StatMainFormServlet"><i class="fa fa-circle-o"></i> 대구지역본부</a></li>
-					<li><a href="StatMainFormServlet"><i class="fa fa-circle-o"></i> 광주지역본부</a></li>
-					<li><a href="StatMainFormServlet"><i class="fa fa-circle-o"></i> 대전지역본부</a></li>
-					<li><a href="StatMainFormServlet"><i class="fa fa-circle-o"></i> 제주지역본부</a></li>
-					<li><a href="StatMainFormServlet"><i class="fa fa-circle-o"></i> 인천지사</a></li>
-					<li><a href="StatMainFormServlet"><i class="fa fa-circle-o"></i> 울산지사</a></li>
-					<li><a href="StatMainFormServlet"><i class="fa fa-circle-o"></i> 경기지사</a></li>
-					<li><a href="StatMainFormServlet"><i class="fa fa-circle-o"></i> 충남지사</a></li>
-					<li><a href="StatMainFormServlet"><i class="fa fa-circle-o"></i> 충북지사</a></li>
+					<li><a href="SeoulStatFormServlet"><i class="fa fa-circle-o"></i> 서울지역본부</a></li>
+					<li><a href="BusanStatFormServlet"><i class="fa fa-circle-o"></i> 부산지역본부</a></li>
+					<li><a href="DaeguStatFormServlet"><i class="fa fa-circle-o"></i> 대구지역본부</a></li>
+					<li><a href="GwangjuStatFormServlet"><i class="fa fa-circle-o"></i> 광주지역본부</a></li>
+					<li><a href="DaejeonStatFormServlet"><i class="fa fa-circle-o"></i> 대전지역본부</a></li>
+					<li><a href="JejuStatFormServlet"><i class="fa fa-circle-o"></i> 제주지역본부</a></li>
+					<li><a href="IncheonStatFormServlet"><i class="fa fa-circle-o"></i> 인천지사</a></li>
+					<li><a href="UlsanStatFormServlet"><i class="fa fa-circle-o"></i> 울산지사</a></li>
+					<li><a href="GyeonggiStatFormServlet"><i class="fa fa-circle-o"></i> 경기지사</a></li>
+					<li><a href="ChungnamStatFormServlet"><i class="fa fa-circle-o"></i> 충남지사</a></li>
+					<li><a href="ChungbukStatFormServlet"><i class="fa fa-circle-o"></i> 충북지사</a></li>
 				</ul>
 			</li>
 			<li>

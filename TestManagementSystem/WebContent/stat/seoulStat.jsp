@@ -21,9 +21,9 @@
 <%
 	ServletContext ctx = getServletContext();
 	String tsTitle = (String)session.getAttribute("tsTitle");
-	List<String> bonbooList = (ArrayList<String>)session.getAttribute("bonboo");
+	List<String> seoulList = (ArrayList<String>)session.getAttribute("seoul");
 	List<String> giSaList = (ArrayList<String>)session.getAttribute("giSaList");
-	TableType allGiSaTableType = (TableType)session.getAttribute("allGiSaTableType");
+	TableType giSaTableType = (TableType)session.getAttribute("seoulGiSaTableType");
 %>
 
 <div class="content-wrapper">
@@ -45,8 +45,8 @@
 					<thead>
 						<tr>
 							<th>종 목 ＼ 본 부&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-							<% for(int i=0; i < bonbooList.size(); i++) { %>
-							<th><%= bonbooList.get(i) %>&nbsp&nbsp</th>
+							<% for(int i=0; i < seoulList.size(); i++) { %>
+							<th><%= seoulList.get(i) %>&nbsp&nbsp</th>
 							<%} %>
 							<th>총&nbsp&nbsp&nbsp합</th>
 						</tr>
@@ -55,19 +55,19 @@
 						<% for (int i=0; i < giSaList.size(); i++) {%>
 						<tr>
 							<th><%= giSaList.get(i) %>&nbsp&nbsp</th>
-							<% for (int j=0; j < bonbooList.size(); j++) {%>
-							<td align="center"><%= allGiSaTableType.getYesArr()[i][j] %>/&nbsp&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp/<%= allGiSaTableType.getArr()[i][j] %></td>
+							<% for (int j=0; j < seoulList.size(); j++) {%>
+							<td align="center"><%= giSaTableType.getYesArr()[i][j] %>/&nbsp&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp/<%= giSaTableType.getArr()[i][j] %></td>
 							<%} %>
-							<td align="center"><%= allGiSaTableType.getYesHSum()[i] %>/&nbsp&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp/<%= allGiSaTableType.gethSum()[i] %></td>
+							<td align="center"><%= giSaTableType.getYesHSum()[i] %>/&nbsp&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp/<%= giSaTableType.gethSum()[i] %></td>
 						</tr>
 						<%} %>
 						<!-- 세로 총합 구하기 -->
 						<tr>
 							<th>총&nbsp&nbsp&nbsp합</th>
-						<% for (int i=0; i < bonbooList.size(); i++) {%>
-							<td align="center"><%= allGiSaTableType.getYesVSum()[i] %>/&nbsp&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp/<%= allGiSaTableType.getvSum()[i] %></td>
+						<% for (int i=0; i < seoulList.size(); i++) {%>
+							<td align="center"><%= giSaTableType.getYesVSum()[i] %>/&nbsp&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp/<%= giSaTableType.getvSum()[i] %></td>
 						<%} %>
-						<td align="center"><%=allGiSaTableType.getYesTotal()%>/&nbsp&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp/<%=allGiSaTableType.getTotal()%></td>
+						<td align="center"><%=giSaTableType.getYesTotal()%>/&nbsp&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp/<%=giSaTableType.getTotal()%></td>
 						</tr>
 					</tbody>
 				</table>             

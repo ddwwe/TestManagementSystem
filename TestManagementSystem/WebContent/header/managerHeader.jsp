@@ -19,12 +19,22 @@
         <span class="sr-only">Toggle navigation</span>
       </a>
       <!-- Navbar Right Menu -->
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
+      <div class="collapse navbar-collapse pull-left">
+      	<ul class="nav navbar-nav">
           <!-- Messages: style can be found in dropdown.less-->
-             <li class="dropdown user user-menu">
-            <a >
-            </a>
+        	<li class="dropdown">
+	          <a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-expended="false">
+	           	눌러봐용
+	           <span class="caret"></span>
+	          </a>
+	          
+	          <ul class="dropdown-menu" role="menu">
+	          	<li><a href="#">메롱</a></li>
+	          	<li><a href="#">凸凸</a></li>
+	          </ul>
+          
+          	</li>
+      	</ul>
       </div>
     </nav>
   </header>

@@ -1,23 +1,30 @@
-package com.context;
+package com.stat;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-public class YearChangeServlet extends HttpServlet {
+import com.exception.CommonException;
+import com.refresh.TableType;
+import com.service.SelectService;
 
+@WebServlet("/JejuStatFormServlet")
+public class JejuStatFormServlet extends HttpServlet {
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		
-		
-		RequestDispatcher dis = request.getRequestDispatcher("managerMainForm.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("jejuStatForm.jsp");
 		dis.forward(request, response);
-		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -41,7 +41,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 					   from Qualification
 					   where qName = #{qName})
 					   
-			  and #{tsYear} = substr(eNo,11,2)
+			  and substr(eNo,11,4) like #{tsNo}
 	</select>
 	
 	<!-- 과목의 참석한 사람 불러오기 -->
@@ -60,7 +60,60 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 					   			 	  from Qualification
 					   				  where qName = #{qName}))
 					   
-			  and #{tsYear} = substr(ppNo,11,2)
+			  and substr(ppNo,11,4) like #{tsNo}
+			  
+			  and pAttendance = 'Y'
+	</select>
+	
+	<!-- 시험이름 불러오기 -->
+	<select id="selectTsTitleBytsNo" parameterType="string" resultType="string">
+		select tsTitle
+		from Test_Schedule
+		where tsNo = #{tsNo}
+	</select>
+	
+	<!-- 기관 불러오기 -->
+	<select id="selectGiGwan" resultType="string" parameterType="string">
+		select distinct s_gigwan
+		from school
+		where s_bonboo = #{s_bonboo}
+		order by 1
+	</select>
+	
+	<!-- 과목의 접수한 사람 불러오기 -->
+	<select id="selectGigwanSubmitPeople" parameterType="hashmap" resultType="int">
+		select count(eNo)
+		from TEST_IDENTIFICATION_SLIP
+		where substr(eNo,4,2) = (select distinct substr(S_CODE,4,2)
+								 from SCHOOL
+								 where S_GIGWAN = #{S_GIGWAN} and S_BONBOO = #{S_BONBOO})
+					  
+			  and
+			  
+			  qCode = (select qCode
+					   from Qualification
+					   where qName = #{qName})
+					   
+			  and substr(eNo,11,4) like #{tsNo}
+	</select>
+	
+	<!-- 과목의 참석한 사람 불러오기 -->
+	<select id="selectGigwanYesPeople" parameterType="hashmap" resultType="int">
+		select count(ppNo)
+		from PERSONAL_DATA
+		where substr(ppNo,4,2) = (select distinct substr(S_CODE,4,2)
+								 from SCHOOL
+								 where S_GIGWAN = #{S_GIGWAN} and S_BONBOO = #{S_BONBOO})
+					  
+			  and
+			  
+			  ppNo in (select eNo
+                   	   from TEST_IDENTIFICATION_SLIP
+                   	   where qCode = (select qCode
+					   			 	  from Qualification
+					   				  where qName = #{qName}))
+					   
+			  and substr(ppNo,11,4) like #{tsNo}
 			  
 			  and pAttendance = 'Y'
 	</select>
