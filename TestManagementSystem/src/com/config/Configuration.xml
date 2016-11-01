@@ -15,6 +15,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
    <typeAlias type="com.dto.StudentDTO" alias="StudentDTO"/>
    <typeAlias type="com.dto.ManagerDTO" alias="ManagerDTO"/>
    <typeAlias type="com.dto.SlipDTO" alias="SlipDTO"/>
+   <typeAlias type="com.dto.StatTableDTO" alias="StatTableDTO"/>
+   <typeAlias type="com.dto.StatResultDTO" alias="StatResultDTO"/>
+   <typeAlias type="com.dto.PlaceDTO" alias="PlaceDTO"/>
   </typeAliases>
   
 

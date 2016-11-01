@@ -7,6 +7,9 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 
 import com.config.MySqlSessionFactory;
+import com.dto.PlaceDTO;
+import com.dto.StatResultDTO;
+import com.dto.StatTableDTO;
 import com.exception.CommonException;
 
 public class SelectService {
@@ -27,21 +30,6 @@ public class SelectService {
 		}
 		return strList;
 	}// end selectTestSchedule
-	
-	// 본부 이름 불러오기
-		public List<String> selectBonBoo() throws CommonException {
-			List<String> bonbooList = null;
-			SqlSession session = MySqlSessionFactory.getSession();
-			try {
-				bonbooList = session.selectList("selectBonBoo");
-			} catch (Exception e) {
-				e.printStackTrace();
-				throw new CommonException("본부 이름 불러오기 실패");
-			} finally {
-				session.close();
-			}
-			return bonbooList;
-		}// end selectTestSchedule
 	
 	// 과목이름 불러오기
 	public List<String> selectQualificationList(String qClass) throws CommonException {
@@ -104,8 +92,8 @@ public class SelectService {
 		}// end selectTsTitleBytsNo
 
 		// s_bonboo대로 기관이름 가져오기
-		public List<String> selectGiGwan(String s_bonboo) throws CommonException {
-			List<String> GiGwanList = null;
+		public List<PlaceDTO> selectGiGwan(String s_bonboo) throws CommonException {
+			List<PlaceDTO> GiGwanList = null;
 			SqlSession session = MySqlSessionFactory.getSession();
 			try {
 				GiGwanList = session.selectList("selectGiGwan", s_bonboo);
@@ -147,4 +135,142 @@ public class SelectService {
 			}
 			return submitNum;
 		}// end selectYesPeople
+		
+		// qCode 불러오기
+		public List<String> qCodeSearch(String qClass) throws CommonException {
+			List<String> list = null;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				list = session.selectList("qCodeSearch", qClass);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("qCode 검색 실패");
+			} finally {
+				session.close();
+			}
+			return list;
+		}// end qCodeSearch
+		
+		// s_Code 불러오기
+		public List<String> s_CodeSearch() throws CommonException {
+			List<String> list = null;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				list = session.selectList("s_CodeSearch");
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("s_Code 검색 실패");
+			} finally {
+				session.close();
+			}
+			return list;
+		}// end s_CodeSearch
+
+		// tsNo 불러오기
+		public List<String> tsNoSearch(String tsNo) throws CommonException {
+			List<String> list = null;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				list = session.selectList("tsNoSearch", tsNo);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("tsNo 검색 실패");
+			} finally {
+				session.close();
+			}
+			return list;
+		}// end tsNoSearch
+
+		// 참석인원 구하기
+		public int searchAttend(HashMap<String, String> searchMap) throws CommonException {
+			int attend=0;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				attend = session.selectOne("searchAttend", searchMap);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("attend 검색 실패");
+			} finally {
+				session.close();
+			}
+			return attend;
+		}// end searchAttend
+
+		// 신청인원 구하기
+		public int searchSubmit(HashMap<String, String> searchMap) throws CommonException {
+			int submit=0;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				submit = session.selectOne("searchSubmit", searchMap);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("submit 검색 실패");
+			} finally {
+				session.close();
+			}
+			return submit;
+		}// end searchSubmit
+
+		// 통계테이블에 인원수 넣기
+		public void updateCount(StatTableDTO dto) throws CommonException {
+			
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				int n = session.update("updateCount", dto);
+				session.commit();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("통계테이블 등록 실패");
+			} finally {
+				session.close();
+			}
+
+		}// end insertCount
+
+		// 본부 숫자, 이름 불러오기
+		public List<PlaceDTO> selectBonBoo() throws CommonException {
+			List<PlaceDTO> bonbooNoList = null;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				bonbooNoList = session.selectList("selectBonBooNo");
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("본부 숫자 불러오기 실패");
+			} finally {
+				session.close();
+			}
+			return bonbooNoList;
+		}// end selectBonBooNo
+
+		// 메인 통계 값 불러오기
+		public StatResultDTO CountMain(HashMap<String, String> parameterMap) throws CommonException {
+			StatResultDTO resultDTO = null;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				resultDTO = session.selectOne("CountMain", parameterMap);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("기관이름 불러오기 실패");
+			} finally {
+				session.close();
+			}
+			return resultDTO;
+		}// end CountMain
+		
+		// 일정이름 불러오기
+		public String searchTsTitle(String tsNo) throws CommonException {
+			String tsTitle = null;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				tsTitle = session.selectOne("searchTsTitle", tsNo);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("일정이름 불러오기 실패");
+			} finally {
+				session.close();
+			}
+			return tsTitle;
+		}// end CountMain
+		
 }

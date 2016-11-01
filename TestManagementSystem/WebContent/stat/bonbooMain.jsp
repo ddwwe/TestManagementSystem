@@ -65,7 +65,7 @@
 <%
 	String tsTitle = (String)request.getAttribute("tsTitle");
 	List<String> qNameList = (ArrayList<String>)request.getAttribute("qNameList");
-	List<PlaceDTO> bonbooList = (ArrayList<PlaceDTO>)request.getAttribute("bonbooList");
+	List<PlaceDTO> gigwanList = (ArrayList<PlaceDTO>)request.getAttribute("gigwanList");
 	int [][] AttendCountArr = (int[][])request.getAttribute("mainAttendCountArr");
 	int [][] SubmitCountArr = (int[][])request.getAttribute("mainSubmitCountArr");
 	int [] AttendHSumArr = (int[])request.getAttribute("mainAttendHSumArr");
@@ -113,8 +113,8 @@
 					<thead>
 						<tr>
 							<th>종 목 ＼ 본 부&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-							<% for(int i=0; i < bonbooList.size(); i++) { %>
-							<th><%= bonbooList.get(i).getS_Place() %>&nbsp&nbsp</th>
+							<% for(int i=0; i < gigwanList.size(); i++) { %>
+							<th><%= gigwanList.get(i).getS_Place() %>&nbsp&nbsp</th>
 							<%} %>
 							<th>총&nbsp&nbsp&nbsp합</th>
 						</tr>
@@ -123,7 +123,7 @@
 						<% for (int i=0; i < qNameList.size(); i++) {%>
 						<tr>
 							<th><%= qNameList.get(i) %>&nbsp&nbsp</th>
-							<% for (int j=0; j < bonbooList.size(); j++) {%>
+							<% for (int j=0; j < gigwanList.size(); j++) {%>
 							<td align="center"><%= AttendCountArr[i][j] %>/&nbsp&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp/<%= SubmitCountArr[i][j] %></td>
 							<%} %>
 							<td align="center"><%= AttendHSumArr[i] %>/&nbsp&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp/<%= SubmitHSumArr[i] %></td>
@@ -131,7 +131,7 @@
 						<%} %>
 						<tr>
 							<th>총&nbsp&nbsp&nbsp합</th>
-						<% for (int i=0; i < bonbooList.size(); i++) {%>
+						<% for (int i=0; i < gigwanList.size(); i++) {%>
 							<td align="center"><%= AttendVSumArr[i] %>/&nbsp&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp/<%= SubmitVSumArr[i] %></td>
 						<%} %>
 						<td align="center"><%=AttendTotal%>/&nbsp&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp/<%=SubmitTotal%></td>

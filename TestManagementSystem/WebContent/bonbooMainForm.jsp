@@ -17,7 +17,7 @@
 <div class="wrapper">
   <jsp:include page="header/managerHeader.jsp" flush="true"></jsp:include>
   <jsp:include page="sidebar/managerSidebar.jsp" flush="true"></jsp:include>
-  <jsp:include page="stat/busanStat.jsp" flush="true"></jsp:include>
+  <jsp:include page="stat/bonbooMain.jsp" flush="true"></jsp:include>
   <jsp:include page="footer/footer.jsp" flush="true"></jsp:include>
 
 </div>

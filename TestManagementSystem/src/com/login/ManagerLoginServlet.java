@@ -43,7 +43,7 @@ public class ManagerLoginServlet extends HttpServlet {
 			} else {
 				HttpSession session = request.getSession();
 				session.setAttribute("manaLogin", dto);
-				target = "managerMainForm.jsp";
+				target = "MainStatFormServlet";
 			}
 
 		} catch (CommonException e) {

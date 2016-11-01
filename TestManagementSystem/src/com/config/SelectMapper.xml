@@ -12,13 +12,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		order by tsTitle
 	</select>
 	
-	<!-- 본부 불러오기 -->
-	<select id="selectBonBoo" resultType="string">
-		select distinct S_BONBOO
-		from SCHOOL
-		order by 1
-	</select>
-	
 	<!-- 종목 불러오기 -->
 	<select id="selectQualificationList" parameterType="string" resultType="string">
 		select qName
@@ -73,10 +66,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<!-- 기관 불러오기 -->
-	<select id="selectGiGwan" resultType="string" parameterType="string">
-		select distinct s_gigwan
-		from school
-		where s_bonboo = #{s_bonboo}
+	<select id="selectGiGwan" resultType="PlaceDTO" parameterType="string">
+		select distinct substr(s_Code,1,5) placeNo, s_Gigwan s_Place
+		from SCHOOL
+		where s_Bonboo = #{s_bonboo}
 		order by 1
 	</select>
 	
@@ -116,6 +109,76 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			  and substr(ppNo,11,4) like #{tsNo}
 			  
 			  and pAttendance = 'Y'
+	</select>
+	
+	<select id="qCodeSearch" parameterType="string" resultType="string">
+		select qCode
+		from Qualification
+		where qClass = #{qClass}
+	</select>
+	
+	<select id="s_CodeSearch" resultType="string">
+		select s_Code
+		from SCHOOL
+	</select>
+	
+	<select id="tsNoSearch" parameterType="string" resultType="string">
+		select tsNo
+		from Test_Schedule
+		where tsNo like #{tsNo}
+		order by tsNo
+	</select>
+	
+	<select id="searchAttend" parameterType="hashmap" resultType="int">
+		select count(*)
+		from PERSONAL_DATA
+		where #{tsNo} = substr(ppNo,11,4)					and
+		
+			  #{s_Code} = substr(ppNo,1,8)					and
+			  
+			  ppNo = any (select eNo
+              			  from TEST_IDENTIFICATION_SLIP
+              			  where qCode = #{qCode})			and
+              
+       	 	  pAttendance = 'Y'
+	</select>
+	
+	<select id="searchSubmit" parameterType="hashmap" resultType="int">
+		select count(*)
+		from PERSONAL_DATA
+		where #{tsNo} = substr(ppNo,11,4)					and
+		
+			  #{s_Code} = substr(ppNo,1,8)					and
+			  
+			  ppNo = any (select eNo
+              			  from TEST_IDENTIFICATION_SLIP
+             			   where qCode = #{qCode})
+	</select>
+	
+	<update id="updateCount" parameterType="StatTableDTO">
+		update ALL_STAT_TABLE
+		set CountAttendStat = #{CountAttendStat}, CountSubmitStat = #{CountSubmitStat}
+		where qCode = #{qCode} and s_Code = #{s_Code} and tsNo =#{tsNo}
+	</update>
+	
+	<!-- 본부 불러오기 -->
+	<select id="selectBonBooNo" resultType="PlaceDTO">
+		select distinct substr(s_Code,1,3) placeNo, s_Bonboo s_Place
+		from SCHOOL
+	</select>
+	
+	<!-- 통계값 불러오기 -->
+	<select id="CountMain" resultType="StatResultDTO" parameterType="hashmap">
+		select sum(COUNTATTENDSTAT) countAttendStat, sum(COUNTSUBMITSTAT) countSumbitStat
+		from ALL_STAT_TABLE
+		where qCode = #{qCode} and s_code like #{placeNo} and tsNo = #{tsNo}
+	</select>
+	
+	<!-- 일정이름 불러오기 -->
+	<select id="searchTsTitle" parameterType="string" resultType="string">
+		select tsTitle
+		from TEST_SCHEDULE
+		where tsNo = #{tsNo}
 	</select>
 	
 </mapper>
