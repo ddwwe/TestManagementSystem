@@ -23,10 +23,9 @@
         <ul class="nav navbar-nav">
           <!-- Messages: style can be found in dropdown.less-->
           <li class="dropdown user user-menu">
-            <a href="StudentLogOutServlet">
-              <img src="dist/img/logout.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">로그아웃</span>
-            </a>
+            
+          </li>
+        </ul>
       </div>
     </nav>
   </header>

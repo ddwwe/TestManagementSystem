@@ -26,7 +26,11 @@
       <div class="collapse navbar-collapse pull-left">
       	
       	
-      	
+      	<ul class="nav navbar-nav">
+      		<li>
+      			<a href="#"><%= tsTitle %> 통계입니다</a>
+      		</li>
+      	</ul>
       </div>
     </nav>
   </header>

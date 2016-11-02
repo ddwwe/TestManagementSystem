@@ -36,7 +36,7 @@ public class StudentLoginServlet extends HttpServlet {
 			StudentDTO dto = service.login(map);
 			if(dto==null){
 				title= "아이디나 비밀번호 불일치  또는 등록된 회원이 아닙니다";
-				String link="StudentLoginFormServlet";
+				String link="";
 				target="error.jsp";
 				request.setAttribute("title", title);
 				request.setAttribute("link", link);

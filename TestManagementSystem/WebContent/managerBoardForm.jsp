@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
 
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
 <div class="wrapper">
   <jsp:include page="header/managerHeader.jsp" flush="true"></jsp:include>
   <jsp:include page="sidebar/managerSidebar.jsp" flush="true"></jsp:include>

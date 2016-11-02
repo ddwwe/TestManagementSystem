@@ -98,7 +98,7 @@ public class BonbooStatFormServlet extends HttpServlet {
 			}
 		}
 
-		request.setAttribute("tsTitle", tsTitle);
+		request.setAttribute("tsTitle", bonboo+" "+tsTitle);
 		request.setAttribute("qNameList", qNameList);
 		request.setAttribute("gigwanList", gigwanList);
 		request.setAttribute("mainAttendCountArr", mainAttendCountArr);

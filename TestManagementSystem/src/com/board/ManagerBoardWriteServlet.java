@@ -9,28 +9,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dto.PageDTO;
-import com.service.BoardService;
-
-@WebServlet("/ManagerBoardFormServlet")
-public class ManagerBoardFormServlet extends HttpServlet {
-
+@WebServlet("/ManagerBoardWriteServlet")
+public class ManagerBoardWriteServlet extends HttpServlet {
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String curPage = request.getParameter("curPage");
-		if(curPage == null){
-			curPage = "1";
-		}
-		
-		
-		BoardService service = new BoardService();
-		PageDTO dto = 
-				service.page(Integer.parseInt(curPage));
-		
-		request.setAttribute("page", dto);
 		
 		RequestDispatcher dis = request.getRequestDispatcher("managerBoardForm.jsp");
 		dis.forward(request, response);
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -63,7 +63,6 @@
 </script>
 
 <%
-	String tsTitle = (String)request.getAttribute("tsTitle");
 	List<String> qNameList = (ArrayList<String>)request.getAttribute("qNameList");
 	List<PlaceDTO> gigwanList = (ArrayList<PlaceDTO>)request.getAttribute("gigwanList");
 	int [][] AttendCountArr = (int[][])request.getAttribute("mainAttendCountArr");
@@ -83,7 +82,6 @@
 	         
 	         <div class="box box-info ">
             <div class="box-header with-border">
-				<h3 class="box-title"><%= tsTitle %></h3>
 				
 				<div class="box-tools pull-right">
 					<button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>

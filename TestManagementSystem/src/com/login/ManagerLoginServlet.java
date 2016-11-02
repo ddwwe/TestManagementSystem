@@ -36,7 +36,7 @@ public class ManagerLoginServlet extends HttpServlet {
 			ManagerDTO dto = service.managerLogin(map);
 			if (dto == null) {
 				title = "아이디 또는 비밀번호 불일치";
-				String link = "ManagerLoginFormServlet";
+				String link = "";
 				target = "error.jsp";
 				request.setAttribute("title", title);
 				request.setAttribute("link", link);

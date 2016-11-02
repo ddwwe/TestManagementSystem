@@ -61,7 +61,7 @@
 						<li><a class="page-scroll" href="ManagerLoginFormServlet">관리자용</a></li>
 					</c:if>
 					<c:if test="${sessionScope.manaLogin!=null}">
-						<li><a class="page-scroll" href="managerMainForm.jsp">관리자용</a></li>
+						<li><a class="page-scroll" href="MainStatFormServlet">관리자용</a></li>
 					</c:if>
 				</ul>
 			</div>

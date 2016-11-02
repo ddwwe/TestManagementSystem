@@ -96,7 +96,7 @@ public class MainStatFormServlet extends HttpServlet {
 			}
 		}
 
-		request.setAttribute("tsTitle", tsTitle);
+		request.setAttribute("tsTitle", "전국 "+tsTitle);
 		request.setAttribute("qNameList", qNameList);
 		request.setAttribute("bonbooList", bonbooList);
 		request.setAttribute("mainAttendCountArr", mainAttendCountArr);
