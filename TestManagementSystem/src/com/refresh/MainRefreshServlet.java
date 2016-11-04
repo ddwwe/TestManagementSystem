@@ -51,7 +51,7 @@ public class MainRefreshServlet extends HttpServlet {
 				giSulSaTsNoList = service.tsNoSearch("__2_");		// 기술사 tsNo 넣기
 				giNngJangTsNoList = service.tsNoSearch("__3_");		// 기능장 tsNo 넣기
 				
-				for (String tsNo : giNngSaTsNoList) {				// 기능사 인원수 넣기
+				for (String tsNo : giNngSaTsNoList) {
 					for (String qCode : giNngSaqCodeList) {
 						for (String s_Code : s_CodeList) {
 							searchMap.put("qCode", qCode);
@@ -65,8 +65,8 @@ public class MainRefreshServlet extends HttpServlet {
 						}
 					}
 				}
-				
-				for (String tsNo : giSaTsNoList) {				// 기사 인원수 넣기
+					
+				for (String tsNo : giSaTsNoList) {
 					for (String qCode : giSaqCodeList) {
 						for (String s_Code : s_CodeList) {
 							searchMap.put("qCode", qCode);
@@ -81,7 +81,7 @@ public class MainRefreshServlet extends HttpServlet {
 					}
 				}
 				
-				for (String tsNo : giSulSaTsNoList) {				// 기술사 인원수 넣기
+				for (String tsNo : giSulSaTsNoList) {
 					for (String qCode : giSulSaqCodeList) {
 						for (String s_Code : s_CodeList) {
 							searchMap.put("qCode", qCode);
@@ -96,7 +96,7 @@ public class MainRefreshServlet extends HttpServlet {
 					}
 				}
 				
-				for (String tsNo : giNngJangTsNoList) {				// 기능장 인원수 넣기
+				for (String tsNo : giNngJangTsNoList) {
 					for (String qCode : giNngJangqCodeList) {
 						for (String s_Code : s_CodeList) {
 							searchMap.put("qCode", qCode);
@@ -115,9 +115,6 @@ public class MainRefreshServlet extends HttpServlet {
 			} catch (CommonException e) {
 				e.printStackTrace();
 			}
-			
-		/*RequestDispatcher dis = request.getRequestDispatcher("MainStatFormServlet");
-		dis.forward(request, response);*/
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

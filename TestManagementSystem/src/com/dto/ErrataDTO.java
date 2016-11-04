@@ -3,6 +3,7 @@ package com.dto;
 public class ErrataDTO {
 
 	private int bNo;
+	private String bType;
 	private String ssId;
 	private String bContent;
 	private String bDate;
@@ -13,9 +14,10 @@ public class ErrataDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ErrataDTO(int bNo, String ssId, String bContent, String bDate, SchoolDTO schoolDTO) {
+	public ErrataDTO(int bNo, String bType, String ssId, String bContent, String bDate, SchoolDTO schoolDTO) {
 		super();
 		this.bNo = bNo;
+		this.bType = bType;
 		this.ssId = ssId;
 		this.bContent = bContent;
 		this.bDate = bDate;
@@ -28,6 +30,14 @@ public class ErrataDTO {
 
 	public void setbNo(int bNo) {
 		this.bNo = bNo;
+	}
+
+	public String getbType() {
+		return bType;
+	}
+
+	public void setbType(String bType) {
+		this.bType = bType;
 	}
 
 	public String getSsId() {
@@ -64,8 +74,8 @@ public class ErrataDTO {
 
 	@Override
 	public String toString() {
-		return "ErrataDTO [bNo=" + bNo + ", ssId=" + ssId + ", bContent=" + bContent + ", bDate=" + bDate
-				+ ", schoolDTO=" + schoolDTO + "]";
+		return "ErrataDTO [bNo=" + bNo + ", bType=" + bType + ", ssId=" + ssId + ", bContent=" + bContent + ", bDate="
+				+ bDate + ", schoolDTO=" + schoolDTO + "]";
 	}
 	
 }

@@ -6,7 +6,7 @@ public class PageDTO {
 
 	private List<ErrataDTO> list;
 	private int curPage;  //현재 페이지
-	private int perPage=10;   //페이지당 보여줄 갯수
+	private int perPage=8;   //페이지당 보여줄 갯수
 	private int totalRecord;  // 전체 레코드 갯수
 	
 	public PageDTO() {

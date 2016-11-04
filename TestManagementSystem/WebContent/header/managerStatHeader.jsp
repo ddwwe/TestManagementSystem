@@ -22,16 +22,19 @@
       <a href="#" class="sidebar-toggle " data-toggle="offcanvas" role="button">
         <span class="sr-only">Toggle navigation</span>
       </a>
-      <!-- Navbar Right Menu -->
+      
       <div class="collapse navbar-collapse pull-left">
       	
-      	
+      
       	<ul class="nav navbar-nav">
       		<li>
       			<a href="#"><%= tsTitle %> 통계입니다</a>
       		</li>
       	</ul>
       </div>
+      
+      <!-- Navbar Right Menu -->
+      
     </nav>
   </header>
   

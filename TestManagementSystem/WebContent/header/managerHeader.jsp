@@ -23,26 +23,25 @@
         <span class="sr-only">Toggle navigation</span>
       </a>
       <!-- Navbar Right Menu -->
-      <div class="collapse navbar-collapse pull-left">
-      	
-      	
-      	
-      </div>
+      
+      
+      
     </nav>
   </header>
   
   
     <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
+  
     <!-- Create the tabs -->
     <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-comment-o"></i></a></li>
     
     </ul>
     <!-- Tab panes -->
     <div class="tab-content">
     </div>
+    
   </aside>
   <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed

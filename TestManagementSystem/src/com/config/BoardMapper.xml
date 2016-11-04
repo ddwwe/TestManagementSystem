@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="myboard">
 
 	<select id="list" resultType="ErrataDTO">
-	   select bNo, ssId, bContent,
+	   select bNo, bType, ssId, bContent,
 	         to_char(bDate,'yyyy/mm/dd hh24:mi:ss') bDate
 	   from ERRATA_BOARD
        order by bno desc 
@@ -24,6 +24,44 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	on SCHEDULE_SUPERVISOR.S_CODE = SCHOOL.S_CODE
 	where SCHEDULE_SUPERVISOR.SSID = #{ssId}
 	</select>
+	
+	<select id="listNotice" resultType="ErrataDTO">
+	   select bNo, bType, ssId, bContent,
+	         to_char(bDate,'yyyy/mm/dd hh24:mi:ss') bDate
+	   from ERRATA_BOARD
+	   where bType = 'notice'
+       order by bno desc 
+	</select>
+	
+	<select id="totalCountNotice" resultType="int">
+	 select count(*) 
+	 from ERRATA_BOARD
+	 where bType = 'notice'
+	</select>
+	
+	<insert id="write" parameterType="ErrataDTO">
+		insert into ERRATA_BOARD
+		values( errata_seq.nextval, #{bType}, #{ssId}, #{bContent}, sysdate)
+    </insert>
+    
+    <select id="selectErrataDTO" parameterType="int" resultType="ErrataDTO">
+	   select bNo, bType, ssId, bContent,
+	         to_char(bDate,'yyyy/mm/dd hh24:mi:ss') bDate
+	   from ERRATA_BOARD
+	   where bNo = #{bNo}
+       
+	</select>
+	
+	<update id="updateErrata" parameterType="ErrataDTO">
+		update ERRATA_BOARD
+		set bContent = #{bContent}
+		where bNo = #{bNo}
+	</update>
+	
+	<delete id="deleteErrata" parameterType="int">
+		delete ERRATA_BOARD
+		where bNo = #{bNo}
+	</delete>
 	
 </mapper>
 
