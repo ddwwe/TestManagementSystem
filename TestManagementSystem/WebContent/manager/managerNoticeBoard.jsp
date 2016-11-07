@@ -22,35 +22,13 @@
 				<c:set var="page" value="${pageNotice}" />
 				<c:forEach var="errata" items="${page.list}" varStatus="status">
 				<tr>
-					<c:if test="${errata.bType == 'send' || errata.bType == 'notice'}">
-						<td align="center">${errata.bNo}<br><a href="ManagerBoardUpdateUIServlet?bNo=${errata.bNo}"><input class="btn btn-primary btn-sm" type="button" value="글 수정"></a><p/><p/><a href="ManagerDeleteBoardServlet?bNo=${errata.bNo}&type=ManagerNoticeBoardFormServlet"><input class="btn btn-danger btn-sm" type="button" value="글 삭제"></a></td>
-					</c:if>
-					<c:if test="${errata.bType == 'receive'}">
-						<td align="center">${errata.bNo}</td>
-					</c:if>
+					<td align="center">${errata.bNo}<br><a href="ManagerBoardUpdateUIServlet?bNo=${errata.bNo}"><input class="btn btn-primary btn-sm" type="button" value="글 수정"></a><p/><p/><a href="ManagerDeleteBoardServlet?bNo=${errata.bNo}&type=ManagerNoticeBoardFormServlet"><input class="btn btn-danger btn-sm" type="button" value="글 삭제"></a></td>
 					
 					<td align="center">공지사항</td>
 					
-					<c:if test="${errata.ssId != null }">
-						<c:if test="${manaLogin != null }">
-							<td align="center"><a href="ManagerBoardWriteServlet?ssId=${errata.ssId}">${errata.ssId}</a></td>
-						</c:if>
-						<c:if test="${manaLogin == null }">
-							<td align="center">${errata.ssId}</td>
-						</c:if>
-				 	</c:if>
-					<c:if test="${errata.ssId != null }">
-						<td></td>
-					</c:if>
-					
 					<td align="center">${errata.bDate}</td>
 					
-					<c:if test="${errata.schoolDTO != null }">
-						<td align="center"><div align="center">${errata.schoolDTO.s_bonboo}<br>${errata.schoolDTO.s_gigwan}<br>${errata.schoolDTO.s_name}<br>${errata.schoolDTO.s_room}시험실</div></td>
-					</c:if>
-					<c:if test="${errata.schoolDTO == null }">
-						<td align="center"><div align="center">모든 장소에게</div></td>
-					</c:if>
+					<td align="center"><div align="center">모든 장소에게</div></td>
 					
 					<td>${errata.bContent}</td>
 				</tr>

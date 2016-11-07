@@ -21,6 +21,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
    <typeAlias type="com.dto.ErrataDTO" alias="ErrataDTO"/>
    <typeAlias type="com.dto.PageDTO" alias="PageDTO"/>
    <typeAlias type="com.dto.SchoolDTO" alias="SchoolDTO"/>
+   <typeAlias type="com.dto.SupervisorDTO" alias="SupervisorDTO"/>
   </typeAliases>
   
 
@@ -41,6 +42,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<mapper resource="com/config/MemberMapper.xml" />
 		<mapper resource="com/config/SelectMapper.xml" />
 		<mapper resource="com/config/BoardMapper.xml" />
+		<mapper resource="com/config/InfoMapper.xml" />
 	</mappers>
 </configuration>
 

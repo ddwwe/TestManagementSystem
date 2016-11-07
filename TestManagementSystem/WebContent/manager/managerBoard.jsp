@@ -10,7 +10,7 @@
 		<div class="box-body table-responsive no-padding">
 		<a href="ManagerBoardWriteUIServlet"><button class="btn btn-warning"><i class="fa fa-pencil"></i> 글 쓰기</button></a>&nbsp;
 		<a href="ManagerBoardFormServlet"><button class="btn btn-info"><i class="fa fa-comments-o"></i> 모든 글 보기</button></a>&nbsp;
-		<a href="ManagerNoticeBoardFormServlet"><button class="btn btn-success"><i class="fa fa-comment-o"></i> 공지사항 보기</button></a>
+		<a href="ManagerNoticeBoardFormServlet"><button class="btn btn-success"><i class="fa fa-comment-o"></i> 공지사항 보기</button></a>&nbsp;
 		<p/><table class="table table-hover">
 				<tr align="center">
 					<th width="6%"><div align="center">글번호</div></th>
@@ -40,12 +40,7 @@
 						<td align="center">관리자<br>↓<br>감독관<br><br>보낸글</td>
 					</c:if>
 					
-					<c:if test="${sessionScope.manaLogin != null }">
-						<td align="center"><a href="ManagerBoardWriteUIServlet?ssId=${errata.ssId}">${errata.ssId}</a></td>
-					</c:if>
-					<c:if test="${sessionScope.manaLogin == null }">
-						<td align="center">${errata.ssId}</td>
-					</c:if>
+					<td align="center"><a href="ManagerBoardWriteUIServlet?ssId=${errata.ssId}">${errata.ssId}</a></td>
 				 
 					<td align="center">${errata.bDate}</td>
 					

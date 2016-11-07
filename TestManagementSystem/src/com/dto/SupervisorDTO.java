@@ -2,132 +2,132 @@ package com.dto;
 
 public class SupervisorDTO {
 
-	private String sid;
-	private String spw;
-	private String sname;
-	private String sgroup;
-	private String sphone;
-	private String spost;
-	private String saddr1;
-	private String saddr2;
-	private String sbirth;
-	private String spath;
-	private String scareers;
-
-	public String getSid() {
-		return sid;
-	}
-
-	public void setSid(String sid) {
-		this.sid = sid;
-	}
-
-	public String getSpw() {
-		return spw;
-	}
-
-	public void setSpw(String spw) {
-		this.spw = spw;
-	}
-
-	public String getSname() {
-		return sname;
-	}
-
-	public void setSname(String sname) {
-		this.sname = sname;
-	}
-
-	public String getSgroup() {
-		return sgroup;
-	}
-
-	public void setSgroup(String sgroup) {
-		this.sgroup = sgroup;
-	}
-
-	public String getSphone() {
-		return sphone;
-	}
-
-	public void setSphone(String sphone) {
-		this.sphone = sphone;
-	}
-
-	public String getSpost() {
-		return spost;
-	}
-
-	public void setSpost(String spost) {
-		this.spost = spost;
-	}
-
-	public String getSaddr1() {
-		return saddr1;
-	}
-
-	public void setSaddr1(String saddr1) {
-		this.saddr1 = saddr1;
-	}
-
-	public String getSaddr2() {
-		return saddr2;
-	}
-
-	public void setSaddr2(String saddr2) {
-		this.saddr2 = saddr2;
-	}
-
-	public String getSbirth() {
-		return sbirth;
-	}
-
-	public void setSbirth(String sbirth) {
-		this.sbirth = sbirth;
-	}
-
-	public String getSpath() {
-		return spath;
-	}
-
-	public void setSpath(String spath) {
-		this.spath = spath;
-	}
-
-	public String getScareers() {
-		return scareers;
-	}
-
-	public void setScareers(String scareers) {
-		this.scareers = scareers;
-	}
-
-	@Override
-	public String toString() {
-		return "SupervisorDTO [sid=" + sid + ", spw=" + spw + ", sname=" + sname + ", sgroup=" + sgroup + ", sphone="
-				+ sphone + ", spost=" + spost + ", saddr1=" + saddr1 + ", saddr2=" + saddr2 + ", sbirth=" + sbirth
-				+ ", spath=" + spath + ", scareers=" + scareers + "]";
-	}
-
+	private String ssId;
+	private String sPw;
+	private String sName;
+	private String sGroup;
+	private String sPhone;
+	private String sPost;
+	private String sAddr1;
+	private String sAddr2;
+	private String sBirth;
+	private String sPath;
+	private SchoolDTO schoolDTO;
+	
 	public SupervisorDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public SupervisorDTO(String sid, String spw, String sname, String sgroup, String sphone, String spost,
-			String saddr1, String saddr2, String sbirth, String spath, String scareers) {
+	public SupervisorDTO(String ssId, String sPw, String sName, String sGroup, String sPhone, String sPost,
+			String sAddr1, String sAddr2, String sBirth, String sPath, SchoolDTO schoolDTO) {
 		super();
-		this.sid = sid;
-		this.spw = spw;
-		this.sname = sname;
-		this.sgroup = sgroup;
-		this.sphone = sphone;
-		this.spost = spost;
-		this.saddr1 = saddr1;
-		this.saddr2 = saddr2;
-		this.sbirth = sbirth;
-		this.spath = spath;
-		this.scareers = scareers;
+		this.ssId = ssId;
+		this.sPw = sPw;
+		this.sName = sName;
+		this.sGroup = sGroup;
+		this.sPhone = sPhone;
+		this.sPost = sPost;
+		this.sAddr1 = sAddr1;
+		this.sAddr2 = sAddr2;
+		this.sBirth = sBirth;
+		this.sPath = sPath;
+		this.schoolDTO = schoolDTO;
 	}
 
+	public String getSsId() {
+		return ssId;
+	}
+
+	public void setSsId(String ssId) {
+		this.ssId = ssId;
+	}
+
+	public String getsPw() {
+		return sPw;
+	}
+
+	public void setsPw(String sPw) {
+		this.sPw = sPw;
+	}
+
+	public String getsName() {
+		return sName;
+	}
+
+	public void setsName(String sName) {
+		this.sName = sName;
+	}
+
+	public String getsGroup() {
+		return sGroup;
+	}
+
+	public void setsGroup(String sGroup) {
+		this.sGroup = sGroup;
+	}
+
+	public String getsPhone() {
+		return sPhone;
+	}
+
+	public void setsPhone(String sPhone) {
+		this.sPhone = sPhone;
+	}
+
+	public String getsPost() {
+		return sPost;
+	}
+
+	public void setsPost(String sPost) {
+		this.sPost = sPost;
+	}
+
+	public String getsAddr1() {
+		return sAddr1;
+	}
+
+	public void setsAddr1(String sAddr1) {
+		this.sAddr1 = sAddr1;
+	}
+
+	public String getsAddr2() {
+		return sAddr2;
+	}
+
+	public void setsAddr2(String sAddr2) {
+		this.sAddr2 = sAddr2;
+	}
+
+	public String getsBirth() {
+		return sBirth;
+	}
+
+	public void setsBirth(String sBirth) {
+		this.sBirth = sBirth;
+	}
+
+	public String getsPath() {
+		return sPath;
+	}
+
+	public void setsPath(String sPath) {
+		this.sPath = sPath;
+	}
+
+	public SchoolDTO getSchoolDTO() {
+		return schoolDTO;
+	}
+
+	public void setSchoolDTO(SchoolDTO schoolDTO) {
+		this.schoolDTO = schoolDTO;
+	}
+
+	@Override
+	public String toString() {
+		return "SupervisorDTO [ssId=" + ssId + ", sPw=" + sPw + ", sName=" + sName + ", sGroup=" + sGroup + ", sPhone="
+				+ sPhone + ", sPost=" + sPost + ", sAddr1=" + sAddr1 + ", sAddr2=" + sAddr2 + ", sBirth=" + sBirth
+				+ ", sPath=" + sPath + ", schoolDTO=" + schoolDTO + "]";
+	}
+	
 }

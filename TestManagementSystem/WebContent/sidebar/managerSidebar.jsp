@@ -44,6 +44,12 @@
 				</a>
 			</li>
 			<li>
+				<a href=ManagerSupervisorInfoFormServlet>
+					<i class="fa fa-odnoklassniki"></i><span>감독관 정보</span>
+					<span class="pull-right-container"></span>
+				</a>
+			</li>
+			<li>
 				<a href="ManagerLogoutServlet">
 					<i class="fa fa-sign-out" aria-hidden="true"></i>
 					<span class="hidden-xs">로그아웃</span>

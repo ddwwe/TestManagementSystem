@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="select">
+
+	<!-- 모든 감독관 불러오기 -->
+	<select id="searchAllSupervisor" resultType="SupervisorDTO">
+		select ssId, sName, sGroup, sPhone, sPost, sAddr1, sAddr2, to_char(sBirth, 'yyyy/mm/dd') sBirth
+		from supervisor
+		order by 1
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
