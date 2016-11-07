@@ -36,7 +36,7 @@
 					<td align="center">${supervisor.sPhone}</td>
 					<td align="center">${supervisor.sPost}</td>
 					<td align="center">${supervisor.sAddr1} ${supervisor.sAddr2}</td>
-					<td>${supervisor.sBirth}</td>
+					<td align="center">${supervisor.sBirth}</td>
 					<td align="center"><div align="center">${supervisor.schoolDTO.s_bonboo}<br>${supervisor.schoolDTO.s_gigwan}<br>${supervisor.schoolDTO.s_name}<br>${supervisor.schoolDTO.s_room}시험실</div></td>
 				</tr>
 				</c:forEach>
