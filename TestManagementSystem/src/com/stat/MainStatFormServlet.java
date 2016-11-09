@@ -1,4 +1,4 @@
-package com.stat.main;
+package com.stat;
 
 import java.io.IOException;
 import java.util.ArrayList;

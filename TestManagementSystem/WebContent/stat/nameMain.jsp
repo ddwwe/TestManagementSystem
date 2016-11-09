@@ -64,8 +64,10 @@
 
 <%
 	String bonboo = (String)request.getAttribute("bonboo");
+	String gigwan = (String)request.getAttribute("gigwan");
+	String name = (String)request.getAttribute("name");
 	List<String> qNameList = (ArrayList<String>)request.getAttribute("qNameList");
-	List<PlaceDTO> gigwanList = (ArrayList<PlaceDTO>)request.getAttribute("gigwanList");
+	List<PlaceDTO> roomList = (ArrayList<PlaceDTO>)request.getAttribute("roomList");
 	int [][] AttendCountArr = (int[][])request.getAttribute("mainAttendCountArr");
 	int [][] SubmitCountArr = (int[][])request.getAttribute("mainSubmitCountArr");
 	int [] AttendHSumArr = (int[])request.getAttribute("mainAttendHSumArr");
@@ -84,7 +86,7 @@
 	         <div class="box box-info ">
             <div class="box-header with-border">
             
-            	<form action="BonbooStatFormServlet" method="get">
+            	<form action="NameStatFormServlet" method="get">
 	            	<select name="tsNoChoice" id="tsNoChoice" onchange="changeQClassChoice(this)">
 					    <option value="">연도 선택</option>
 					    <option value="15">2015년</option>
@@ -99,6 +101,9 @@
 						<option value="">시험 선택</option>
 					</select>
 					<input type="hidden" name="bonboo" value="<%=bonboo %>">
+					<input type="hidden" name="gigwan" value="<%=gigwan %>">
+					<input type="hidden" name="name" value="<%=name %>">
+					
 					<input class="btn btn-primary" id="submit" type="submit" value="검색" disabled="disabled">
 				</form>
             </div>
@@ -108,8 +113,8 @@
 					<thead>
 						<tr>
 							<th>종 목 ＼ 본 부</th>
-							<% for(int i=0; i < gigwanList.size(); i++) { %>
-							<th><%= gigwanList.get(i).getS_Place() %></th>
+							<% for(int i=0; i < roomList.size(); i++) { %>
+							<th align="center"><%= roomList.get(i).getS_Place() %>시험실</th>
 							<%} %>
 							<th>총합</th>
 						</tr>
@@ -118,7 +123,7 @@
 						<% for (int i=0; i < qNameList.size(); i++) {%>
 						<tr>
 							<th><%= qNameList.get(i) %></th>
-							<% for (int j=0; j < gigwanList.size(); j++) {%>
+							<% for (int j=0; j < roomList.size(); j++) {%>
 							<td align="center"><%= AttendCountArr[i][j] %>/<br>/<%= SubmitCountArr[i][j] %></td>
 							<%} %>
 							<td align="center"><%= AttendHSumArr[i] %>/<br>/<%= SubmitHSumArr[i] %></td>
@@ -126,7 +131,7 @@
 						<%} %>
 						<tr>
 							<th>총합</th>
-						<% for (int i=0; i < gigwanList.size(); i++) {%>
+						<% for (int i=0; i < roomList.size(); i++) {%>
 							<td align="center"><%= AttendVSumArr[i] %>/<br>/<%= SubmitVSumArr[i] %></td>
 						<%} %>
 						<td align="center"><%=AttendTotal%>/<br>/<%=SubmitTotal%></td>

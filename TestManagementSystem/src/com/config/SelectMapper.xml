@@ -181,6 +181,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		where tsNo = #{tsNo}
 	</select>
 	
+	<!-- 시험장 불러오기 -->
+	<select id="selectName" resultType="PlaceDTO" parameterType="hashmap">
+		select distinct substr(s_Code,1,7) placeNo, s_name s_Place
+		from SCHOOL
+		where s_Bonboo = #{bonboo} and s_gigwan = #{gigwan}
+		order by 1
+	</select>
+	
+	<!-- 시험실 불러오기 -->
+	<select id="selectRoom" resultType="PlaceDTO" parameterType="hashmap">
+		select distinct substr(s_Code,1,8) placeNo, s_room s_Place
+		from SCHOOL
+		where s_Bonboo = #{bonboo} and s_gigwan = #{gigwan} and s_name = #{name}
+		order by 1
+	</select>
+	
 </mapper>
 
 

@@ -82,10 +82,6 @@
 	         
 	         <div class="box box-info ">
             <div class="box-header with-border">
-				
-				<div class="box-tools pull-right">
-					<button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-				</div>
             
             	<form action="MainStatFormServlet" method="get">
 	            	<select name="tsNoChoice" id="tsNoChoice" onchange="changeQClassChoice(this)">
@@ -110,29 +106,29 @@
 				<table border="1">
 					<thead>
 						<tr>
-							<th>종 목 ＼ 본 부&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+							<th>종 목 ＼ 본 부</th>
 							<% for(int i=0; i < bonbooList.size(); i++) { %>
-							<th><%= bonbooList.get(i).getS_Place() %>&nbsp&nbsp</th>
+							<th><%= bonbooList.get(i).getS_Place() %></th>
 							<%} %>
-							<th>총&nbsp&nbsp&nbsp합</th>
+							<th>총합</th>
 						</tr>
 					</thead>
 					<tbody>
 						<% for (int i=0; i < qNameList.size(); i++) {%>
 						<tr>
-							<th><%= qNameList.get(i) %>&nbsp&nbsp</th>
+							<th><%= qNameList.get(i) %></th>
 							<% for (int j=0; j < bonbooList.size(); j++) {%>
-							<td align="center"><%= AttendCountArr[i][j] %>/&nbsp&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp/<%= SubmitCountArr[i][j] %></td>
+							<td align="center"><%= AttendCountArr[i][j] %>/<br>/<%= SubmitCountArr[i][j] %></td>
 							<%} %>
-							<td align="center"><%= AttendHSumArr[i] %>/&nbsp&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp/<%= SubmitHSumArr[i] %></td>
+							<td align="center"><%= AttendHSumArr[i] %>/<br>/<%= SubmitHSumArr[i] %></td>
 						</tr>
 						<%} %>
 						<tr>
-							<th>총&nbsp&nbsp&nbsp합</th>
+							<th>총합</th>
 						<% for (int i=0; i < bonbooList.size(); i++) {%>
-							<td align="center"><%= AttendVSumArr[i] %>/&nbsp&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp/<%= SubmitVSumArr[i] %></td>
+							<td align="center"><%= AttendVSumArr[i] %>/<br>/<%= SubmitVSumArr[i] %></td>
 						<%} %>
-						<td align="center"><%=AttendTotal%>/&nbsp&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp/<%=SubmitTotal%></td>
+						<td align="center"><%=AttendTotal%>/<br>/<%=SubmitTotal%></td>
 						</tr>
 					</tbody>
 				</table>             

@@ -1,4 +1,4 @@
-package com.stat.bonboo;
+package com.stat;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ public class BonbooStatFormServlet extends HttpServlet {
 		List<String> qNameList = new ArrayList<>();			// 종목이름 리스트
 		List<PlaceDTO> gigwanList = new ArrayList<>();		// 본부 리스트
 		
-		bonboo = request.getParameter("bonboo");
+		bonboo = (String)request.getParameter("bonboo");
 		qClass = (String) request.getParameter("qClassChoice");	// qClass 받음. 없으면 기사
 		System.out.println(qClass);
 		if(qClass == null)			qClass = "기사";
@@ -98,6 +98,7 @@ public class BonbooStatFormServlet extends HttpServlet {
 			}
 		}
 
+		request.setAttribute("bonboo", bonboo);
 		request.setAttribute("tsTitle", bonboo+" "+tsTitle);
 		request.setAttribute("qNameList", qNameList);
 		request.setAttribute("gigwanList", gigwanList);

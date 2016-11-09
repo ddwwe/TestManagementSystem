@@ -272,5 +272,33 @@ public class SelectService {
 			}
 			return tsTitle;
 		}// end CountMain
+
+		public List<PlaceDTO> selectName(HashMap<String, String> map) throws CommonException {
+			List<PlaceDTO> GiGwanList = null;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				GiGwanList = session.selectList("selectName", map);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("기관이름 불러오기 실패");
+			} finally {
+				session.close();
+			}
+			return GiGwanList;
+		}// end selectName
+
+		public List<PlaceDTO> selectRoom(HashMap<String, String> map) throws CommonException {
+			List<PlaceDTO> GiGwanList = null;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				GiGwanList = session.selectList("selectRoom", map);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("기관이름 불러오기 실패");
+			} finally {
+				session.close();
+			}
+			return GiGwanList;
+		}// end selectRoom
 		
 }

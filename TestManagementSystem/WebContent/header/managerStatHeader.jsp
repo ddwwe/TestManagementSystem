@@ -28,7 +28,7 @@
       
       	<ul class="nav navbar-nav">
       		<li>
-      			<a href="#"><%= tsTitle %> 통계입니다</a>
+      			<a><%= tsTitle %> 통계입니다</a>
       		</li>
       	</ul>
       </div>
