@@ -197,6 +197,39 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		order by 1
 	</select>
 	
+	<!-- 맵으로 sCode 불러오기 -->
+	<select id="searchScodeByMap" parameterType="hashmap" resultType="string">
+		select s_code
+		from school
+		where s_bonboo = #{bonboo} and s_gigwan = #{gigwan} and s_name = #{name} and s_room = #{room}
+	</select>
+	
+	<!-- sCode와 tsNo로 학생정보  불러오기 -->
+	<select id="searchStudentDataByScode" parameterType="string" resultType="hashmap">
+		select TEST_IDENTIFICATION_SLIP.SNO sNo, QUALIFICATION.QNAME qName,
+			   EXAMINEE.ENAME eName, PERSONAL_DATA.PTYPE pType, PERSONAL_DATA.PSEAT pSeat,
+			   PERSONAL_DATA.PATTENDANCE pAttendance, PERSONAL_DATA.PNOTE pNote
+		from TEST_IDENTIFICATION_SLIP
+    	join PERSONAL_DATA
+    	on PERSONAL_DATA.PPNO = TEST_IDENTIFICATION_SLIP.ENO
+		join EXAMINEE
+		on TEST_IDENTIFICATION_SLIP.EID = EXAMINEE.EID
+		join QUALIFICATION
+		on QUALIFICATION.QCODE = TEST_IDENTIFICATION_SLIP.QCODE
+		where TEST_IDENTIFICATION_SLIP.ENO like #{sCodeTsNo}
+		order by eno
+	</select>
+	
+	<!-- sCode와 tsNo로 감독관정보  불러오기 -->
+	<select id="searchSupervisorDataByScode" parameterType="hashmap" resultType="hashmap">
+		select SUPERVISOR.SNAME sName, SUPERVISOR.SSID ssId
+		from SCHEDULE_SUPERVISOR
+		join SUPERVISOR
+		on SUPERVISOR.SSID = SCHEDULE_SUPERVISOR.SSID
+		where S_CODE = #{sCode} and tsno = #{tsNo}
+		order by 1
+	</select>
+	
 </mapper>
 
 

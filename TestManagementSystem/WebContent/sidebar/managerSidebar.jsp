@@ -23,23 +23,23 @@
 								<ul>
 									<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=인창고등학교"> 인창고등학교</a>
 										<ul>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=인창고등학교&room=1"> 1시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=인창고등학교&room=2"> 2시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=인창고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=인창고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=인창고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=인창고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=명지고등학교"> 명지고등학교</a>
 										<ul>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=명지고등학교&room=1"> 1시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=명지고등학교&room=2"> 2시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=명지고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=명지고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=명지고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=명지고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=한성고등학교"> 한성고등학교</a>
 										<ul>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=한성고등학교&room=1"> 1시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=한성고등학교&room=2"> 2시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=한성고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=한성고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=한성고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=서대문구&name=한성고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -48,23 +48,23 @@
 								<ul>
 									<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=대진고등학교"> 대진고등학교</a>
 										<ul>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=대진고등학교&room=1"> 1시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=대진고등학교&room=2"> 2시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=대진고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=대진고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=대진고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=대진고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=청원고등학교"> 청원고등학교</a>
 										<ul>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=청원고등학교&room=1"> 1시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=청원고등학교&room=2"> 2시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=청원고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=청원고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=청원고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=청원고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=노원고등학교"> 노원고등학교</a>
 										<ul>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=노원고등학교&room=1"> 1시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=노원고등학교&room=2"> 2시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=노원고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=노원고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=노원고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=노원고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -73,23 +73,23 @@
 								<ul>
 									<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=용문고등학교"> 용문고등학교</a>
 										<ul>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=용문고등학교&room=1"> 1시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=용문고등학교&room=2"> 2시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=용문고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=용문고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=용문고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=용문고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=경동고등학교"> 경동고등학교</a>
 										<ul>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=경동고등학교&room=1"> 1시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=경동고등학교&room=2"> 2시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=경동고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=경동고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=경동고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=경동고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=석관고등학교"> 석관 고등학교</a>
 										<ul>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=석관고등학교&room=1"> 1시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=석관고등학교&room=2"> 2시험실</a></li>
-											<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=석관고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=석관고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=석관고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=서울지역본부&gigwan=성북구&name=석관고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -103,23 +103,23 @@
 								<ul>
 									<li><a href="NameStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=부산고등학교"> 부산고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=부산고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=부산고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=부산고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=부산고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=부산고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=부산고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=경남여자고등학교"> 경남여자고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=경남여자고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=경남여자고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=경남여자고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=경남여자고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=경남여자고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=경남여자고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=부산금성고등학교"> 부산금성고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=부산금성고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=부산금성고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=부산금성고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=부산금성고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=부산금성고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=동구&name=부산금성고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -128,23 +128,23 @@
 								<ul>
 									<li><a href="NameStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=개성고등학교"> 개성고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=개성고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=개성고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=개성고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=개성고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=개성고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=개성고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=가야고등학교"> 가야고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=가야고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=가야고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=가야고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=가야고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=가야고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=가야고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=개금고등학교"> 개금고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=개금고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=개금고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=개금고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=개금고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=개금고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=부산진구&name=개금고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -153,23 +153,23 @@
 								<ul>
 									<li><a href="NameStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=경남고등학교"> 경남고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=경남고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=경남고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=경남고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=경남고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=경남고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=경남고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=부경고등학교"> 부경고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=부경고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=부경고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=부경고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=부경고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=부경고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=부경고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=경성전자고등학교"> 경성전자고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=경성전자고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=경성전자고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=경성전자고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=경성전자고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=경성전자고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=부산지역본부&gigwan=서구&name=경성전자고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -183,23 +183,23 @@
 								<ul>
 									<li><a href="NameStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대전고등학교"> 대전고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대전고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대전고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대전고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대전고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대전고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대전고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대성고등학교"> 대성고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대성고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대성고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대성고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대성고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대성고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대성고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대전동산고등학교"> 대전동산고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대전동산고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대전동산고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대전동산고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대전동산고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대전동산고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=중구&name=대전동산고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -208,23 +208,23 @@
 								<ul>
 									<li><a href="NameStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=유성고등학교"> 유성고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=유성고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=유성고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=유성고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=유성고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=유성고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=유성고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=노은고등학교"> 노은고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=노은고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=노은고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=노은고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=노은고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=노은고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=노은고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=대덕고등학교"> 대덕고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=대덕고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=대덕고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=대덕고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=대덕고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=대덕고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=유성구&name=대덕고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -233,23 +233,23 @@
 								<ul>
 									<li><a href="NameStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=동대전고등학교"> 동대전고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=동대전고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=동대전고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=동대전고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=동대전고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=동대전고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=동대전고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=신탄진고등학교"> 신탄진고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=신탄진고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=신탄진고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=신탄진고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=신탄진고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=신탄진고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=신탄진고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 									<li><a href="NameStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=대전송촌고등학교"> 대전송촌고등학교</a>
 										<ul>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=대전송촌고등학교&room=1"> 1시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=대전송촌고등학교&room=2"> 2시험실</a></li>
-											<li><a href="GigwanStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=대전송촌고등학교&room=3"> 3시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=대전송촌고등학교&room=1"> 1시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=대전송촌고등학교&room=2"> 2시험실</a></li>
+											<li><a href="RoomStatFormServlet?bonboo=대전지역본부&gigwan=대덕구&name=대전송촌고등학교&room=3"> 3시험실</a></li>
 										</ul>
 									</li>
 								</ul>

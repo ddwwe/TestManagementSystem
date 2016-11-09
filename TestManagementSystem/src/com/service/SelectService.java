@@ -1,5 +1,6 @@
 package com.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -7,6 +8,7 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 
 import com.config.MySqlSessionFactory;
+import com.dto.PersonalDataDTO;
 import com.dto.PlaceDTO;
 import com.dto.StatResultDTO;
 import com.dto.StatTableDTO;
@@ -273,6 +275,7 @@ public class SelectService {
 			return tsTitle;
 		}// end CountMain
 
+		// 학교이름 불러오기
 		public List<PlaceDTO> selectName(HashMap<String, String> map) throws CommonException {
 			List<PlaceDTO> GiGwanList = null;
 			SqlSession session = MySqlSessionFactory.getSession();
@@ -280,13 +283,14 @@ public class SelectService {
 				GiGwanList = session.selectList("selectName", map);
 			} catch (Exception e) {
 				e.printStackTrace();
-				throw new CommonException("기관이름 불러오기 실패");
+				throw new CommonException("학교이름 불러오기 실패");
 			} finally {
 				session.close();
 			}
 			return GiGwanList;
 		}// end selectName
 
+		// 시험실 이름 불러오기
 		public List<PlaceDTO> selectRoom(HashMap<String, String> map) throws CommonException {
 			List<PlaceDTO> GiGwanList = null;
 			SqlSession session = MySqlSessionFactory.getSession();
@@ -300,5 +304,50 @@ public class SelectService {
 			}
 			return GiGwanList;
 		}// end selectRoom
+
+		// 맵으로 sCode 찾기
+		public String searchScodeByMap(HashMap<String, String> map) throws CommonException {
+			String sCode = null;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				sCode = session.selectOne("searchScodeByMap", map);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("맵으로 sCode 불러오기 실패");
+			} finally {
+				session.close();
+			}
+			return sCode;
+		}// end searchScodeByMap
+
+		// sCode+tsNo로 학생정보 찾기
+		public List<HashMap<String, String>> searchStudentDataByScode(String sCodeTsNo) throws CommonException {
+			List<HashMap<String, String>> list = null;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				list = session.selectList("searchStudentDataByScode", sCodeTsNo);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("sCode+tsNo로 학생정보 불러오기 실패");
+			} finally {
+				session.close();
+			}
+			return list;
+		}// end searchStudentDataByScode
+
+		// sCode와 tsNo로 감독관 정보 찾기
+		public List<HashMap<String, String>> searchSupervisorDataByScode(HashMap<String, String> map) throws CommonException {
+			List<HashMap<String, String>> list = null;
+			SqlSession session = MySqlSessionFactory.getSession();
+			try {
+				list = session.selectList("searchSupervisorDataByScode", map);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new CommonException("sCode+tsNo로 감독관정보 불러오기 실패");
+			} finally {
+				session.close();
+			}
+			return list;
+		}// end searchStudentDataByScode
 		
 }
