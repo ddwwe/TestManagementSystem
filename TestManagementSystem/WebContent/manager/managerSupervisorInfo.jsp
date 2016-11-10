@@ -14,6 +14,14 @@
 <div class="content-wrapper">
 	<section class="content-header">
 		<div class="box-body table-responsive no-padding">
+		<form>
+		장소 보기&nbsp;
+			<select>
+				<option>s</option>
+				<option>s</option>
+				<option>s</option>
+			</select>
+		</form>
 		<h3 class="hh">컨트롤 + F로 감독관 정보를 찾으시면 편리합니다</h3>
 		<c:set var="supervisorList" value="${supervisorList}" />
 		<p/><table class="table table-hover">

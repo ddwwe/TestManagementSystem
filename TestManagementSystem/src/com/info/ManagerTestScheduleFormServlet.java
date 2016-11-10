@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ManagerCalendarFormServlet")
-public class ManagerCalendarFormServlet extends HttpServlet {
+@WebServlet("/ManagerTestScheduleFormServlet")
+public class ManagerTestScheduleFormServlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		RequestDispatcher dis = request.getRequestDispatcher("managerCalendarForm.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("managerTestScheduleForm.jsp");
 		dis.forward(request, response);
 		
 	}

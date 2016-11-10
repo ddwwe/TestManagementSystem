@@ -18,12 +18,20 @@
 	            <div class="box-header">
 	              <p>
 					<c:set var="ssId" value="${ssId}" />
-	            	<c:if test="${ssId != null}">
+					<c:set var="qName" value="${qName}" />
+					
+					<c:if test="${ssId == null && qName != null}">
+	            		<h4>특정 종목에 글 쓰기&nbsp;&nbsp;<input type="radio" name="destination" value="qName" checked="checked"></h4>
+	            		보낼 종목&nbsp;&nbsp;<input type="text" name="inputQName" id="inputQName" value="${qName}" readonly="readonly"><br>
+	            	</c:if>
+	            	<c:if test="${ssId != null && qName == null}">
 	            		<h4>감독관에게 글 쓰기&nbsp;&nbsp;<input type="radio" name="destination" value="Supervisor" checked="checked"></h4>
 	            		보낼 감독관 ID&nbsp;&nbsp;<input type="text" name="inputSsId" id="inputSsId" value="${ssId}" readonly="readonly"><br>
 	            	</c:if>
-	            	<c:if test="${ssId == null}">
-	            		<h4>감독관에게 글 쓰기&nbsp;&nbsp;<input type="radio" name="destination" id="Supervisor" value="Supervisor"></h4>
+	            	<c:if test="${ssId == null && qName == null}">
+	            		<h4>특정 종목에 글 쓰기&nbsp;&nbsp;<input type="radio" name="destination" id="qName" value="qName"></h4>
+	            			보낼 종목&nbsp;&nbsp;<input type="text" name="inputQName" id="inputQName"><br>
+	            		<h4>특정 감독관에게 글 쓰기&nbsp;&nbsp;<input type="radio" name="destination" id="Supervisor" value="Supervisor"></h4>
 	            			보낼 감독관 ID&nbsp;&nbsp;<input type="text" name="inputSsId" id="inputSsId"><br>
 	            		<h4>공지사항으로 글 쓰기&nbsp;&nbsp;<input type="radio" name="destination" id="Supervisors" value="Supervisors" checked="checked"></h4>
 	            	</c:if>
@@ -55,9 +63,14 @@
 	$("form").on("submit", function(event){
 		   
 	    var inputSsId = $("#inputSsId").val();
+	    var inputQName = $("#inputQName").val();
 	    var destination = $(":input:radio[name='destination']:checked").val();
 	    if(inputSsId == '' && destination == 'Supervisor'){
-	    	alert("아이디를 입력하세요");
+	    	alert("감독관 아이디를 입력하세요");
+	    	return false;
+	    }
+	    if(inputQName == '' && destination == 'qName'){
+	    	alert("종목을 입력하세요");
 	    	return false;
 	    }
 	   

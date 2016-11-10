@@ -18,6 +18,8 @@ public class ManagerBoardWriteUIServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String ssId = request.getParameter("ssId");
+		String qName = request.getParameter("qName");
+		request.setAttribute("qName", qName);
 		request.setAttribute("ssId", ssId);
 		
 	     RequestDispatcher dis = request.getRequestDispatcher("managerBoardWriteUIForm.jsp");

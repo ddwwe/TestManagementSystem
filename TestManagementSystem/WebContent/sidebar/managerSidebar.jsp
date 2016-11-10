@@ -262,7 +262,7 @@
 			<li><a href="ManagerBoardFormServlet"><i class="fa fa-comment"></i> <span>정오게시판</span></a></li>
 			<li><a href="ManagerSupervisorInfoFormServlet"><i class="fa fa-odnoklassniki"></i> 감독관 정보</a></li>
 			<li><a href="ManagerExamineeInfoFormServlet"><i class="fa fa-odnoklassniki-square"></i> 수험생 정보</a></li>
-			<li><a href="ManagerCalendarFormServlet"><i class="fa fa-calendar-check-o"></i> 시험일정 정보</a></li>
+			<li><a href="ManagerTestScheduleFormServlet"><i class="fa fa-calendar-check-o"></i> 시험일정 정보</a></li>
 			<li><a href="ManagerLogoutServlet"><i class="fa fa-sign-out"></i> 로그아웃</a></li>
 		</ul>
       <!-- /.sidebar-menu -->

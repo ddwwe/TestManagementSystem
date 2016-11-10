@@ -24,7 +24,7 @@
 <div class="wrapper">
   <jsp:include page="header/managerHeader.jsp" flush="true"></jsp:include>
   <jsp:include page="sidebar/managerSidebar.jsp" flush="true"></jsp:include>
-  <jsp:include page="manager/managerBoardUpdateUI.jsp" flush="true"></jsp:include>
+  <jsp:include page="manager/managerTestSchedule.jsp" flush="true"></jsp:include>
   <jsp:include page="footer/footer.jsp" flush="true"></jsp:include>
 
 </div>

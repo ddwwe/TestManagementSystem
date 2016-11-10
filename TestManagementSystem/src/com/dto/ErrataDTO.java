@@ -4,24 +4,29 @@ public class ErrataDTO {
 
 	private int bNo;
 	private String bType;
+	private String qCode;
 	private String ssId;
 	private String bContent;
 	private String bDate;
 	private SchoolDTO schoolDTO;
+	private String qName;
 	
 	public ErrataDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public ErrataDTO(int bNo, String bType, String ssId, String bContent, String bDate, SchoolDTO schoolDTO) {
+	public ErrataDTO(int bNo, String bType, String qCode, String ssId, String bContent, String bDate,
+			SchoolDTO schoolDTO, String qName) {
 		super();
 		this.bNo = bNo;
 		this.bType = bType;
+		this.qCode = qCode;
 		this.ssId = ssId;
 		this.bContent = bContent;
 		this.bDate = bDate;
 		this.schoolDTO = schoolDTO;
+		this.qName = qName;
 	}
 
 	public int getbNo() {
@@ -38,6 +43,14 @@ public class ErrataDTO {
 
 	public void setbType(String bType) {
 		this.bType = bType;
+	}
+
+	public String getqCode() {
+		return qCode;
+	}
+
+	public void setqCode(String qCode) {
+		this.qCode = qCode;
 	}
 
 	public String getSsId() {
@@ -72,10 +85,18 @@ public class ErrataDTO {
 		this.schoolDTO = schoolDTO;
 	}
 
+	public String getqName() {
+		return qName;
+	}
+
+	public void setqName(String qName) {
+		this.qName = qName;
+	}
+
 	@Override
 	public String toString() {
-		return "ErrataDTO [bNo=" + bNo + ", bType=" + bType + ", ssId=" + ssId + ", bContent=" + bContent + ", bDate="
-				+ bDate + ", schoolDTO=" + schoolDTO + "]";
+		return "ErrataDTO [bNo=" + bNo + ", bType=" + bType + ", qCode=" + qCode + ", ssId=" + ssId + ", bContent="
+				+ bContent + ", bDate=" + bDate + ", schoolDTO=" + schoolDTO + ", qName=" + qName + "]";
 	}
 	
 }

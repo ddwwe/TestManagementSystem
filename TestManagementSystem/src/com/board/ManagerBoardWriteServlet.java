@@ -11,29 +11,45 @@ import javax.servlet.http.HttpServletResponse;
 import com.dto.ErrataDTO;
 import com.service.BoardService;
 
+import sun.print.resources.serviceui;
+
 @WebServlet("/ManagerBoardWriteServlet")
 public class ManagerBoardWriteServlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		request.setCharacterEncoding("UTF-8");
-		String ssId = request.getParameter("destination");
+		String ssId = null;
+		String qName = null;
+		String qCode = null;
+		String dest = request.getParameter("destination");
 		String bContent = request.getParameter("editor");
 		ErrataDTO dto = new ErrataDTO();
+		BoardService service = new BoardService();
 		
-		if(ssId.equals("Supervisor")) {
+		if(dest.equals("Supervisor")) {					// 라디오버튼 누른거에 따라 타입 설정
 			ssId = request.getParameter("inputSsId");
 			dto.setbType("send");
 		}
+		else if(dest.equals("qName")) {
+			qName = request.getParameter("inputQName");
+			qCode = service.selectQCode(qName);
+			dto.setbType("send");
+		}
 		else {
-			ssId = null;
+			dest = null;
 			dto.setbType("notice");
 		}
 	    
-		dto.setSsId(ssId);
-		dto.setbContent(bContent);
+		dto.setbContent(bContent);		// 글 설정
 		
-		BoardService service = new BoardService();
+		if(ssId != null) {				// ssId나 qCode 설정
+			dto.setSsId(ssId);
+		}
+		else if(qName != null) {
+			dto.setqCode(qCode);
+		}
+		
 		service.write(dto);
 		
 		//화면 ( list.jsp로 보내면 안됨. )

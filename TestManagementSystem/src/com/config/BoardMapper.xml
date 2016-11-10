@@ -5,11 +5,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="myboard">
 
 	<select id="list" resultType="ErrataDTO">
-	   select bNo, bType, ssId, bContent,
+	   select bNo, bType, qCode, ssId, bContent,
 	         to_char(bDate,'yyyy/mm/dd hh24:mi:ss') bDate
 	   from ERRATA_BOARD
        order by bno desc 
-       
+	</select>
+	
+	<select id="selectQName" parameterType="string" resultType="string">
+		select qName
+		from Qualification
+		where qCode = #{qCode}
 	</select>
 	
 	<select id="totalCount" resultType="int">
@@ -26,7 +31,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<select id="listNotice" resultType="ErrataDTO">
-	   select bNo, bType, ssId, bContent,
+	   select bNo, bType, qCode, ssId, bContent,
 	         to_char(bDate,'yyyy/mm/dd hh24:mi:ss') bDate
 	   from ERRATA_BOARD
 	   where bType = 'notice'
@@ -41,7 +46,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<insert id="write" parameterType="ErrataDTO">
 		insert into ERRATA_BOARD
-		values( errata_seq.nextval, #{bType}, #{ssId}, #{bContent}, sysdate)
+		values( errata_seq.nextval, #{bType}, #{qCode}, #{ssId}, #{bContent}, sysdate)
     </insert>
     
     <select id="selectErrataDTO" parameterType="int" resultType="ErrataDTO">
@@ -62,6 +67,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		delete ERRATA_BOARD
 		where bNo = #{bNo}
 	</delete>
+	
+	<select id="selectQCode" parameterType="string" resultType="string">
+		select qCode
+		from Qualification
+		where qName = #{qName}
+	</select>
 	
 </mapper>
 

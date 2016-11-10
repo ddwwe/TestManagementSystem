@@ -13,12 +13,13 @@
 		<a href="ManagerNoticeBoardFormServlet"><button class="btn btn-success"><i class="fa fa-comment-o"></i> 공지사항 보기</button></a>&nbsp;
 		<p/><table class="table table-hover">
 				<tr align="center">
-					<th width="6%"><div align="center">글번호</div></th>
-					<th width="8%"><div align="center">글종류</div></th>
-					<th width="5%">감독관<br><div align="center">ID</div></th>
-					<th width="5%"><div align="center">날짜</div></th>
-					<th width="15%"><div align="center">장소</div></th>
-					<th width="61%">내용</th>
+					<th width="50"><div align="center">글번호</div></th>
+					<th width="50"><div align="center">글종류</div></th>
+					<th width="50"><div align="center">종목</div></th>
+					<th width="50"><div align="center">감독관</div></th>
+					<th width="50"><div align="center">날짜</div></th>
+					<th width="50"><div align="center">장소</div></th>
+					<th width="50">내용</th>
 				</tr>
 				<c:set var="page" value="${page}" />
 				<c:forEach var="errata" items="${page.list}" varStatus="status">
@@ -40,8 +41,20 @@
 						<td align="center">관리자<br>↓<br>감독관<br><br>보낸글</td>
 					</c:if>
 					
-					<td align="center"><a href="ManagerBoardWriteUIServlet?ssId=${errata.ssId}">${errata.ssId}</a></td>
-				 
+					<c:if test="${errata.bType == 'notice'}">
+						<td align="center">모든 종목</td>
+					</c:if>
+					<c:if test="${errata.bType == 'send' || errata.bType == 'receive'}">
+						<td align="center"><a href="ManagerBoardWriteUIServlet?qCode=${errata.qCode}&qName=${errata.qName}">${errata.qName}</a></td>
+					</c:if>
+					
+					<c:if test="${errata.bType == 'notice'}">
+						<td align="center">모든 감독관</td>
+					</c:if>
+					<c:if test="${errata.bType == 'send' || errata.bType == 'receive'}">
+						<td align="center"><a href="ManagerBoardWriteUIServlet?ssId=${errata.ssId}">${errata.ssId}</a></td>
+					</c:if>
+					
 					<td align="center">${errata.bDate}</td>
 					
 					<c:if test="${errata.schoolDTO != null }">

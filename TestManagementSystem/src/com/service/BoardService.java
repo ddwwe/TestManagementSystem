@@ -27,6 +27,9 @@ public class BoardService {
 	        for (ErrataDTO errataDTO : list) {
 				errataDTO.setSchoolDTO(selectSchoolDTO(errataDTO.getSsId()));
 			}
+	        for (ErrataDTO errataDTO : list) {
+				errataDTO.setqName(selectQName(errataDTO.getqCode()));
+			}
 			}finally {
 				session.close();
 			}
@@ -38,6 +41,19 @@ public class BoardService {
 			return pdto;
 		}//end list()
 		
+		// qCode로 qName 찾기
+		public String selectQName(String qCode) {
+			String qName = null;
+			SqlSession session = 
+					MySqlSessionFactory.getSession();
+			try{
+				qName = session.selectOne("selectQName", qCode);
+			}finally {
+				session.close();
+			}
+			return qName;
+		}//end selectQName
+
 		//전체 레코드 갯수
 		public int totalCount(){
 			int count = 0;
@@ -62,7 +78,7 @@ public class BoardService {
 				session.close();
 			}
 			return dto;
-		}//end totalCount
+		}//end selectSchoolDTO
 		
 		//페이지 공지사항만
 		public PageDTO pageNotice(int curPage){
@@ -153,4 +169,18 @@ public class BoardService {
 				session.close();
 			}
 		}//end deleteErrata
+
+		// qName으로  qCode찾기
+		public String selectQCode(String qName) {
+			String qCode = null;
+			SqlSession session = 
+					MySqlSessionFactory.getSession();
+			try{
+				qCode = session.selectOne("selectQCode", qName);
+			}finally {
+				session.close();
+			}
+			return qCode;
+		}//end selectQName
+			
 }
