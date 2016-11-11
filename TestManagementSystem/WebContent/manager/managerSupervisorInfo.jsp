@@ -4,12 +4,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
-<style>
-	.hh {
-	color:red;
-	}
-</style>
-
 <script type="text/javascript" src="jquery-3.1.0.min.js"></script>
 <script type="text/javascript">
 
@@ -144,7 +138,7 @@
 		</form>
 		<h3 class="hh">컨트롤 + F로 감독관 정보를 찾으시면 편리합니다</h3>
 		<c:set var="supervisorList" value="${supervisorList}" />
-		<p/><table class="table table-hover">
+		<p/><table class="type06">
 				<tr>
 					<th align="center">감독관 ID</th>
 					<th align="center">감독관 이름</th>
