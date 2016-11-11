@@ -22,9 +22,9 @@
 				  </div>
 	            </div>
 	            <div class="box-body">
-		        	<table border="1">
+		        	<table class="table table-condensed">
 			        	<tr>
-			        		<th width="40" align="center">회차</th>
+			        		<th width="80" align="center">회차</th>
 			        		<th align="center">필기시험<br>접수기간<br>(인터넷)</th>
 			        		<th>필기시험</th>
 			        		<th>필기시험<br>합격자 발표</th>
@@ -92,9 +92,9 @@
 				  </div>
 	            </div>
 	            <div class="box-body">
-		        	<table border="1">
+		        <table class="table table-condensed">
 			        	<tr>
-			        		<th width="40" align="center">회차</th>
+			        		<th width="80" align="center">회차</th>
 			        		<th align="center">필기시험<br>접수기간<br>(인터넷)</th>
 			        		<th>필기시험</th>
 			        		<th>합격예정자<br>발표(필기)</th>
@@ -157,9 +157,9 @@
 				  </div>
 	            </div>
 	            <div class="box-body">
-		        	<table border="1">
+		        <table class="table table-condensed">
 			        	<tr>
-			        		<th width="40" align="center">회차</th>
+			        		<th width="80" align="center">회차</th>
 			        		<th align="center">필기시험<br>접수기간<br>(인터넷)</th>
 			        		<th>필기시험</th>
 			        		<th>합격예정자<br>발표(필기)</th>
@@ -202,9 +202,9 @@
 				  </div>
 	            </div>
 	            <div class="box-body">
-		        	<table border="1">
+		        <table class="table table-condensed">
 			        	<tr>
-			        		<th width="40" align="center">회차</th>
+			        		<th width="80" align="center">회차</th>
 			        		<th align="center">필기시험<br>접수기간<br>(인터넷)</th>
 			        		<th>필기시험</th>
 			        		<th>합격예정자<br>발표(필기)</th>

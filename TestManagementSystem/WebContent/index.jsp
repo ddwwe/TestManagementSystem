@@ -50,15 +50,10 @@
 					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
 					<li class="hidden"><a href="#page-top"></a></li>
 					<li><a class="page-scroll" href="#about">About</a></li>
-					<c:if test="${sessionScope.stuLogin==null}">
-						<li><a class="page-scroll" href="StudentLoginFormServlet">수험생용</a></li>
-					</c:if>
-					<c:if test="${sessionScope.stuLogin!=null}">
-						<li><a class="page-scroll" href="studentMainForm.jsp">수험생용</a></li>
-					</c:if>
+				
 					
 					<c:if test="${sessionScope.manaLogin==null}">
-						<li><a class="page-scroll" href="ManagerLoginFormServlet">관리자용</a></li>
+						<li><a class="page-scroll" href="ManagerLoginFormServlet">관리자 로그인</a></li>
 					</c:if>
 					<c:if test="${sessionScope.manaLogin!=null}">
 						<li><a class="page-scroll" href="MainStatFormServlet">관리자용</a></li>
