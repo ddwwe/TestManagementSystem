@@ -11,6 +11,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		order by 1
 	</select>
 	
+	<!-- 특정 감독관 불러오기 -->
+	<select id="searchSupervisorBySCode" parameterType="string" resultType="SupervisorDTO">
+		select ssId, sName, sGroup, sPhone, sPost, sAddr1, sAddr2, to_char(sBirth, 'yyyy/mm/dd') sBirth
+		from supervisor
+		where ssId = any (select ssId
+						  from SCHEDULE_SUPERVISOR
+						  where s_Code like #{sCode})
+		order by 1
+	</select>
+	
 </mapper>
 
 
