@@ -30,8 +30,6 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="dist/js/app.min.js"></script>
 <!-- you need to include the ShieldUI CSS and JS assets in order for the TreeView widget to work -->
-<link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />
-<script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
 
 <script type="text/javascript">
     jQuery(function ($) {

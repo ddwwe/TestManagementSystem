@@ -4,15 +4,7 @@
     <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
 
-    <!-- sidebar: style can be found in sidebar.less -->
 	<section>
-
-      <!-- Sidebar user panel (optional) -->
-
-      <!-- search form (Optional) -->
-      <!-- /.search form -->
-
-      <!-- Sidebar Menu -->
 		<ul class="sidebar-menu" id="treeview">
 	        <!-- Optionally, you can add icons to the links -->
 			<li><a href="MainStatFormServlet"><i class="fa fa-pie-chart"></i> 인원통계</a>
@@ -44,6 +36,7 @@
 									</li>
 								</ul>
 							</li>
+			
 							<li><a href="GigwanStatFormServlet?bonboo=서울지역본부&gigwan=노원구"> 노원구</a>
 								<ul>
 									<li><a href="NameStatFormServlet?bonboo=서울지역본부&gigwan=노원구&name=대진고등학교"> 대진고등학교</a>
@@ -261,7 +254,6 @@
 			
 			<li><a href="ManagerBoardFormServlet"><i class="fa fa-comment"></i> <span>정오게시판</span></a></li>
 			<li><a href="ManagerSupervisorInfoFormServlet"><i class="fa fa-odnoklassniki"></i> 감독관 정보</a></li>
-			<li><a href="ManagerExamineeInfoFormServlet"><i class="fa fa-odnoklassniki-square"></i> 수험생 정보</a></li>
 			<li><a href="ManagerTestScheduleFormServlet"><i class="fa fa-calendar-check-o"></i> 시험일정 정보</a></li>
 			<li><a href="ManagerLogoutServlet"><i class="fa fa-sign-out"></i> 로그아웃</a></li>
 		</ul>

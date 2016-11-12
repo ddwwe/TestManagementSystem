@@ -76,7 +76,23 @@
 	int AttendTotal = (int)request.getAttribute("mainAttendTotal");
 	int SubmitTotal = (int)request.getAttribute("mainSubmitTotal");
 %>
+<style>
+.back{
+background:#DCEBFF;
+text-align: center;
+vertical-align: middle;
+}
+.cal{
+text-align: center;
+vertical-align: middle;
+font-weight: bold;
+}
+.cen{
+text-align: center;
+vertical-align: middle;
 
+}
+</style>
 <div class="content-wrapper">
 	<section class="content">
 		<div class="col-md-6"></div>
@@ -107,32 +123,32 @@
             </div>
             
 			<div class="box-body">
-				<table border="1">
+				<table border="1" class="table table-striped table-hover">
 					<thead>
 						<tr>
-							<th>종 목 ＼ 본 부</th>
+							<th class="back">종 목 ＼ 본 부</th>
 							<% for(int i=0; i < nameList.size(); i++) { %>
-							<th><%= nameList.get(i).getS_Place() %></th>
+							<th  class="back"><%= nameList.get(i).getS_Place() %></th>
 							<%} %>
-							<th>총합</th>
+							<th  class="back">응시종목총합</th>
 						</tr>
 					</thead>
 					<tbody>
 						<% for (int i=0; i < qNameList.size(); i++) {%>
 						<tr>
-							<th><%= qNameList.get(i) %></th>
+							<th class="cen"><%= qNameList.get(i) %></th>
 							<% for (int j=0; j < nameList.size(); j++) {%>
-							<td align="center"><%= AttendCountArr[i][j] %>/<br>/<%= SubmitCountArr[i][j] %></td>
+							<td align="center"><%= AttendCountArr[i][j] %>/<%= SubmitCountArr[i][j] %></td>
 							<%} %>
-							<td align="center"><%= AttendHSumArr[i] %>/<br>/<%= SubmitHSumArr[i] %></td>
+							<td class="cen"><%= AttendHSumArr[i] %>/<%= SubmitHSumArr[i] %></td>
 						</tr>
 						<%} %>
 						<tr>
-							<th>총합</th>
+							<th  class="cen">총합</th>
 						<% for (int i=0; i < nameList.size(); i++) {%>
-							<td align="center"><%= AttendVSumArr[i] %>/<br>/<%= SubmitVSumArr[i] %></td>
+							<td class="cal"><%= AttendVSumArr[i] %>/<%= SubmitVSumArr[i] %></td>
 						<%} %>
-						<td align="center"><%=AttendTotal%>/<br>/<%=SubmitTotal%></td>
+						<td class="cal"><%=AttendTotal%>/<%=SubmitTotal%></td>
 						</tr>
 					</tbody>
 				</table>             

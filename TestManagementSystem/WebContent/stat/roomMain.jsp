@@ -62,6 +62,15 @@
 
 </script>
 
+<style>
+.back{
+background:#DCEBFF;
+text-align: center;
+
+}
+</style>
+
+
 <%
 	String bonboo = (String)request.getAttribute("bonboo");
 	String gigwan = (String)request.getAttribute("gigwan");
@@ -83,10 +92,10 @@
             </div>
             
 			<div class="box-body">
-				<table border="1">
+				<table border="1" class="table table-striped table-hover">
 					<tr align="center">
-						<th align="center">시험실 담당 감독관</th>
-						<th align="center">감독관 ID</th>
+						<th align="center" class="back">시험실 담당 감독관</th>
+						<th align="center" class="back">감독관 ID</th>
 					</tr>
 					<tr align="center">
 						<td><%= supervisorDataList.get(0).get("SNAME") %></td>
@@ -98,16 +107,16 @@
 					</tr>
 				</table>
 				<p/>
-				<table border="1">
+				<table border="1" class="table table-striped table-hover">
 					<thead>
-						<tr al>
-							<th>좌석번호</th>
-							<th>수험번호</th>
-							<th>수험생 이름</th>
-							<th>과목</th>
-							<th>시험지 유형</th>
-							<th>참석여부</th>
-							<th>비고</th>
+						<tr >
+							<th class="back" >좌석번호</th>
+							<th class="back">수험번호</th>
+							<th class="back">수험생 이름</th>
+							<th class="back"> 과목</th>
+							<th class="back">시험지 유형</th>
+							<th class="back">참석여부</th>
+							<th class="back">비고</th>
 						</tr>
 					</thead>
 					<tbody>

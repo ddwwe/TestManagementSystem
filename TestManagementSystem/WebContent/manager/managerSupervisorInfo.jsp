@@ -107,11 +107,30 @@
 	}
 
 </script>
+<style>
+.back{
+background:#DCEBFF;
+text-align: center;
+vertical-align: middle;
+}
+.cal{
+text-align: center;
+vertical-align: middle;
+font-weight: bold;
+}
+.cen{
+text-align: center;
+vertical-align: middle;
 
+}
+</style>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-	<section class="content-header">
-		<div class="box-body table-responsive no-padding">
+	<section class="content">
+	
+	<div class="col-md-6"></div>
+		    <div class="box box-info ">
+            <div class="box-header with-border">
 		
 		<form action="ManagerSupervisorInfoFormServlet" method="get">
 		장소별 감독관 보기&nbsp;
@@ -136,18 +155,17 @@
 			
 			<input class="btn btn-primary" type="submit" value="보기">
 		</form>
-		<h3 class="hh">컨트롤 + F로 감독관 정보를 찾으시면 편리합니다</h3>
 		<c:set var="supervisorList" value="${supervisorList}" />
-		<p/><table class="type06">
+		<p/><table border="1" class="table table-striped table-hover">
 				<tr>
-					<th align="center">감독관 ID</th>
-					<th align="center">감독관 이름</th>
-					<th align="center">감독관 소속</th>
-					<th align="center">감독관 전화</th>
-					<th align="center">감독관 우편번호</th>
-					<th align="center">감독관 주소</th>
-					<th align="center">감독관 생년월일</th>
-					<th align="center">감독관 담당 시험실</th>
+					<th class="back">감독관<p>ID</p></th>
+					<th class="back">감독관<p>이름</p></th>
+					<th class="back">감독관<p>소속</p></th>
+					<th class="back">감독관<p>전화</p></th>
+					<th class="back">감독관<p>우편번호</p></th>
+					<th class="back">감독관<p>주소</p></th>
+					<th class="back">감독관<p>생년월일</p></th>
+					<th class="back">감독관<p>담당시험실</p></th>
 				</tr>
 				
 				<c:forEach var="supervisor" items="${supervisorList}">
@@ -159,11 +177,13 @@
 					<td align="center">${supervisor.sPost}</td>
 					<td align="center">${supervisor.sAddr1} ${supervisor.sAddr2}</td>
 					<td align="center">${supervisor.sBirth}</td>
-					<td align="center"><div align="center">${supervisor.schoolDTO.s_bonboo}<br>${supervisor.schoolDTO.s_gigwan}<br>${supervisor.schoolDTO.s_name}<br>${supervisor.schoolDTO.s_room}시험실</div></td>
+					<td align="center"><div align="center">${supervisor.schoolDTO.s_bonboo} ${supervisor.schoolDTO.s_gigwan} ${supervisor.schoolDTO.s_name} ${supervisor.schoolDTO.s_room}시험실</div></td>
 				</tr>
 				</c:forEach>
 			</table>
 		</div>
+		</div>
 	</section>
 </div>
+
 <!-- /.content-wrapper -->
