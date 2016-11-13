@@ -147,7 +147,35 @@ vertical-align: middle;
 						<td class="cal"><%=AttendTotal%>/<%=SubmitTotal%></td>
 						</tr>
 					</tbody>
-				</table>             
+				</table> 
+				
+				<p/>　<p/><h3>지역별 총합</h3><p/>
+				<table class="table table-striped table-hover">
+					<tr>
+						<% for(int i=0; i < bonbooList.size(); i++) { %>
+						<th class="back"><%= bonbooList.get(i).getS_Place() %></th>
+						<%} %>
+					</tr>
+					<tr>
+						<% for (int i=0; i < bonbooList.size(); i++) {%>
+							<td class="cal"><%= AttendVSumArr[i] %>/<%= SubmitVSumArr[i] %></td>
+						<%} %>
+					</tr>
+				</table>
+				
+				<p/>　<p/><h3>응시종목 총합</h3><p/>
+				<table class="table table-striped table-hover">
+					<tr>
+						<% for(int i=0; i < qNameList.size(); i++) { %>
+							<th class="back"><%= qNameList.get(i) %></th>
+						<%} %>
+					</tr>
+					<tr>
+						<% for (int i=0; i < qNameList.size(); i++) {%>
+							<td align="center"><%= AttendHSumArr[i] %>/<%= SubmitHSumArr[i] %></td>
+						<%} %>
+					</tr>
+				</table>
 			</div>
 	          <!-- /.box -->
 		</div>
