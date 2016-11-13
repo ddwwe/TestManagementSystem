@@ -12,9 +12,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
     </settings>
  
   <typeAliases>
-   <typeAlias type="com.dto.StudentDTO" alias="StudentDTO"/>
    <typeAlias type="com.dto.ManagerDTO" alias="ManagerDTO"/>
-   <typeAlias type="com.dto.SlipDTO" alias="SlipDTO"/>
    <typeAlias type="com.dto.StatTableDTO" alias="StatTableDTO"/>
    <typeAlias type="com.dto.StatResultDTO" alias="StatResultDTO"/>
    <typeAlias type="com.dto.PlaceDTO" alias="PlaceDTO"/>
@@ -22,7 +20,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
    <typeAlias type="com.dto.PageDTO" alias="PageDTO"/>
    <typeAlias type="com.dto.SchoolDTO" alias="SchoolDTO"/>
    <typeAlias type="com.dto.SupervisorDTO" alias="SupervisorDTO"/>
-   <typeAlias type="com.dto.PersonalDataDTO" alias="PersonalDataDTO"/>
   </typeAliases>
   
 

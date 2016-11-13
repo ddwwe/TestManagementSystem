@@ -4,14 +4,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="select">
 
-	<!-- 일정 불러오기 -->
-	<select id="selectTestSchedule" parameterType="hashmap" resultType="string">
-		select tsTitle
-		from Test_Schedule
-		where tsNo like #{yy} and tsTitle like #{tsClass}
-		order by tsTitle
-	</select>
-	
 	<!-- 종목 불러오기 -->
 	<select id="selectQualificationList" parameterType="string" resultType="string">
 		select qName
@@ -20,95 +12,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		order by qName
 	</select>
 	
-	<!-- 과목의 접수한 사람 불러오기 -->
-	<select id="selectSubmitPeople" parameterType="hashmap" resultType="int">
-		select count(eNo)
-		from TEST_IDENTIFICATION_SLIP
-		where substr(eNo,1,3) = (select distinct substr(S_CODE,1,3)
-								 from SCHOOL
-								 where S_BONBOO = #{S_BONBOO})
-					  
-			  and
-			  
-			  qCode = (select qCode
-					   from Qualification
-					   where qName = #{qName})
-					   
-			  and substr(eNo,11,4) like #{tsNo}
-	</select>
-	
-	<!-- 과목의 참석한 사람 불러오기 -->
-	<select id="selectYesPeople" parameterType="hashmap" resultType="int">
-		select count(ppNo)
-		from PERSONAL_DATA
-		where substr(ppNo,1,3) = (select distinct substr(S_CODE,1,3)
-								 from SCHOOL
-								 where S_BONBOO = #{S_BONBOO})
-					  
-			  and
-			  
-			  ppNo in (select eNo
-                   	   from TEST_IDENTIFICATION_SLIP
-                   	   where qCode = (select qCode
-					   			 	  from Qualification
-					   				  where qName = #{qName}))
-					   
-			  and substr(ppNo,11,4) like #{tsNo}
-			  
-			  and pAttendance = 'Y'
-	</select>
-	
-	<!-- 시험이름 불러오기 -->
-	<select id="selectTsTitleBytsNo" parameterType="string" resultType="string">
-		select tsTitle
-		from Test_Schedule
-		where tsNo = #{tsNo}
-	</select>
-	
 	<!-- 기관 불러오기 -->
 	<select id="selectGiGwan" resultType="PlaceDTO" parameterType="string">
 		select distinct substr(s_Code,1,5) placeNo, s_Gigwan s_Place
 		from SCHOOL
 		where s_Bonboo = #{s_bonboo}
 		order by 1
-	</select>
-	
-	<!-- 과목의 접수한 사람 불러오기 -->
-	<select id="selectGigwanSubmitPeople" parameterType="hashmap" resultType="int">
-		select count(eNo)
-		from TEST_IDENTIFICATION_SLIP
-		where substr(eNo,4,2) = (select distinct substr(S_CODE,4,2)
-								 from SCHOOL
-								 where S_GIGWAN = #{S_GIGWAN} and S_BONBOO = #{S_BONBOO})
-					  
-			  and
-			  
-			  qCode = (select qCode
-					   from Qualification
-					   where qName = #{qName})
-					   
-			  and substr(eNo,11,4) like #{tsNo}
-	</select>
-	
-	<!-- 과목의 참석한 사람 불러오기 -->
-	<select id="selectGigwanYesPeople" parameterType="hashmap" resultType="int">
-		select count(ppNo)
-		from PERSONAL_DATA
-		where substr(ppNo,4,2) = (select distinct substr(S_CODE,4,2)
-								 from SCHOOL
-								 where S_GIGWAN = #{S_GIGWAN} and S_BONBOO = #{S_BONBOO})
-					  
-			  and
-			  
-			  ppNo in (select eNo
-                   	   from TEST_IDENTIFICATION_SLIP
-                   	   where qCode = (select qCode
-					   			 	  from Qualification
-					   				  where qName = #{qName}))
-					   
-			  and substr(ppNo,11,4) like #{tsNo}
-			  
-			  and pAttendance = 'Y'
 	</select>
 	
 	<select id="qCodeSearch" parameterType="string" resultType="string">

@@ -1,7 +1,6 @@
 package com.stat;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -12,9 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dto.PersonalDataDTO;
-import com.dto.PlaceDTO;
-import com.dto.StatResultDTO;
 import com.exception.CommonException;
 import com.service.SelectService;
 
