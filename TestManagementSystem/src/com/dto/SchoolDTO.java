@@ -13,15 +13,6 @@ public class SchoolDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public SchoolDTO(String s_code, String s_bonboo, String s_gigwan, String s_name, String s_room) {
-		super();
-		this.s_code = s_code;
-		this.s_bonboo = s_bonboo;
-		this.s_gigwan = s_gigwan;
-		this.s_name = s_name;
-		this.s_room = s_room;
-	}
-
 	public String getS_code() {
 		return s_code;
 	}

@@ -17,12 +17,11 @@ public class MemberService {
 		try {
 			dto = session.selectOne("managerLogin", map);
 		} catch (Exception e) {
-			e.printStackTrace();
 			throw new CommonException("관리자 로그인 실패");
 		} finally {
 			session.close();
 		}
 		return dto;
-	}// end addMember
+	}// end managerLogin
 	
 }

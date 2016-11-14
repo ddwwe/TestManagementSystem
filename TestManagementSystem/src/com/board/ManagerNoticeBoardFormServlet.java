@@ -22,7 +22,6 @@ public class ManagerNoticeBoardFormServlet extends HttpServlet {
 			curPage = "1";
 		}
 		
-		
 		BoardService service = new BoardService();
 		PageDTO dto = 
 				service.pageNotice(Integer.parseInt(curPage));

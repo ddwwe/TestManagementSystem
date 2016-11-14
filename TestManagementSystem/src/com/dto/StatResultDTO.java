@@ -10,12 +10,6 @@ public class StatResultDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public StatResultDTO(int countAttendStat, int countSumbitStat) {
-		super();
-		this.countAttendStat = countAttendStat;
-		this.countSumbitStat = countSumbitStat;
-	}
-
 	public int getCountAttendStat() {
 		return countAttendStat;
 	}

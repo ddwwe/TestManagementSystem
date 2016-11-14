@@ -9,11 +9,7 @@ public class PlaceDTO {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public PlaceDTO(String placeNo, String s_Place) {
-		super();
-		this.placeNo = placeNo;
-		this.s_Place = s_Place;
-	}
+	
 	public String getPlaceNo() {
 		return placeNo;
 	}

@@ -9,12 +9,6 @@ public class ManagerDTO {
 		super();
 	}
 
-	public ManagerDTO(String mId, String mPw) {
-		super();
-		this.mId = mId;
-		this.mPw = mPw;
-	}
-
 	public String getmId() {
 		return mId;
 	}

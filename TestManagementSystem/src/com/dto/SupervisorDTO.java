@@ -19,22 +19,6 @@ public class SupervisorDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public SupervisorDTO(String ssId, String sPw, String sName, String sGroup, String sPhone, String sPost,
-			String sAddr1, String sAddr2, String sBirth, String sPath, SchoolDTO schoolDTO) {
-		super();
-		this.ssId = ssId;
-		this.sPw = sPw;
-		this.sName = sName;
-		this.sGroup = sGroup;
-		this.sPhone = sPhone;
-		this.sPost = sPost;
-		this.sAddr1 = sAddr1;
-		this.sAddr2 = sAddr2;
-		this.sBirth = sBirth;
-		this.sPath = sPath;
-		this.schoolDTO = schoolDTO;
-	}
-
 	public String getSsId() {
 		return ssId;
 	}

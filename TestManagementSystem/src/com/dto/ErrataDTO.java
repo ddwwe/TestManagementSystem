@@ -16,19 +16,6 @@ public class ErrataDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ErrataDTO(int bNo, String bType, String qCode, String ssId, String bContent, String bDate,
-			SchoolDTO schoolDTO, String qName) {
-		super();
-		this.bNo = bNo;
-		this.bType = bType;
-		this.qCode = qCode;
-		this.ssId = ssId;
-		this.bContent = bContent;
-		this.bDate = bDate;
-		this.schoolDTO = schoolDTO;
-		this.qName = qName;
-	}
-
 	public int getbNo() {
 		return bNo;
 	}

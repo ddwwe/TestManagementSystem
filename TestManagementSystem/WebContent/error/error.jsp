@@ -9,7 +9,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        404 Error Page
+       Error Page!!
       </h1>
       <ol class="breadcrumb">
         
@@ -19,10 +19,10 @@
     <!-- Main content -->
     <section class="content">
       <div class="error-page">
-        <h2 class="headline text-yellow"> 404</h2>
+        <h2 class="headline text-yellow"> 에러입니다</h2>
 
         <div class="error-content">
-          <h3><i class="fa fa-warning text-yellow"></i> Oops! Page not found.</h3>
+          <h3><i class="fa fa-warning text-yellow"></i> Oops! Page Error.</h3>
 
           <p>
             <h2>${title}</h2>

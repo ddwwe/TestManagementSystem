@@ -12,7 +12,7 @@ public class StatTableDTO {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
+	
 	public StatTableDTO(String qCode, String s_Code, String tsNo, int countAttendStat, int countSubmitStat) {
 		super();
 		this.qCode = qCode;

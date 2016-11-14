@@ -126,11 +126,10 @@ vertical-align: middle;
 				<table border="1" class="table table-striped table-hover">
 					<thead>
 						<tr>
-							<th class="back">종 목 ＼ 본 부</th>
+							<th class="back">종 목 ＼ 시험장</th>
 							<% for(int i=0; i < nameList.size(); i++) { %>
-							<th  class="back"><%= nameList.get(i).getS_Place() %></th>
+							<th class="back"><%= nameList.get(i).getS_Place() %></th>
 							<%} %>
-							<th  class="back">응시종목총합</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -140,17 +139,40 @@ vertical-align: middle;
 							<% for (int j=0; j < nameList.size(); j++) {%>
 							<td align="center"><%= AttendCountArr[i][j] %>/<%= SubmitCountArr[i][j] %></td>
 							<%} %>
-							<td class="cen"><%= AttendHSumArr[i] %>/<%= SubmitHSumArr[i] %></td>
 						</tr>
 						<%} %>
-						<tr>
-							<th  class="cen">총합</th>
+					</tbody>
+				</table> 
+				
+				<p/>　<p/><h3>시험장 총합</h3><p/>
+				<table class="table table-striped table-hover">
+					<tr>
+						<% for(int i=0; i < nameList.size(); i++) { %>
+						<th class="back"><%= nameList.get(i).getS_Place() %></th>
+						<%} %>
+						<th class="back">총 합</th>
+					</tr>
+					<tr>
 						<% for (int i=0; i < nameList.size(); i++) {%>
 							<td class="cal"><%= AttendVSumArr[i] %>/<%= SubmitVSumArr[i] %></td>
 						<%} %>
 						<td class="cal"><%=AttendTotal%>/<%=SubmitTotal%></td>
-						</tr>
-					</tbody>
+						
+					</tr>
+				</table>
+				
+				<p/>　<p/><h3>응시종목 총합</h3><p/>
+				<table class="table table-striped table-hover">
+					<tr>
+						<% for(int i=0; i < qNameList.size(); i++) { %>
+							<th class="back"><%= qNameList.get(i) %></th>
+						<%} %>
+					</tr>
+					<tr>
+						<% for (int i=0; i < qNameList.size(); i++) {%>
+							<td align="center"><%= AttendHSumArr[i] %>/<%= SubmitHSumArr[i] %></td>
+						<%} %>
+					</tr>
 				</table>             
 			</div>
 	          <!-- /.box -->

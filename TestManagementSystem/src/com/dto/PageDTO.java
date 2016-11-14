@@ -14,14 +14,6 @@ public class PageDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public PageDTO(List<ErrataDTO> list, int curPage, int perPage, int totalRecord) {
-		super();
-		this.list = list;
-		this.curPage = curPage;
-		this.perPage = perPage;
-		this.totalRecord = totalRecord;
-	}
-
 	public List<ErrataDTO> getList() {
 		return list;
 	}
