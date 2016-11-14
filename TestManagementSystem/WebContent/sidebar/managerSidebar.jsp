@@ -1,13 +1,60 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<style>
+.tree { background-color:#222D32; color:#00ff00;}	
+.tree li,
+.tree li > a,
+.tree li > span {
+    padding: 1pt;
+    border-radius: 4px;
+}
 
+.tree li a {
+   color:#dddddd;
+    text-decoration: none;
+    line-height: 21pt;
+    border-radius: 4px;
+}
+
+.tree li a:hover {
+    background-color: #34BC9D;
+    color: #fff;
+}
+
+.active {
+    background-color: #34495E;
+    color: white;
+}
+
+.active a {
+    color: #fff;
+}
+
+.tree li a.active:hover {
+    background-color: #34BC9D;
+}
+</style>
     <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
 
 	<section>
-		<ul class="sidebar-menu" id="treeview">
-	        <!-- Optionally, you can add icons to the links -->
-			<li><a href="MainStatFormServlet"><i class="fa fa-pie-chart"></i> 인원통계</a>
+		
+		<ul class="sidebar-menu tree">
+		  <li><span> <a href="asdf">About</a></span>
+		    <ul>
+		      <li><a href="ffff">Contact</a></li>
+		      <li><a href="dddd">Blog</a></li>
+		      <li><a href="ssss">Jobs</a>
+		        <ul>
+		          <li><a href="#jobs1">Job 1</a></li>
+		          <li><a href="#jobs2">Job 2</a></li>
+		          <li><a href="#jobs3">Job 3</a></li>
+		        </ul>
+		      </li>
+		    </ul>
+		  </li>
+		  
+		  <li><span> <a href="MainStatFormServlet"><i class="fa fa-pie-chart"></i> 인원통계</a></span>
 				<ul>
 					<li><a href="BonbooStatFormServlet?bonboo=서울지역본부"> 서울지역본부</a>
 						<ul>
@@ -252,10 +299,10 @@
 				</ul>
 			</li>
 			
-			<li><a href="ManagerBoardFormServlet"><i class="fa fa-comment"></i> <span>정오게시판</span></a></li>
-			<li><a href="ManagerSupervisorInfoFormServlet"><i class="fa fa-odnoklassniki"></i> 감독관 정보</a></li>
-			<li><a href="ManagerTestScheduleFormServlet"><i class="fa fa-calendar-check-o"></i> 시험일정 정보</a></li>
-			<li><a href="ManagerLogoutServlet"><i class="fa fa-sign-out"></i> 로그아웃</a></li>
+			<li><span> <a href="ManagerBoardFormServlet"><i class="fa fa-comment"></i> 정오게시판</a></span></li>
+			<li><span> <a href="ManagerSupervisorInfoFormServlet"><i class="fa fa-odnoklassniki"></i> 감독관 정보</a></span></li>
+			<li><span> <a href="ManagerTestScheduleFormServlet"><i class="fa fa-calendar-check-o"></i> 시험일정 정보</a></span></li>
+			<li><span> <a href="ManagerLogoutServlet"><i class="fa fa-sign-out"></i> 로그아웃</a></span></li>
 		</ul>
       <!-- /.sidebar-menu -->
 	</section>

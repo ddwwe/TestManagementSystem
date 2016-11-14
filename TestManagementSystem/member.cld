@@ -97,8 +97,8 @@
                   <constraint>
                     <height>-1</height>
                     <width>-1</width>
-                    <x>313</x>
-                    <y>242</y>
+                    <x>246</x>
+                    <y>263</y>
                   </constraint>
                   <sourceConnections>
                     <net.java.amateras.uml.classdiagram.model.DependencyModel>
@@ -130,8 +130,8 @@
                         <constraint>
                           <height>-1</height>
                           <width>-1</width>
-                          <x>133</x>
-                          <y>399</y>
+                          <x>49</x>
+                          <y>401</y>
                         </constraint>
                         <sourceConnections/>
                         <targetConnections>
@@ -239,8 +239,8 @@
                         <constraint>
                           <height>-1</height>
                           <width>-1</width>
-                          <x>764</x>
-                          <y>361</y>
+                          <x>666</x>
+                          <y>376</y>
                         </constraint>
                         <sourceConnections/>
                         <targetConnections>
@@ -273,8 +273,8 @@
                               <constraint>
                                 <height>-1</height>
                                 <width>-1</width>
-                                <x>596</x>
-                                <y>120</y>
+                                <x>501</x>
+                                <y>143</y>
                               </constraint>
                               <sourceConnections>
                                 <net.java.amateras.uml.classdiagram.model.DependencyModel reference="../../.."/>
@@ -1277,8 +1277,8 @@
       <constraint>
         <height>-1</height>
         <width>-1</width>
-        <x>49</x>
-        <y>117</y>
+        <x>9</x>
+        <y>144</y>
       </constraint>
       <sourceConnections/>
       <targetConnections/>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="jquery.treemenu.css" rel="stylesheet">
+<style>
+.tree { background-color:#2C3E50; color:#46CFB0;}
+.tree li,
+.tree li > a,
+.tree li > span {
+    padding: 4pt;
+    border-radius: 4px;
+}
+
+.tree li a {
+   color:#46CFB0;
+    text-decoration: none;
+    line-height: 20pt;
+    border-radius: 4px;
+}
+
+.tree li a:hover {
+    background-color: #34BC9D;
+    color: #fff;
+}
+
+.active {
+    background-color: #34495E;
+    color: white;
+}
+
+.active a {
+    color: #fff;
+}
+
+.tree li a.active:hover {
+    background-color: #34BC9D;
+}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+<ul class="tree">
+  <li><a href="">Home</a></li>
+  <li><span>Category</span>
+    <ul>
+      <li><a href="#">jQuery</a>
+        <ul>
+          <li><a href="#">jQuery</a></li>
+          <li><a href="#">jQuery UI</a></li>
+          <li><a href="#">jQuery Mobile</a></li>
+        </ul>
+      </li>
+      <li><a href="#">JavaScript</a>
+        <ul>
+          <li><a class="active" href="#">AngularJS</a></li>
+          <li><a href="#">React</a></li>
+          <li><a href="#">Backbone</a></li>
+        </ul>
+      </li>
+      <li><a href="#suits">Golang</a></li>
+    </ul>
+  </li>
+  <li><a href="asdf">About</a>
+    <ul>
+      <li><a href="ffff">Contact</a></li>
+      <li><a href="dddd">Blog</a></li>
+      <li><a href="ssss">Jobs</a>
+        <ul>
+          <li><a href="#jobs1">Job 1</a></li>
+          <li><a href="#jobs2">Job 2</a></li>
+          <li><a href="#jobs3">Job 3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</body>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="jquery.treemenu.js"></script>
+<script type="text/javascript">
+	$(".tree").treemenu({delay:500}).openActive();
+</script>
+</html>
