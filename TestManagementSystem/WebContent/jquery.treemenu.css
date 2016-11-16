@@ -8,7 +8,7 @@
 
 .treemenu .toggler:before {
     display: inline-block;
-    margin-right: 100pt;
+    margin-right: 3pt;
 }
 
 li.tree-empty > .toggler { color: #aaa; }

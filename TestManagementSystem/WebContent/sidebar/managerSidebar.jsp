@@ -40,21 +40,7 @@
 	<section>
 		
 		<ul class="sidebar-menu tree">
-		  <li><span> <a href="asdf">About</a></span>
-		    <ul>
-		      <li><a href="ffff">Contact</a></li>
-		      <li><a href="dddd">Blog</a></li>
-		      <li><a href="ssss">Jobs</a>
-		        <ul>
-		          <li><a href="#jobs1">Job 1</a></li>
-		          <li><a href="#jobs2">Job 2</a></li>
-		          <li><a href="#jobs3">Job 3</a></li>
-		        </ul>
-		      </li>
-		    </ul>
-		  </li>
-		  
-		  <li><span> <a href="MainStatFormServlet"><i class="fa fa-pie-chart"></i> 인원통계</a></span>
+		    <li class=""><span> <a href="MainStatFormServlet"><i class="fa fa-pie-chart"></i> 인원통계</a></span>
 				<ul>
 					<li><a href="BonbooStatFormServlet?bonboo=서울지역본부"> 서울지역본부</a>
 						<ul>

@@ -20,19 +20,33 @@
 
 	function changeQClassChoice(sel){
 	    var qClassChoice = document.getElementById("qClassChoice");
-	    qClassChoice.options.length = 0;
-	    var current = opt[sel.value];
-	    qClassChoice.options.length = current.length;
-	    for(var i=0;i<current.length;i++){
-	    	qClassChoice.options[i].text = current[i][0];
-	    	qClassChoice.options[i].value = current[i][1];
-	    }
+	    var qNameChoice = document.getElementById("qNameChoice");
+	    
+	    if(sel.value == '') {
+	    	qClassChoice.options.length = 1;
+	    	qClassChoice.options[0].text = "등급 선택";
+	    	qClassChoice.options[0].value = "";
+	    	
+	    	qNameChoice.options.length = 1;
+	    	qNameChoice.options[0].text = "시험 선택";
+	    	qNameChoice.options[0].value = "";
+		}
+		else {
+		    qClassChoice.options.length = 0;
+		    var current = opt[sel.value];
+		    qClassChoice.options.length = current.length;
+		    for(var i=0;i<current.length;i++){
+		    	qClassChoice.options[i].text = current[i][0];
+		    	qClassChoice.options[i].value = current[i][1];
+		    }
+		}
 	}
 	
 	var opt2 = [];
 
 	function changeQNameChoice(sel){
 		var tsNo = document.getElementById("tsNoChoice").value;
+	    var qNameChoice = document.getElementById("qNameChoice");
 		
 		opt2['giNngSa'] = [["시험이름 선택",""],["1차 기능사 필기","10"],["2차 기능사 필기","11"],["4차 기능사 필기","13"],["5차 기능사 필기","14"],["1차 기능사 실기","15"],["2차 기능사 실기","16"],["3차 기능사 실기","17"],["4차 기능사 실기","18"],["5차 기능사 실기","19"]];
 		opt2['giSa'] = [["시험이름 선택",""],["1차 기사 필기","01"],["2차 기사 필기","02"],["3차 기사 필기","03"],["4차 기사 필기","04"],["1차 기사 실기","06"],["2차 기사 실기","07"],["3차 기사 실기","08"],["4차 기사 실기","09"]];
@@ -45,14 +59,22 @@
 			opt2['giSulSa'] = [["시험이름 선택",""],["기술사 108회 필기","21"],["기술사 109회 필기","22"],["기술사 110회 필기","23"],["기술사 108회 면접","26"],["기술사 109회 면접","27"],["기술사 110회 면접","28"]];
 			opt2['giNngJang'] = [["시험이름 선택",""],["기능장 59회 필기","31"],["기능장 60회 필기","32"],["기능장 59회 실기","36"],["기능장 60회 실기","37"]];
 		}
-	    var qNameChoice = document.getElementById("qNameChoice");
-	    qNameChoice.options.length = 0;
-	    var current = opt2[sel.value];
-	    qNameChoice.options.length = current.length;
-	    for(var i=0;i<current.length;i++){
-	    	qNameChoice.options[i].text = current[i][0];
-	    	qNameChoice.options[i].value = current[i][1];
-	    }
+
+		if(sel.value == '') {
+	    	
+			qNameChoice.options.length = 1;
+			qNameChoice.options[0].text = "시험 선택";
+	    	qNameChoice.options[0].value = "";
+		}
+		else {
+		    qNameChoice.options.length = 0;
+		    var current = opt2[sel.value];
+		    qNameChoice.options.length = current.length;
+		    for(var i=0;i<current.length;i++){
+		    	qNameChoice.options[i].text = current[i][0];
+		    	qNameChoice.options[i].value = current[i][1];
+		    }
+		}
 	}
 	
 	function buttonDisabled() {

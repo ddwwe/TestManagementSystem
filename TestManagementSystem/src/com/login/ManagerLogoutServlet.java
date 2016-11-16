@@ -24,11 +24,7 @@ public class ManagerLogoutServlet extends HttpServlet {
 		 String title="";
 		 String target="";
 		if(dto==null){
-			title= "로그인 하세요";
-			String link="ManagerLoginFormServlet";
-			target="error.jsp";
-			request.setAttribute("title", title);
-			request.setAttribute("link", link);
+			target="index.jsp";
 		}else{
 			target="index.jsp";
 			request.setAttribute("manaLogout", "정상적으로 로그아웃");
