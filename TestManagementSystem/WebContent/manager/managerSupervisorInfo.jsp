@@ -159,10 +159,10 @@ vertical-align: middle;
 		<p/><table border="1" class="table table-striped table-hover">
 				<tr>
 					<th class="back">감독관<p>ID</p></th>
-					<th class="back">감독관<p>이름</p></th>
+					<th class="back" width="60">감독관<p>이름</p></th>
 					<th class="back">감독관<p>소속</p></th>
 					<th class="back">감독관<p>전화</p></th>
-					<th class="back">감독관<p>우편번호</p></th>
+					<th class="back" width="75">감독관<p>우편번호</p></th>
 					<th class="back">감독관<p>주소</p></th>
 					<th class="back">감독관<p>생년월일</p></th>
 					<th class="back">감독관<p>담당시험실</p></th>
@@ -175,7 +175,7 @@ vertical-align: middle;
 					<td align="center">${supervisor.sGroup}</td>
 					<td align="center">${supervisor.sPhone}</td>
 					<td align="center">${supervisor.sPost}</td>
-					<td align="center">${supervisor.sAddr1} ${supervisor.sAddr2}</td>
+					<td align="center">${supervisor.sAddr1}<br>${supervisor.sAddr2}</td>
 					<td align="center">${supervisor.sBirth}</td>
 					<td align="center"><div align="center">${supervisor.schoolDTO.s_bonboo} ${supervisor.schoolDTO.s_gigwan} ${supervisor.schoolDTO.s_name} ${supervisor.schoolDTO.s_room}시험실</div></td>
 				</tr>

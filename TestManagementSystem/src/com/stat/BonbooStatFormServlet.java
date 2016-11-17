@@ -49,7 +49,9 @@ public class BonbooStatFormServlet extends HttpServlet {
 		tsNo = tsNoChoice + qNameChoice;
 		if(tsNoChoice == null && qNameChoice == null)	tsNo = "1603";	// 받아온게 없으면 1603
 		System.out.println(tsNo);
-		
+
+		String title = "";
+		String target = "";
 		try {
 			tsTitle = service.searchTsTitle(tsNo);			// 일정이름 불러오기
 			qCodeList = service.qCodeSearch(qClass);		// qClass로 종목 받기
@@ -58,8 +60,13 @@ public class BonbooStatFormServlet extends HttpServlet {
 			for (String string : qNameList) {
 				System.out.println(string);
 			}
+			target = "bonbooMainForm.jsp";
 		} catch (CommonException e) {
-			e.printStackTrace();
+			title = e.getMessage();
+			String link = "MainStatFormServlet";
+			target = "error.jsp";
+			request.setAttribute("title", title);
+			request.setAttribute("link", link);
 		}
 		int[][] mainAttendCountArr = new int[qCodeList.size()][gigwanList.size()];// 참석 카운트값 저장할 배열 만들기
 		int[][] mainSubmitCountArr = new int[qCodeList.size()][gigwanList.size()];// 신청 카운트값 저장할 배열 만들기
@@ -112,7 +119,7 @@ public class BonbooStatFormServlet extends HttpServlet {
 		request.setAttribute("mainAttendVSumArr", mainAttendVSumArr);
 		request.setAttribute("mainSubmitVSumArr", mainSubmitVSumArr);
 		
-		RequestDispatcher dis = request.getRequestDispatcher("bonbooMainForm.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher(target);
 		dis.forward(request, response);
 		
 	}

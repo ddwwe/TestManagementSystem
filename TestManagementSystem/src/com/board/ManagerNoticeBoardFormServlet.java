@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.dto.PageDTO;
+import com.exception.CommonException;
 import com.service.BoardService;
 
 @WebServlet("/ManagerNoticeBoardFormServlet")
@@ -23,12 +24,23 @@ public class ManagerNoticeBoardFormServlet extends HttpServlet {
 		}
 		
 		BoardService service = new BoardService();
+		String title = "";
+		String target = "";
+		try {
 		PageDTO dto = 
 				service.pageNotice(Integer.parseInt(curPage));
 		
 		request.setAttribute("pageNotice", dto);
+		target = "managerNoticeBoardForm.jsp";
+		} catch (CommonException e) {
+			title = e.getMessage();
+			String link = "MainStatFormServlet";
+			target = "error.jsp";
+			request.setAttribute("title", title);
+			request.setAttribute("link", link);
+		}
 		
-		RequestDispatcher dis = request.getRequestDispatcher("managerNoticeBoardForm.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher(target);
 		dis.forward(request, response);
 	}
 

@@ -52,7 +52,7 @@ public class SelectService {
 				list = session.selectList("qCodeSearch", qClass);
 			} catch (Exception e) {
 				e.printStackTrace();
-				throw new CommonException("qCode 검색 실패");
+				throw new CommonException("종목번호 검색 실패");
 			} finally {
 				session.close();
 			}
@@ -67,7 +67,7 @@ public class SelectService {
 				list = session.selectList("s_CodeSearch");
 			} catch (Exception e) {
 				e.printStackTrace();
-				throw new CommonException("s_Code 검색 실패");
+				throw new CommonException("장소번호 검색 실패");
 			} finally {
 				session.close();
 			}
@@ -82,7 +82,7 @@ public class SelectService {
 				list = session.selectList("tsNoSearch", tsNo);
 			} catch (Exception e) {
 				e.printStackTrace();
-				throw new CommonException("tsNo 검색 실패");
+				throw new CommonException("시험일정 검색 실패");
 			} finally {
 				session.close();
 			}
@@ -97,7 +97,7 @@ public class SelectService {
 				attend = session.selectOne("searchAttend", searchMap);
 			} catch (Exception e) {
 				e.printStackTrace();
-				throw new CommonException("attend 검색 실패");
+				throw new CommonException("참석인원 검색 실패");
 			} finally {
 				session.close();
 			}
@@ -112,7 +112,7 @@ public class SelectService {
 				submit = session.selectOne("searchSubmit", searchMap);
 			} catch (Exception e) {
 				e.printStackTrace();
-				throw new CommonException("submit 검색 실패");
+				throw new CommonException("신청인원 검색 실패");
 			} finally {
 				session.close();
 			}
@@ -219,7 +219,7 @@ public class SelectService {
 				sCode = session.selectOne("searchScodeByMap", map);
 			} catch (Exception e) {
 				e.printStackTrace();
-				throw new CommonException("맵으로 sCode 불러오기 실패");
+				throw new CommonException("맵으로 장소번호 불러오기 실패");
 			} finally {
 				session.close();
 			}
@@ -234,7 +234,7 @@ public class SelectService {
 				list = session.selectList("searchStudentDataByScode", sCodeTsNo);
 			} catch (Exception e) {
 				e.printStackTrace();
-				throw new CommonException("sCode+tsNo로 학생정보 불러오기 실패");
+				throw new CommonException("장소번호+시험일정으로 학생정보 불러오기 실패");
 			} finally {
 				session.close();
 			}
@@ -249,7 +249,7 @@ public class SelectService {
 				list = session.selectList("searchSupervisorDataByScode", map);
 			} catch (Exception e) {
 				e.printStackTrace();
-				throw new CommonException("sCode+tsNo로 감독관정보 불러오기 실패");
+				throw new CommonException("장소번호+시험일정으로 감독관정보 불러오기 실패");
 			} finally {
 				session.close();
 			}

@@ -52,17 +52,24 @@ public class RoomStatFormServlet extends HttpServlet {
 		sCodeMap.put("gigwan", gigwan);
 		sCodeMap.put("name", name);
 		sCodeMap.put("room", room);
-		
+
+		String title = "";
+		String target = "";
 		try {
 			tsTitle = service.searchTsTitle(tsNo);			// 일정이름 불러오기
-			sCode = service.searchScodeByMap(sCodeMap);					// sCode찾기
+			sCode = service.searchScodeByMap(sCodeMap);		// sCode찾기
 			sCodeTsNo = sCode +"__"+ tsNo;
 			scheduleMap.put("sCode", sCode);
 			scheduleMap.put("tsNo", tsNo);
 			studentDataList = service.searchStudentDataByScode(sCodeTsNo);	// sCode와 tsNo로 학생정보 찾기
 			supervisorDataList = service.searchSupervisorDataByScode(scheduleMap);	// sCode와 tsNo로 감독관 찾기
+			target = "roomMainForm.jsp";
 		} catch (CommonException e) {
-			e.printStackTrace();
+			title = e.getMessage();
+			String link = "MainStatFormServlet";
+			target = "error.jsp";
+			request.setAttribute("title", title);
+			request.setAttribute("link", link);
 		}
 		
 		request.setAttribute("bonboo", bonboo);
@@ -73,7 +80,7 @@ public class RoomStatFormServlet extends HttpServlet {
 		request.setAttribute("studentDataList", studentDataList);
 		request.setAttribute("supervisorDataList", supervisorDataList);
 		
-		RequestDispatcher dis = request.getRequestDispatcher("roomMainForm.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher(target);
 		dis.forward(request, response);
 		
 	}

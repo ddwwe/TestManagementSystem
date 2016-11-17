@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.exception.CommonException;
 import com.service.BoardService;
 
 /**
@@ -22,10 +23,20 @@ public class ManagerDeleteBoardServlet extends HttpServlet {
 		String type = request.getParameter("type");
 		
 		BoardService service = new BoardService();
+		String title = "";
+		String target = "";
+		try {
 		service.deleteErrata(Integer.parseInt(bNo));
 		
-		
-		response.sendRedirect(type);
+		target = type;
+		} catch (CommonException e) {
+			title = e.getMessage();
+			String link = "managerBoardForm.jsp";
+			target = "error.jsp";
+			request.setAttribute("title", title);
+			request.setAttribute("link", link);
+		}
+		response.sendRedirect(target);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

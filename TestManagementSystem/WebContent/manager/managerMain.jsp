@@ -14,6 +14,9 @@
 <script type="text/javascript" src="jquery-3.1.0.min.js"></script>
 <script type="text/javascript">
 
+	var sel2 = '15';
+	var sel3 = '';
+
 	var opt = [];
 	opt['15'] = [["등급 선택",""],["기능사","giNngSa"],["기사","giSa"],["기술사","giSulSa"],["기능장","giNngJang"]];
 	opt['16'] = [["등급 선택",""],["기능사","giNngSa"],["기사","giSa"],["기술사","giSulSa"],["기능장","giNngJang"]];
@@ -30,8 +33,20 @@
 	    	qNameChoice.options.length = 1;
 	    	qNameChoice.options[0].text = "시험 선택";
 	    	qNameChoice.options[0].value = "";
+			document.getElementById("submit").disabled = true;
 		}
 		else {
+			if(sel.value != sel2) {
+		    	qClassChoice.options.length = 1;
+		    	qClassChoice.options[0].text = "등급 선택";
+		    	qClassChoice.options[0].value = "";
+		    	
+		    	qNameChoice.options.length = 1;
+		    	qNameChoice.options[0].text = "시험 선택";
+		    	qNameChoice.options[0].value = "";
+				document.getElementById("submit").disabled = true;
+			}
+			
 		    qClassChoice.options.length = 0;
 		    var current = opt[sel.value];
 		    qClassChoice.options.length = current.length;
@@ -39,6 +54,8 @@
 		    	qClassChoice.options[i].text = current[i][0];
 		    	qClassChoice.options[i].value = current[i][1];
 		    }
+			document.getElementById("submit").disabled = true;
+		    sel2 = sel.value;
 		}
 	}
 	
@@ -65,8 +82,16 @@
 			qNameChoice.options.length = 1;
 			qNameChoice.options[0].text = "시험 선택";
 	    	qNameChoice.options[0].value = "";
+			document.getElementById("submit").disabled = true;
 		}
 		else {
+			if(sel.value != sel3) {
+	    	
+				qNameChoice.options.length = 1;
+				qNameChoice.options[0].text = "시험 선택";
+		    	qNameChoice.options[0].value = "";
+				document.getElementById("submit").disabled = true;
+			}
 		    qNameChoice.options.length = 0;
 		    var current = opt2[sel.value];
 		    qNameChoice.options.length = current.length;
@@ -74,6 +99,7 @@
 		    	qNameChoice.options[i].text = current[i][0];
 		    	qNameChoice.options[i].value = current[i][1];
 		    }
+		    sel3 = sel.value;
 		}
 	}
 	

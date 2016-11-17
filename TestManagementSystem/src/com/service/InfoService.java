@@ -6,12 +6,13 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.config.MySqlSessionFactory;
 import com.dto.SupervisorDTO;
+import com.exception.CommonException;
 
 public class InfoService {
 
 	BoardService service = new BoardService();
 	
-	public List<SupervisorDTO> searchAllSupervisor() {
+	public List<SupervisorDTO> searchAllSupervisor() throws CommonException {
 		SqlSession session = MySqlSessionFactory.getSession();
 		List<SupervisorDTO> list = null;
 		try{
@@ -20,6 +21,8 @@ public class InfoService {
 			for (SupervisorDTO supervisorDTO : list) {
 				supervisorDTO.setSchoolDTO(service.selectSchoolDTO(supervisorDTO.getSsId()));
 			}
+		} catch (Exception e) {
+			throw new CommonException("모든 관리자 불러오기 실패");
 		}
 		finally {
 			session.close();
@@ -27,7 +30,7 @@ public class InfoService {
 		return list;
 	}
 
-	public List<SupervisorDTO> searchSupervisorBySCode(String sCode) {
+	public List<SupervisorDTO> searchSupervisorBySCode(String sCode) throws CommonException {
 		SqlSession session = MySqlSessionFactory.getSession();
 		List<SupervisorDTO> list = null;
 		try{
@@ -36,6 +39,8 @@ public class InfoService {
 			for (SupervisorDTO supervisorDTO : list) {
 				supervisorDTO.setSchoolDTO(service.selectSchoolDTO(supervisorDTO.getSsId()));
 			}
+		} catch (Exception e) {
+			throw new CommonException("선택한 장소의 관리자 불러오기 실패");
 		}
 		finally {
 			session.close();

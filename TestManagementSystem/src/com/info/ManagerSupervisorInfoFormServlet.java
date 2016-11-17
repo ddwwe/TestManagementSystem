@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.dto.SupervisorDTO;
+import com.exception.CommonException;
 import com.service.InfoService;
 
 @WebServlet("/ManagerSupervisorInfoFormServlet")
@@ -33,15 +34,23 @@ public class ManagerSupervisorInfoFormServlet extends HttpServlet {
 		System.out.println(sCode);
 		InfoService service = new InfoService();
 		List<SupervisorDTO> supervisorList = null;
-		
+		String title = "";
+		String target = "";
+		try {
 		if(sCode == "%") supervisorList = service.searchAllSupervisor();
 		else supervisorList = service.searchSupervisorBySCode(sCode);
 		
 		request.setAttribute("supervisorList", supervisorList);
-		System.out.println(supervisorList.size());
-		RequestDispatcher dis = request.getRequestDispatcher("managerSupervisorInfoForm.jsp");
+		target = "managerSupervisorInfoForm.jsp";
+		} catch (CommonException e) {
+			title = e.getMessage();
+			String link = "MainStatFormServlet";
+			target = "error.jsp";
+			request.setAttribute("title", title);
+			request.setAttribute("link", link);
+		}
+		RequestDispatcher dis = request.getRequestDispatcher(target);
 		dis.forward(request, response);
-		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
