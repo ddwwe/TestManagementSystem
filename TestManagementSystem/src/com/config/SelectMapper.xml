@@ -24,6 +24,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select qCode
 		from Qualification
 		where qClass = #{qClass}
+		order by qName
 	</select>
 	
 	<select id="s_CodeSearch" resultType="string">

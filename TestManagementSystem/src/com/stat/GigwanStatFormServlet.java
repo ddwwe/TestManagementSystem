@@ -110,7 +110,6 @@ public class GigwanStatFormServlet extends HttpServlet {
 		request.setAttribute("qNameList", qNameList);
 		request.setAttribute("nameList", nameList);
 		request.setAttribute("mainAttendCountArr", mainAttendCountArr);
-		request.setAttribute("mainAttendCountArr", mainAttendCountArr);
 		request.setAttribute("mainSubmitCountArr", mainSubmitCountArr);
 		request.setAttribute("mainAttendHSumArr", mainAttendHSumArr);
 		request.setAttribute("mainSubmitHSumArr", mainSubmitHSumArr);
